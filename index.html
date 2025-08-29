@@ -48,6 +48,86 @@
     </script>
     
     <style>
+        /* Typing Animation Styles */
+        .typing-cursor {
+            display: inline-block;
+            width: 3px;
+            animation: blink 1s infinite;
+            color: #00D4FF;
+        }
+
+        @keyframes blink {
+            0%, 50% { opacity: 1; }
+            51%, 100% { opacity: 0; }
+        }
+
+        /* Neon Glow Effect */
+        .neon-glow {
+            box-shadow: 
+                0 0 20px rgba(123, 47, 255, 0.1),
+                0 0 40px rgba(123, 47, 255, 0.05),
+                inset 0 0 20px rgba(123, 47, 255, 0.05);
+        }
+
+        /* Emotion Button Styles */
+        .emotion-btn {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: rgba(107, 114, 128, 0.2);
+            border: 1px solid rgba(107, 114, 128, 0.3);
+            font-size: 20px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .emotion-btn:hover {
+            transform: scale(1.2);
+            background: rgba(123, 47, 255, 0.2);
+            border-color: rgba(123, 47, 255, 0.5);
+        }
+
+        .emotion-btn.selected {
+            background: rgba(123, 47, 255, 0.3);
+            border-color: rgba(123, 47, 255, 0.7);
+            transform: scale(1.1);
+        }
+
+        /* Custom Scrollbar */
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 4px;
+        }
+
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: rgba(31, 41, 55, 0.5);
+            border-radius: 2px;
+        }
+
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: linear-gradient(to bottom, #7B2FFF, #FF2E97);
+            border-radius: 2px;
+        }
+
+        /* Profile Image Glow */
+        .rounded-full.border-4 {
+            box-shadow: 
+                0 0 30px rgba(0, 212, 255, 0.3),
+                0 0 60px rgba(0, 212, 255, 0.1);
+        }
+
+        /* Animation Delays */
+        .delay-1000 {
+            animation-delay: 1000ms;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 1024px) {
+            .lg\:grid-cols-2 {
+                grid-template-columns: 1fr;
+            }
+        }
+
+
         /* Custom CSS for animations and effects */
         .gradient-text {
             background: linear-gradient(135deg, #00D4FF, #7B2FFF, #FF2E97);
@@ -374,35 +454,178 @@
     </nav>
     
     <!-- Hero Section -->
-    <section id="home" class="min-h-screen flex items-center justify-center relative">
-        <div class="container mx-auto px-4 text-center z-10">
-            <div class="reveal">
-                <h1 class="text-5xl md:text-7xl font-bold mb-6">
-                    <span class="gradient-text">Marufur Rahman</span>
-                </h1>
-                <p class="text-xl md:text-2xl text-gray-400 mb-4">
-                    Tech & Finance Innovator | প্রযুক্তি উদ্যোক্তা
-                </p>
-                <p class="text-lg text-gray-500 mb-8">
-                    Founder @ <span class="text-neon-blue">Rokto Bondhu</span> & <span class="text-neon-purple">Tutorly AI</span>
-                </p>
-                <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                    <a href="#projects" class="px-8 py-3 bg-gradient-to-r from-neon-blue to-neon-purple rounded-lg font-semibold hover:scale-105 transition-transform">
-                        View Work
-                    </a>
-                    <a href="#contact" class="px-8 py-3 border border-gray-600 rounded-lg font-semibold hover:bg-gray-800 transition-colors">
-                        Get In Touch
-                    </a>
+    <section id="home" class="min-h-screen flex items-center relative overflow-hidden ">
+        <div class="container mx-auto px-4 z-10">
+            <div class="grid lg:grid-cols-2 gap-12 items-center mt-16">
+                
+                <!-- Left Side - Main Content -->
+                <div class="text-left reveal">
+                    <!-- Profile Image -->
+                    <div class="mb-8">
+                        <div class="relative inline-block">
+                            <div class="w-32 h-32 md:w-40 md:h-40 rounded-full overflow-hidden border-4 border-neon-blue/50 shadow-2xl">
+                                <img src="logo.jpeg" 
+                                    alt="Marufur Rahman" 
+                                    class="w-full h-full object-cover hover:scale-110 transition-transform duration-300">
+                            </div>
+                            <!-- Status Indicator -->
+                            <div class="absolute bottom-2 right-2 w-6 h-6 bg-green-500 rounded-full border-4 border-gray-900 animate-pulse"></div>
+                        </div>
+                    </div>
+                    
+                    <!-- Name and Title -->
+                    <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold mb-6">
+                        <span class="gradient-text">Marufur Rahman</span>
+                    </h1>
+                    
+                    <!-- Animated Typing Text -->
+                    <div class="text-xl md:text-2xl text-gray-400 mb-6 h-8">
+                        <span class="text-neon-blue">I'm a</span> 
+                        <span id="typed-text" class="text-neon-purple font-semibold"></span>
+                        <span class="typing-cursor">|</span>
+                    </div>
+                    
+                    <p class="text-lg text-gray-500 mb-8">
+                        Building the future through innovation and technology<br>
+                        প্রযুক্তির মাধ্যমে ভবিষ্যৎ নির্মাণ
+                    </p>
+                    
+                    <!-- Company Badges -->
+                    <div class="flex flex-wrap gap-4 mb-8">
+                        <div class="px-4 py-2 bg-gray-800/50 backdrop-blur-sm rounded-full border border-neon-blue/30 hover:border-neon-blue transition-colors">
+                            <span class="text-sm">🩸 Founder @ <span class="text-neon-blue font-semibold">Rokto Bondhu</span></span>
+                        </div>
+                        <div class="px-4 py-2 bg-gray-800/50 backdrop-blur-sm rounded-full border border-neon-purple/30 hover:border-neon-purple transition-colors">
+                            <span class="text-sm">🤖 Co-Founder @ <span class="text-neon-purple font-semibold">Tutorly AI</span></span>
+                        </div>
+                    </div>
+                    
+                    <!-- CTA Buttons -->
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="#projects" class="px-8 py-3 bg-gradient-to-r from-neon-blue to-neon-purple rounded-lg font-semibold hover:scale-105 transition-transform text-center">
+                            <i class="fas fa-briefcase mr-2"></i>View Work
+                        </a>
+                    </div>
+                    
+                    <!-- Social Links -->
+                    <div class="flex gap-4 mt-8">
+                        <a href="https://linkedin.com" target="_blank" class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-neon-blue/20 transition-colors">
+                            <i class="fab fa-linkedin text-gray-400 hover:text-neon-blue"></i>
+                        </a>
+                        <a href="https://github.com" target="_blank" class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-neon-purple/20 transition-colors">
+                            <i class="fab fa-github text-gray-400 hover:text-neon-purple"></i>
+                        </a>
+                        <a href="https://twitter.com" target="_blank" class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-neon-pink/20 transition-colors">
+                            <i class="fab fa-twitter text-gray-400 hover:text-neon-pink"></i>
+                        </a>
+                        <a href="https://instagram.com" target="_blank" class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-green-500/20 transition-colors">
+                            <i class="fab fa-instagram text-gray-400 hover:text-green-400"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Right Side - Anonymous Message Widget -->
+                <div class="lg:flex justify-center items-center hidden">
+                    <div class="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-700 hover:border-neon-purple/50 transition-all duration-300 max-w-md w-full neon-glow">
+                        <!-- NGL Widget Header -->
+                        <div class="text-center mb-6">
+                            <div class="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-neon-purple to-neon-pink rounded-full mb-4">
+                                <i class="fas fa-user-secret text-2xl text-white"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold text-white mb-2">Send Anonymous Message</h3>
+                            <p class="text-gray-400 text-sm">Your identity will remain completely anonymous</p>
+                        </div>
+                        
+                        <!-- Message Form -->
+                        <form id="anonymous-form" class="space-y-4">
+                            <div>
+                                <textarea 
+                                    id="anonymous-message"
+                                    rows="4" 
+                                    class="w-full px-4 py-3 bg-gray-900/50 border border-gray-600 rounded-lg focus:border-neon-purple focus:outline-none transition-colors resize-none text-gray-300"
+                                    placeholder="Type your anonymous message here..."
+                                    maxlength="500"></textarea>
+                                <div class="text-right mt-1">
+                                    <span id="char-count" class="text-xs text-gray-500">0/500</span>
+                                </div>
+                            </div>
+                            
+                            <!-- Emotion Selection -->
+                            <div class="flex justify-center gap-3">
+                                <button type="button" class="emotion-btn" data-emotion="💭">💭</button>
+                                <button type="button" class="emotion-btn" data-emotion="💡">💡</button>
+                                <button type="button" class="emotion-btn" data-emotion="❤️">❤️</button>
+                                <button type="button" class="emotion-btn" data-emotion="🎯">🎯</button>
+                                <button type="button" class="emotion-btn" data-emotion="🚀">🚀</button>
+                            </div>
+                            
+                            <button type="submit" class="w-full px-6 py-3 bg-gradient-to-r from-neon-purple to-neon-pink rounded-lg font-semibold hover:scale-105 transition-transform">
+                                <i class="fas fa-paper-plane mr-2"></i>Send Message
+                            </button>
+                        </form>
+                        
+                        <!-- NGL Link -->
+                        <div class="mt-6 pt-6 border-t border-gray-700 text-center">
+                            <p class="text-gray-500 text-sm mb-2">Or send via NGL</p>
+                            <a href="https://ngl.link/marufurrahman1" 
+                            target="_blank" 
+                            class="inline-flex items-center gap-2 text-neon-purple hover:text-neon-pink transition-colors">
+                                <i class="fas fa-external-link-alt"></i>
+                                <span>ngl.link/marufurrahman1</span>
+                            </a>
+                        </div>
+                        
+                        <!-- Recent Messages Preview -->
+                        <div class="mt-6 pt-6 border-t border-gray-700">
+                            <p class="text-gray-400 text-sm mb-3">Recent Anonymous Messages</p>
+                            <div class="space-y-2 max-h-32 overflow-y-auto custom-scrollbar">
+                                <div class="text-xs text-gray-500 italic">"Your work is truly inspiring! 💡"</div>
+                                <div class="text-xs text-gray-500 italic">"Great innovation in tech space 🚀"</div>
+                                <div class="text-xs text-gray-500 italic">"Keep building amazing things! ❤️"</div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
             
+            <!-- Mobile Anonymous Message Button -->
+            <div class="lg:hidden fixed bottom-20 right-4 z-40">
+                <button id="mobile-ngl-btn" class="w-14 h-14 bg-gradient-to-br from-neon-purple to-neon-pink rounded-full flex items-center justify-center shadow-lg hover:scale-110 transition-transform">
+                    <i class="fas fa-user-secret text-white text-xl"></i>
+                </button>
+            </div>
         </div>
+        
+        <!-- Animated Background Elements -->
+        <div class="absolute top-20 left-10 w-72 h-72 bg-neon-blue/10 rounded-full blur-3xl animate-pulse"></div>
+        <div class="absolute bottom-20 right-10 w-96 h-96 bg-neon-purple/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
         
         <!-- Scroll Indicator -->
         <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
             <i class="fas fa-chevron-down text-gray-500"></i>
         </div>
     </section>
+
+    <!-- Mobile Anonymous Message Modal -->
+    <div id="mobile-ngl-modal" class="fixed inset-0 z-50 hidden">
+        <div class="flex items-center justify-center min-h-screen px-4">
+            <div class="fixed inset-0 bg-gray-900 bg-opacity-75" onclick="closeMobileNGL()"></div>
+            <div class="bg-gray-800 rounded-2xl p-6 max-w-sm w-full z-10">
+                <div class="flex justify-between items-center mb-4">
+                    <h3 class="text-xl font-bold text-white">Send Anonymous Message</h3>
+                    <button onclick="closeMobileNGL()" class="text-gray-400 hover:text-white">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                <p class="text-gray-400 text-sm mb-4">Your identity will remain anonymous</p>
+                <a href="https://ngl.link/marufurrahman1" 
+                target="_blank" 
+                class="block w-full px-6 py-3 bg-gradient-to-r from-neon-purple to-neon-pink rounded-lg font-semibold text-center hover:scale-105 transition-transform">
+                    <i class="fas fa-external-link-alt mr-2"></i>Open NGL
+                </a>
+            </div>
+        </div>
+    </div>  
     
     <!-- About Section -->
     <section id="about" class="py-20">
@@ -1384,13 +1607,13 @@
     </div>
     
     <!-- Contact Section -->
-    <!-- <section id="contact" class="py-20">
+    <section id="contact" class="py-20">
         <div class="container mx-auto px-4">
             <div class="reveal">
                 <h2 class="text-4xl font-bold text-center mb-12 gradient-text">Get In Touch</h2>
                 
                 <div class="max-w-2xl mx-auto">
-                    <form id="contact-form" class="bg-gray-800/50 backdrop-blur-sm rounded-xl p-8">
+                    <!-- <form id="contact-form" class="bg-gray-800/50 backdrop-blur-sm rounded-xl p-8">
                         <div class="grid md:grid-cols-2 gap-6 mb-6">
                             <div>
                                 <label for="name" class="block text-gray-400 mb-2">Name</label>
@@ -1463,6 +1686,176 @@
     <!-- JavaScript -->
     <script>
         // 
+        // Typing Animation
+        document.addEventListener('DOMContentLoaded', function() {
+            const roles = [
+                'Entrepreneur',
+                'Researcher', 
+                'Founder',
+                'Innovator',
+                'Tech Leader',
+                'Problem Solver'
+            ];
+            
+            let currentRoleIndex = 0;
+            let currentCharIndex = 0;
+            let isDeleting = false;
+            let typingSpeed = 100;
+            
+            const typedTextElement = document.getElementById('typed-text');
+            
+            function typeWriter() {
+                const currentRole = roles[currentRoleIndex];
+                
+                if (isDeleting) {
+                    // Remove characters
+                    typedTextElement.textContent = currentRole.substring(0, currentCharIndex - 1);
+                    currentCharIndex--;
+                    typingSpeed = 50;
+                } else {
+                    // Add characters
+                    typedTextElement.textContent = currentRole.substring(0, currentCharIndex + 1);
+                    currentCharIndex++;
+                    typingSpeed = 100;
+                }
+                
+                // Check if word is complete
+                if (!isDeleting && currentCharIndex === currentRole.length) {
+                    // Pause at the end
+                    typingSpeed = 2000;
+                    isDeleting = true;
+                } else if (isDeleting && currentCharIndex === 0) {
+                    isDeleting = false;
+                    currentRoleIndex = (currentRoleIndex + 1) % roles.length;
+                    typingSpeed = 500;
+                }
+                
+                setTimeout(typeWriter, typingSpeed);
+            }
+            
+            // Start typing animation
+            typeWriter();
+            
+            // Anonymous Message Form Handler
+            const anonymousForm = document.getElementById('anonymous-form');
+            const messageTextarea = document.getElementById('anonymous-message');
+            const charCount = document.getElementById('char-count');
+            const emotionBtns = document.querySelectorAll('.emotion-btn');
+            
+            // Character counter
+            messageTextarea?.addEventListener('input', function() {
+                const length = this.value.length;
+                charCount.textContent = `${length}/500`;
+                
+                if (length >= 450) {
+                    charCount.classList.add('text-yellow-500');
+                } else if (length >= 490) {
+                    charCount.classList.add('text-red-500');
+                } else {
+                    charCount.classList.remove('text-yellow-500', 'text-red-500');
+                }
+            });
+            
+            // Emotion selection
+            let selectedEmotion = '';
+            emotionBtns.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    emotionBtns.forEach(b => b.classList.remove('selected'));
+                    this.classList.add('selected');
+                    selectedEmotion = this.dataset.emotion;
+                });
+            });
+            
+            // Form submission
+            anonymousForm?.addEventListener('submit', async function(e) {
+                e.preventDefault();
+                
+                const message = messageTextarea.value.trim();
+                if (!message) {
+                    messageTextarea.classList.add('border-red-500');
+                    setTimeout(() => {
+                        messageTextarea.classList.remove('border-red-500');
+                    }, 2000);
+                    return;
+                }
+                
+                // In production, this would send to your backend/NGL API
+                const submitBtn = this.querySelector('button[type="submit"]');
+                const originalText = submitBtn.innerHTML;
+                
+                // Show loading state
+                submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i>Sending...';
+                submitBtn.disabled = true;
+                
+                // Simulate API call
+                setTimeout(() => {
+                    submitBtn.innerHTML = '<i class="fas fa-check mr-2"></i>Sent!';
+                    submitBtn.classList.add('bg-green-600');
+                    
+                    // Reset form
+                    setTimeout(() => {
+                        messageTextarea.value = '';
+                        charCount.textContent = '0/500';
+                        emotionBtns.forEach(b => b.classList.remove('selected'));
+                        selectedEmotion = '';
+                        submitBtn.innerHTML = originalText;
+                        submitBtn.classList.remove('bg-green-600');
+                        submitBtn.disabled = false;
+                        
+                        // Add to recent messages (optional)
+                        addRecentMessage(message, selectedEmotion);
+                    }, 2000);
+                }, 1500);
+            });
+            
+            // Add recent message to preview
+            function addRecentMessage(message, emotion) {
+                const recentContainer = document.querySelector('.custom-scrollbar');
+                if (recentContainer) {
+                    const messageDiv = document.createElement('div');
+                    messageDiv.className = 'text-xs text-gray-500 italic';
+                    messageDiv.textContent = `"${message.substring(0, 50)}${message.length > 50 ? '...' : ''}" ${emotion || '💭'}`;
+                    recentContainer.insertBefore(messageDiv, recentContainer.firstChild);
+                    
+                    // Keep only last 5 messages
+                    while (recentContainer.children.length > 5) {
+                        recentContainer.removeChild(recentContainer.lastChild);
+                    }
+                }
+            }
+            
+            // Mobile NGL Modal
+            const mobileNGLBtn = document.getElementById('mobile-ngl-btn');
+            const mobileNGLModal = document.getElementById('mobile-ngl-modal');
+            
+            mobileNGLBtn?.addEventListener('click', function() {
+                mobileNGLModal.classList.remove('hidden');
+                setTimeout(() => {
+                    mobileNGLModal.classList.add('opacity-100');
+                }, 10);
+            });
+        });
+
+        // Close Mobile NGL Modal
+        function closeMobileNGL() {
+            const modal = document.getElementById('mobile-ngl-modal');
+            modal.classList.remove('opacity-100');
+            setTimeout(() => {
+                modal.classList.add('hidden');
+            }, 300);
+        }
+
+        // Parallax effect for background elements
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const parallaxElements = document.querySelectorAll('.absolute.bg-neon-blue\\/10, .absolute.bg-neon-purple\\/10');
+            
+            parallaxElements.forEach((element, index) => {
+                const speed = 0.5 * (index + 1);
+                element.style.transform = `translateY(${scrolled * speed}px)`;
+            });
+        });
+
         // Add this JavaScript to handle the certificate section functionality
         // Certificate Data Store
         const certificateData = {
