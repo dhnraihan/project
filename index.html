@@ -1,0 +1,1974 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Mahadi Hassan - Tech & Finance Founder | Rokto Bondhu & Tutorly AI">
+    <title>Mahadi Hassan - Tech & Finance Innovator</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- tsParticles -->
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.12.0/tsparticles.bundle.min.js"></script>
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom Tailwind Config -->
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        neon: {
+                            blue: '#00D4FF',
+                            purple: '#7B2FFF',
+                            pink: '#FF2E97'
+                        }
+                    },
+                    animation: {
+                        'float': 'float 6s ease-in-out infinite',
+                        'glow': 'glow 2s ease-in-out infinite',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0px)' },
+                            '50%': { transform: 'translateY(-20px)' },
+                        },
+                        glow: {
+                            '0%, 100%': { opacity: 1 },
+                            '50%': { opacity: 0.5 },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        /* Custom CSS for animations and effects */
+        .gradient-text {
+            background: linear-gradient(135deg, #00D4FF, #7B2FFF, #FF2E97);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: gradient 3s ease infinite;
+            background-size: 200% 200%;
+        }
+        
+        @keyframes gradient {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        
+        .neon-border {
+            box-shadow: 
+                0 0 5px rgba(0, 212, 255, 0.5),
+                0 0 10px rgba(0, 212, 255, 0.3),
+                0 0 15px rgba(0, 212, 255, 0.1);
+        }
+        
+        .card-hover {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 
+                0 20px 40px rgba(0, 212, 255, 0.2),
+                0 0 20px rgba(123, 47, 255, 0.2);
+        }
+        
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .progress-fill {
+            transition: width 1.5s ease-out;
+        }
+        
+        /* Smooth scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        
+        ::-webkit-scrollbar-track {
+            background: #1a1a2e;
+        }
+        
+        ::-webkit-scrollbar-thumb {
+            background: linear-gradient(135deg, #00D4FF, #7B2FFF);
+            border-radius: 4px;
+        }
+        
+        /* Mobile menu animation */
+        .hamburger-line {
+            transition: all 0.3s ease;
+        }
+        
+        .hamburger.active .hamburger-line:nth-child(1) {
+            transform: rotate(45deg) translate(5px, 5px);
+        }
+        
+        .hamburger.active .hamburger-line:nth-child(2) {
+            opacity: 0;
+        }
+        
+        .hamburger.active .hamburger-line:nth-child(3) {
+            transform: rotate(-45deg) translate(7px, -6px);
+        }
+        
+        /* Particle container */
+        #particles-js {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            opacity: 0.7;
+        }
+        
+        @media (max-width: 768px) {
+            #particles-js {
+                opacity: 0.3;
+            }
+        }
+
+        /* Certificate Section Styles */
+        .training-card {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .training-card:hover {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 
+                0 20px 40px rgba(0, 212, 255, 0.2),
+                0 0 20px rgba(123, 47, 255, 0.2);
+        }
+
+        .training-tab {
+            transition: all 0.3s ease;
+        }
+
+        .training-tab:hover {
+            transform: translateY(-2px);
+        }
+
+        .training-tab.active {
+            transform: translateY(-2px);
+        }
+
+        /* Certificate Modal Animations */
+        #certificateModal {
+            transition: opacity 0.3s ease;
+        }
+
+        #certificateModal.opacity-100 {
+            opacity: 1;
+        }
+
+        #certificateModal img {
+            transition: transform 0.3s ease;
+        }
+
+        #certificateModal img:hover {
+            transform: scale(1.05);
+        }
+
+        /* Certificate Badge Glow */
+        .training-card .view-certificate {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .training-card .view-certificate::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transform: translateY(-50%);
+            transition: left 0.5s;
+        }
+
+        .training-card .view-certificate:hover::before {
+            left: 100%;
+        }
+
+        /* Status Badge Animations */
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+            50% {
+                transform: scale(1.1);
+                opacity: 0.8;
+            }
+        }
+
+        .training-card span[class*="text-green"] {
+            animation: pulse 2s infinite;
+        }
+
+        /* Responsive Design for Certificate Cards */
+        @media (max-width: 768px) {
+            .training-card {
+                margin-bottom: 1rem;
+            }
+            
+            #certificateModal .inline-block {
+                max-width: 95%;
+            }
+        }
+
+        /* Enhanced Skills Section Styles */
+        .skill-item {
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+        .skill-item:hover {
+            transform: translateX(5px);
+        }
+
+        .skill-item:hover .progress-fill {
+            box-shadow: 0 0 10px currentColor;
+        }
+
+        /* Skill Card Hover Effects */
+        .bg-gray-800\/50:hover {
+            box-shadow: 
+                0 10px 30px rgba(0, 212, 255, 0.1),
+                0 0 15px rgba(123, 47, 255, 0.1);
+        }
+
+        /* Icon Animations */
+        .bg-gray-800\/50 .fa-crown,
+        .bg-gray-800\/50 .fa-chess-king,
+        .bg-gray-800\/50 .fa-flask,
+        .bg-gray-800\/50 .fa-code,
+        .bg-gray-800\/50 .fa-chart-line,
+        .bg-gray-800\/50 .fa-rocket {
+            animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-5px); }
+        }
+
+        /* Tool Icons Hover */
+        .group:hover .bg-gray-700 {
+            background: linear-gradient(135deg, rgba(0, 212, 255, 0.1), rgba(123, 47, 255, 0.1));
+            border: 1px solid rgba(0, 212, 255, 0.3);
+        }
+
+        /* Competency Badge Hover */
+        .bg-gray-700\/50:hover {
+            background: linear-gradient(135deg, rgba(0, 212, 255, 0.2), rgba(123, 47, 255, 0.2));
+            transform: scale(1.05);
+            cursor: default;
+        }
+
+        /* Progress Bar Animation Enhancement */
+        .progress-fill {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .progress-fill::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            animation: shimmer 2s infinite;
+        }
+
+        @keyframes shimmer {
+            0% { left: -100%; }
+            100% { left: 100%; }
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .grid.lg\:grid-cols-6 {
+                grid-template-columns: repeat(3, minmax(0, 1fr));
+            }
+            
+            .bg-gray-800\/50 {
+                margin-bottom: 1rem;
+            }
+        }
+    </style>
+    
+
+</head>
+<body class="bg-gray-900 text-gray-100 overflow-x-hidden">
+    
+    <!-- Particle Background -->
+    <div id="particles-js"></div>
+    
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full bg-gray-900/90 backdrop-blur-md z-50 border-b border-gray-800">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <a href="#home" class="text-xl font-bold gradient-text">
+                    MH
+                </a>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#home" class="nav-link hover:text-neon-blue transition-colors">Home</a>
+                    <a href="#about" class="nav-link hover:text-neon-blue transition-colors">About</a>
+                    <a href="#projects" class="nav-link hover:text-neon-blue transition-colors">Projects</a>
+                    <a href="#skills" class="nav-link hover:text-neon-blue transition-colors">Skills</a>
+                    <a href="#training" class="nav-link hover:text-neon-blue transition-colors">Certifications</a>
+                    <a href="#timeline" class="nav-link hover:text-neon-blue transition-colors">Experience</a>
+                    <a href="#contact" class="nav-link hover:text-neon-blue transition-colors">Contact</a>
+                    <button id="theme-toggle" class="ml-4 p-2 rounded-lg hover:bg-gray-800 transition-colors" aria-label="Toggle theme">
+                        <i class="fas fa-moon text-yellow-400"></i>
+                    </button>
+                </div>
+                
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="md:hidden hamburger p-2" aria-label="Toggle mobile menu" aria-expanded="false">
+                    <div class="space-y-1">
+                        <div class="hamburger-line w-6 h-0.5 bg-gray-300"></div>
+                        <div class="hamburger-line w-6 h-0.5 bg-gray-300"></div>
+                        <div class="hamburger-line w-6 h-0.5 bg-gray-300"></div>
+                    </div>
+                </button>
+            </div>
+            
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="hidden md:hidden py-4 border-t border-gray-800">
+                <div class="flex flex-col space-y-4">
+                    <a href="#home" class="mobile-nav-link hover:text-neon-blue transition-colors">Home</a>
+                    <a href="#about" class="mobile-nav-link hover:text-neon-blue transition-colors">About</a>
+                    <a href="#projects" class="mobile-nav-link hover:text-neon-blue transition-colors">Projects</a>
+                    <a href="#skills" class="mobile-nav-link hover:text-neon-blue transition-colors">Skills</a>
+                    <a href="#training" class="mobile-nav-link hover:text-neon-blue transition-colors">Certifications</a>
+                    <a href="#timeline" class="mobile-nav-link hover:text-neon-blue transition-colors">Experience</a>
+                    <a href="#contact" class="mobile-nav-link hover:text-neon-blue transition-colors">Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Hero Section -->
+    <section id="home" class="min-h-screen flex items-center justify-center relative">
+        <div class="container mx-auto px-4 text-center z-10">
+            <div class="reveal">
+                <h1 class="text-5xl md:text-7xl font-bold mb-6">
+                    <span class="gradient-text">Marufur Rahman</span>
+                </h1>
+                <p class="text-xl md:text-2xl text-gray-400 mb-4">
+                    Tech & Finance Innovator | প্রযুক্তি উদ্যোক্তা
+                </p>
+                <p class="text-lg text-gray-500 mb-8">
+                    Founder @ <span class="text-neon-blue">Rokto Bondhu</span> & <span class="text-neon-purple">Tutorly AI</span>
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="#projects" class="px-8 py-3 bg-gradient-to-r from-neon-blue to-neon-purple rounded-lg font-semibold hover:scale-105 transition-transform">
+                        View Work
+                    </a>
+                    <a href="#contact" class="px-8 py-3 border border-gray-600 rounded-lg font-semibold hover:bg-gray-800 transition-colors">
+                        Get In Touch
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Animated Stats -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mt-16 reveal">
+                <div class="text-center">
+                    <div class="text-3xl font-bold text-neon-blue counter" data-target="1000">0</div>
+                    <div class="text-sm text-gray-500">Users Helped</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-3xl font-bold text-neon-purple counter" data-target="15">0</div>
+                    <div class="text-sm text-gray-500">Projects Shipped</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-3xl font-bold text-neon-pink counter" data-target="500">0</div>
+                    <div class="text-sm text-gray-500">Blood Donors</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-3xl font-bold text-green-400 counter" data-target="95">0</div>
+                    <div class="text-sm text-gray-500">Client Satisfaction %</div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Scroll Indicator -->
+        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+            <i class="fas fa-chevron-down text-gray-500"></i>
+        </div>
+    </section>
+    
+    <!-- About Section -->
+    <section id="about" class="py-20">
+        <div class="container mx-auto px-4">
+            <div class="reveal">
+                <h2 class="text-4xl font-bold text-center mb-12 gradient-text">About Me</h2>
+                <div class="max-w-4xl mx-auto">
+                    <div class="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-8 neon-border">
+                        <p class="text-lg text-gray-300 mb-6 leading-relaxed">
+                            Passionate entrepreneur bridging technology and social impact. Building innovative solutions that matter - from saving lives through blood donation networks to democratizing education with AI.
+                        </p>
+                        <p class="text-lg text-gray-300 mb-8 leading-relaxed">
+                            প্রযুক্তির মাধ্যমে সমাজে ইতিবাচক পরিবর্তন আনতে প্রতিশ্রুতিবদ্ধ। My journey spans from fintech innovations to healthcare technology, always with a focus on accessibility and user empowerment.
+                        </p>
+                        
+                        <!-- Founder Badges -->
+                        <div class="flex flex-wrap gap-4 justify-center">
+                            <div class="px-4 py-2 bg-gradient-to-r from-red-600 to-red-800 rounded-full text-sm font-semibold">
+                                🩸 Rokto Bondhu Founder
+                            </div>
+                            <div class="px-4 py-2 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full text-sm font-semibold">
+                                🤖 Tutorly AI Co-Founder
+                            </div>
+                            <div class="px-4 py-2 bg-gradient-to-r from-green-600 to-teal-600 rounded-full text-sm font-semibold">
+                                💰 Fintech Innovator
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 bg-gray-800/30">
+        <div class="container mx-auto px-4">
+            <div class="reveal">
+                <h2 class="text-4xl font-bold text-center mb-12 gradient-text">Featured Projects</h2>
+                
+                <!-- Filter Buttons -->
+                <div class="flex flex-wrap justify-center gap-4 mb-12">
+                    <button class="filter-btn active px-6 py-2 rounded-full border border-neon-blue bg-neon-blue/20 transition-all" data-filter="all">
+                        All
+                    </button>
+                    <button class="filter-btn px-6 py-2 rounded-full border border-gray-600 hover:border-neon-blue transition-all" data-filter="web">
+                        Web
+                    </button>
+                    <button class="filter-btn px-6 py-2 rounded-full border border-gray-600 hover:border-neon-blue transition-all" data-filter="ai">
+                        AI/ML
+                    </button>
+                    <button class="filter-btn px-6 py-2 rounded-full border border-gray-600 hover:border-neon-blue transition-all" data-filter="product">
+                        Product
+                    </button>
+                </div>
+                
+                <!-- Project Cards Grid -->
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Project 1: Rokto Bondhu -->
+                    <div class="project-card card-hover bg-gray-800/50 backdrop-blur-sm rounded-xl overflow-hidden" data-category="web product">
+                        <div class="h-48 bg-gradient-to-br from-red-600 to-red-800 flex items-center justify-center">
+                            <i class="fas fa-heartbeat text-6xl text-white/50"></i>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2">Rokto Bondhu</h3>
+                            <p class="text-gray-400 mb-4">Revolutionary blood donation platform connecting donors with those in need. Saved 500+ lives.</p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="px-2 py-1 bg-gray-700 rounded text-xs">React</span>
+                                <span class="px-2 py-1 bg-gray-700 rounded text-xs">Node.js</span>
+                                <span class="px-2 py-1 bg-gray-700 rounded text-xs">MongoDB</span>
+                                <span class="px-2 py-1 bg-gray-700 rounded text-xs">Maps API</span>
+                            </div>
+                            <div class="flex gap-4">
+                                <a href="#" class="text-neon-blue hover:text-neon-purple transition-colors">
+                                    <i class="fas fa-external-link-alt"></i> Live
+                                </a>
+                                <a href="#" class="text-neon-blue hover:text-neon-purple transition-colors">
+                                    <i class="fab fa-github"></i> Code
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Project 2: Tutorly AI -->
+                    <div class="project-card card-hover bg-gray-800/50 backdrop-blur-sm rounded-xl overflow-hidden" data-category="ai product">
+                        <div class="h-48 bg-gradient-to-br from-blue-600 to-purple-600 flex items-center justify-center">
+                            <i class="fas fa-robot text-6xl text-white/50"></i>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2">Tutorly AI</h3>
+                            <p class="text-gray-400 mb-4">AI-powered personalized learning platform revolutionizing education for 1000+ students.</p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="px-2 py-1 bg-gray-700 rounded text-xs">Python</span>
+                                <span class="px-2 py-1 bg-gray-700 rounded text-xs">TensorFlow</span>
+                                <span class="px-2 py-1 bg-gray-700 rounded text-xs">FastAPI</span>
+                                <span class="px-2 py-1 bg-gray-700 rounded text-xs">React</span>
+                            </div>
+                            <div class="flex gap-4">
+                                <a href="#" class="text-neon-blue hover:text-neon-purple transition-colors">
+                                    <i class="fas fa-external-link-alt"></i> Live
+                                </a>
+                                <a href="#" class="text-neon-blue hover:text-neon-purple transition-colors">
+                                    <i class="fab fa-github"></i> Code
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Project 3: FinTrack Pro -->
+                    <div class="project-card card-hover bg-gray-800/50 backdrop-blur-sm rounded-xl overflow-hidden" data-category="web product">
+                        <div class="h-48 bg-gradient-to-br from-green-600 to-teal-600 flex items-center justify-center">
+                            <i class="fas fa-chart-line text-6xl text-white/50"></i>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2">FinTrack Pro</h3>
+                            <p class="text-gray-400 mb-4">Smart financial tracking and analytics platform for SMEs. Managing $2M+ in transactions.</p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="px-2 py-1 bg-gray-700 rounded text-xs">Vue.js</span>
+                                <span class="px-2 py-1 bg-gray-700 rounded text-xs">Django</span>
+                                <span class="px-2 py-1 bg-gray-700 rounded text-xs">PostgreSQL</span>
+                                <span class="px-2 py-1 bg-gray-700 rounded text-xs">D3.js</span>
+                            </div>
+                            <div class="flex gap-4">
+                                <a href="#" class="text-neon-blue hover:text-neon-purple transition-colors">
+                                    <i class="fas fa-external-link-alt"></i> Live
+                                </a>
+                                <a href="#" class="text-neon-blue hover:text-neon-purple transition-colors">
+                                    <i class="fab fa-github"></i> Code
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Skills Section - Entrepreneur/Founder Focus -->
+    <section id="skills" class="py-20">
+        <div class="container mx-auto px-4">
+            <div class="reveal">
+                <h2 class="text-4xl font-bold text-center mb-4 gradient-text">Skills & Expertise</h2>
+                <p class="text-center text-gray-400 mb-12 max-w-2xl mx-auto">
+                    Multidisciplinary expertise spanning entrepreneurship, research, technology, and innovation
+                </p>
+                
+                <!-- Skill Categories Tabs -->
+                <div class="flex flex-wrap justify-center gap-3 mb-12">
+                    <span class="px-4 py-2 bg-gradient-to-r from-neon-blue to-neon-purple rounded-full text-sm font-semibold">
+                        🚀 Entrepreneur
+                    </span>
+                    <span class="px-4 py-2 bg-gradient-to-r from-neon-purple to-neon-pink rounded-full text-sm font-semibold">
+                        🔬 Researcher
+                    </span>
+                    <span class="px-4 py-2 bg-gradient-to-r from-neon-pink to-green-400 rounded-full text-sm font-semibold">
+                        💡 Innovator
+                    </span>
+                    <span class="px-4 py-2 bg-gradient-to-r from-green-400 to-neon-blue rounded-full text-sm font-semibold">
+                        👨‍💼 Founder
+                    </span>
+                </div>
+                
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                    
+                    <!-- Leadership & Management -->
+                    <div class="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 hover:scale-105 transition-transform">
+                        <div class="flex items-center mb-6">
+                            <div class="w-12 h-12 bg-gradient-to-br from-neon-blue to-blue-600 rounded-lg flex items-center justify-center mr-3">
+                                <i class="fas fa-crown text-white"></i>
+                            </div>
+                            <h3 class="text-xl font-semibold text-neon-blue">Leadership & Management</h3>
+                        </div>
+                        <div class="space-y-4">
+                            <div class="skill-item">
+                                <div class="flex justify-between mb-2">
+                                    <span class="text-gray-300">Team Leadership</span>
+                                    <span class="text-gray-500">95%</span>
+                                </div>
+                                <div class="w-full bg-gray-700 rounded-full h-2">
+                                    <div class="progress-fill bg-gradient-to-r from-neon-blue to-blue-500 h-2 rounded-full" style="width: 0%" data-width="95%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="flex justify-between mb-2">
+                                    <span class="text-gray-300">Strategic Planning</span>
+                                    <span class="text-gray-500">92%</span>
+                                </div>
+                                <div class="w-full bg-gray-700 rounded-full h-2">
+                                    <div class="progress-fill bg-gradient-to-r from-neon-blue to-blue-500 h-2 rounded-full" style="width: 0%" data-width="92%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="flex justify-between mb-2">
+                                    <span class="text-gray-300">Cross-functional Collaboration</span>
+                                    <span class="text-gray-500">90%</span>
+                                </div>
+                                <div class="w-full bg-gray-700 rounded-full h-2">
+                                    <div class="progress-fill bg-gradient-to-r from-neon-blue to-blue-500 h-2 rounded-full" style="width: 0%" data-width="90%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="flex justify-between mb-2">
+                                    <span class="text-gray-300">Crisis Management</span>
+                                    <span class="text-gray-500">88%</span>
+                                </div>
+                                <div class="w-full bg-gray-700 rounded-full h-2">
+                                    <div class="progress-fill bg-gradient-to-r from-neon-blue to-blue-500 h-2 rounded-full" style="width: 0%" data-width="88%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Business & Strategy -->
+                    <div class="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 hover:scale-105 transition-transform">
+                        <div class="flex items-center mb-6">
+                            <div class="w-12 h-12 bg-gradient-to-br from-neon-purple to-purple-600 rounded-lg flex items-center justify-center mr-3">
+                                <i class="fas fa-chess-king text-white"></i>
+                            </div>
+                            <h3 class="text-xl font-semibold text-neon-purple">Business & Strategy</h3>
+                        </div>
+                        <div class="space-y-4">
+                            <div class="skill-item">
+                                <div class="flex justify-between mb-2">
+                                    <span class="text-gray-300">Business Development</span>
+                                    <span class="text-gray-500">93%</span>
+                                </div>
+                                <div class="w-full bg-gray-700 rounded-full h-2">
+                                    <div class="progress-fill bg-gradient-to-r from-neon-purple to-purple-500 h-2 rounded-full" style="width: 0%" data-width="93%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="flex justify-between mb-2">
+                                    <span class="text-gray-300">Market Analysis</span>
+                                    <span class="text-gray-500">87%</span>
+                                </div>
+                                <div class="w-full bg-gray-700 rounded-full h-2">
+                                    <div class="progress-fill bg-gradient-to-r from-neon-purple to-purple-500 h-2 rounded-full" style="width: 0%" data-width="87%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="flex justify-between mb-2">
+                                    <span class="text-gray-300">Product-Market Fit</span>
+                                    <span class="text-gray-500">91%</span>
+                                </div>
+                                <div class="w-full bg-gray-700 rounded-full h-2">
+                                    <div class="progress-fill bg-gradient-to-r from-neon-purple to-purple-500 h-2 rounded-full" style="width: 0%" data-width="91%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="flex justify-between mb-2">
+                                    <span class="text-gray-300">Competitive Analysis</span>
+                                    <span class="text-gray-500">85%</span>
+                                </div>
+                                <div class="w-full bg-gray-700 rounded-full h-2">
+                                    <div class="progress-fill bg-gradient-to-r from-neon-purple to-purple-500 h-2 rounded-full" style="width: 0%" data-width="85%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Research & Innovation -->
+                    <div class="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 hover:scale-105 transition-transform">
+                        <div class="flex items-center mb-6">
+                            <div class="w-12 h-12 bg-gradient-to-br from-neon-pink to-pink-600 rounded-lg flex items-center justify-center mr-3">
+                                <i class="fas fa-flask text-white"></i>
+                            </div>
+                            <h3 class="text-xl font-semibold text-neon-pink">Research & Innovation</h3>
+                        </div>
+                        <div class="space-y-4">
+                            <div class="skill-item">
+                                <div class="flex justify-between mb-2">
+                                    <span class="text-gray-300">R&D Management</span>
+                                    <span class="text-gray-500">89%</span>
+                                </div>
+                                <div class="w-full bg-gray-700 rounded-full h-2">
+                                    <div class="progress-fill bg-gradient-to-r from-neon-pink to-pink-500 h-2 rounded-full" style="width: 0%" data-width="89%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="flex justify-between mb-2">
+                                    <span class="text-gray-300">Data Analysis & Insights</span>
+                                    <span class="text-gray-500">86%</span>
+                                </div>
+                                <div class="w-full bg-gray-700 rounded-full h-2">
+                                    <div class="progress-fill bg-gradient-to-r from-neon-pink to-pink-500 h-2 rounded-full" style="width: 0%" data-width="86%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="flex justify-between mb-2">
+                                    <span class="text-gray-300">Problem-Solving</span>
+                                    <span class="text-gray-500">94%</span>
+                                </div>
+                                <div class="w-full bg-gray-700 rounded-full h-2">
+                                    <div class="progress-fill bg-gradient-to-r from-neon-pink to-pink-500 h-2 rounded-full" style="width: 0%" data-width="94%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="flex justify-between mb-2">
+                                    <span class="text-gray-300">Innovation Frameworks</span>
+                                    <span class="text-gray-500">88%</span>
+                                </div>
+                                <div class="w-full bg-gray-700 rounded-full h-2">
+                                    <div class="progress-fill bg-gradient-to-r from-neon-pink to-pink-500 h-2 rounded-full" style="width: 0%" data-width="88%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Technical & Development -->
+                    <div class="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 hover:scale-105 transition-transform">
+                        <div class="flex items-center mb-6">
+                            <div class="w-12 h-12 bg-gradient-to-br from-green-500 to-teal-600 rounded-lg flex items-center justify-center mr-3">
+                                <i class="fas fa-code text-white"></i>
+                            </div>
+                            <h3 class="text-xl font-semibold text-green-400">Technical & Development</h3>
+                        </div>
+                        <div class="space-y-4">
+                            <div class="skill-item">
+                                <div class="flex justify-between mb-2">
+                                    <span class="text-gray-300">Full-Stack Development</span>
+                                    <span class="text-gray-500">90%</span>
+                                </div>
+                                <div class="w-full bg-gray-700 rounded-full h-2">
+                                    <div class="progress-fill bg-gradient-to-r from-green-400 to-teal-500 h-2 rounded-full" style="width: 0%" data-width="90%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="flex justify-between mb-2">
+                                    <span class="text-gray-300">AI/ML Implementation</span>
+                                    <span class="text-gray-500">82%</span>
+                                </div>
+                                <div class="w-full bg-gray-700 rounded-full h-2">
+                                    <div class="progress-fill bg-gradient-to-r from-green-400 to-teal-500 h-2 rounded-full" style="width: 0%" data-width="82%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="flex justify-between mb-2">
+                                    <span class="text-gray-300">Cloud Architecture</span>
+                                    <span class="text-gray-500">85%</span>
+                                </div>
+                                <div class="w-full bg-gray-700 rounded-full h-2">
+                                    <div class="progress-fill bg-gradient-to-r from-green-400 to-teal-500 h-2 rounded-full" style="width: 0%" data-width="85%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="flex justify-between mb-2">
+                                    <span class="text-gray-300">System Design</span>
+                                    <span class="text-gray-500">87%</span>
+                                </div>
+                                <div class="w-full bg-gray-700 rounded-full h-2">
+                                    <div class="progress-fill bg-gradient-to-r from-green-400 to-teal-500 h-2 rounded-full" style="width: 0%" data-width="87%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Financial & Investment -->
+                    <div class="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 hover:scale-105 transition-transform">
+                        <div class="flex items-center mb-6">
+                            <div class="w-12 h-12 bg-gradient-to-br from-yellow-500 to-orange-600 rounded-lg flex items-center justify-center mr-3">
+                                <i class="fas fa-chart-line text-white"></i>
+                            </div>
+                            <h3 class="text-xl font-semibold text-yellow-400">Financial & Investment</h3>
+                        </div>
+                        <div class="space-y-4">
+                            <div class="skill-item">
+                                <div class="flex justify-between mb-2">
+                                    <span class="text-gray-300">Financial Modeling</span>
+                                    <span class="text-gray-500">88%</span>
+                                </div>
+                                <div class="w-full bg-gray-700 rounded-full h-2">
+                                    <div class="progress-fill bg-gradient-to-r from-yellow-400 to-orange-500 h-2 rounded-full" style="width: 0%" data-width="88%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="flex justify-between mb-2">
+                                    <span class="text-gray-300">Fundraising & Pitching</span>
+                                    <span class="text-gray-500">91%</span>
+                                </div>
+                                <div class="w-full bg-gray-700 rounded-full h-2">
+                                    <div class="progress-fill bg-gradient-to-r from-yellow-400 to-orange-500 h-2 rounded-full" style="width: 0%" data-width="91%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="flex justify-between mb-2">
+                                    <span class="text-gray-300">Venture Capital Relations</span>
+                                    <span class="text-gray-500">84%</span>
+                                </div>
+                                <div class="w-full bg-gray-700 rounded-full h-2">
+                                    <div class="progress-fill bg-gradient-to-r from-yellow-400 to-orange-500 h-2 rounded-full" style="width: 0%" data-width="84%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="flex justify-between mb-2">
+                                    <span class="text-gray-300">P&L Management</span>
+                                    <span class="text-gray-500">86%</span>
+                                </div>
+                                <div class="w-full bg-gray-700 rounded-full h-2">
+                                    <div class="progress-fill bg-gradient-to-r from-yellow-400 to-orange-500 h-2 rounded-full" style="width: 0%" data-width="86%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Marketing & Growth -->
+                    <div class="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 hover:scale-105 transition-transform">
+                        <div class="flex items-center mb-6">
+                            <div class="w-12 h-12 bg-gradient-to-br from-red-500 to-pink-600 rounded-lg flex items-center justify-center mr-3">
+                                <i class="fas fa-rocket text-white"></i>
+                            </div>
+                            <h3 class="text-xl font-semibold text-red-400">Marketing & Growth</h3>
+                        </div>
+                        <div class="space-y-4">
+                            <div class="skill-item">
+                                <div class="flex justify-between mb-2">
+                                    <span class="text-gray-300">Growth Hacking</span>
+                                    <span class="text-gray-500">87%</span>
+                                </div>
+                                <div class="w-full bg-gray-700 rounded-full h-2">
+                                    <div class="progress-fill bg-gradient-to-r from-red-400 to-pink-500 h-2 rounded-full" style="width: 0%" data-width="87%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="flex justify-between mb-2">
+                                    <span class="text-gray-300">Digital Marketing</span>
+                                    <span class="text-gray-500">83%</span>
+                                </div>
+                                <div class="w-full bg-gray-700 rounded-full h-2">
+                                    <div class="progress-fill bg-gradient-to-r from-red-400 to-pink-500 h-2 rounded-full" style="width: 0%" data-width="83%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="flex justify-between mb-2">
+                                    <span class="text-gray-300">Brand Building</span>
+                                    <span class="text-gray-500">89%</span>
+                                </div>
+                                <div class="w-full bg-gray-700 rounded-full h-2">
+                                    <div class="progress-fill bg-gradient-to-r from-red-400 to-pink-500 h-2 rounded-full" style="width: 0%" data-width="89%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="flex justify-between mb-2">
+                                    <span class="text-gray-300">User Acquisition</span>
+                                    <span class="text-gray-500">85%</span>
+                                </div>
+                                <div class="w-full bg-gray-700 rounded-full h-2">
+                                    <div class="progress-fill bg-gradient-to-r from-red-400 to-pink-500 h-2 rounded-full" style="width: 0%" data-width="85%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Special Skills & Tools -->
+                <div class="mt-16 bg-gray-800/50 backdrop-blur-sm rounded-2xl p-8 neon-border">
+                    <h3 class="text-2xl font-bold text-center mb-8 gradient-text">Core Competencies & Tools</h3>
+                    
+                    <!-- Competency Badges -->
+                    <div class="flex flex-wrap justify-center gap-3 mb-8">
+                        <!-- Soft Skills -->
+                        <div class="px-4 py-2 bg-gray-700/50 rounded-full text-sm">
+                            <i class="fas fa-brain text-neon-blue mr-2"></i>Critical Thinking
+                        </div>
+                        <div class="px-4 py-2 bg-gray-700/50 rounded-full text-sm">
+                            <i class="fas fa-users text-neon-purple mr-2"></i>Stakeholder Management
+                        </div>
+                        <div class="px-4 py-2 bg-gray-700/50 rounded-full text-sm">
+                            <i class="fas fa-comments text-neon-pink mr-2"></i>Public Speaking
+                        </div>
+                        <div class="px-4 py-2 bg-gray-700/50 rounded-full text-sm">
+                            <i class="fas fa-handshake text-green-400 mr-2"></i>Negotiation
+                        </div>
+                        <div class="px-4 py-2 bg-gray-700/50 rounded-full text-sm">
+                            <i class="fas fa-lightbulb text-yellow-400 mr-2"></i>Design Thinking
+                        </div>
+                        <div class="px-4 py-2 bg-gray-700/50 rounded-full text-sm">
+                            <i class="fas fa-sync text-red-400 mr-2"></i>Agile Methodologies
+                        </div>
+                    </div>
+                    
+                    <!-- Tools & Technologies -->
+                    <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
+                        <!-- Programming Languages -->
+                        <div class="text-center group">
+                            <div class="w-16 h-16 mx-auto mb-2 bg-gray-700 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
+                                <i class="fab fa-python text-2xl text-yellow-400"></i>
+                            </div>
+                            <span class="text-xs text-gray-400">Python</span>
+                        </div>
+                        <div class="text-center group">
+                            <div class="w-16 h-16 mx-auto mb-2 bg-gray-700 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
+                                <i class="fab fa-js text-2xl text-yellow-300"></i>
+                            </div>
+                            <span class="text-xs text-gray-400">JavaScript</span>
+                        </div>
+                        <div class="text-center group">
+                            <div class="w-16 h-16 mx-auto mb-2 bg-gray-700 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
+                                <i class="fab fa-react text-2xl text-cyan-400"></i>
+                            </div>
+                            <span class="text-xs text-gray-400">React</span>
+                        </div>
+                        
+                        <!-- Business Tools -->
+                        <div class="text-center group">
+                            <div class="w-16 h-16 mx-auto mb-2 bg-gray-700 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
+                                <i class="fab fa-figma text-2xl text-purple-400"></i>
+                            </div>
+                            <span class="text-xs text-gray-400">Figma</span>
+                        </div>
+                        <div class="text-center group">
+                            <div class="w-16 h-16 mx-auto mb-2 bg-gray-700 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
+                                <i class="fab fa-slack text-2xl text-pink-400"></i>
+                            </div>
+                            <span class="text-xs text-gray-400">Slack</span>
+                        </div>
+                        <div class="text-center group">
+                            <div class="w-16 h-16 mx-auto mb-2 bg-gray-700 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
+                                <i class="fab fa-trello text-2xl text-blue-400"></i>
+                            </div>
+                            <span class="text-xs text-gray-400">Trello</span>
+                        </div>
+                        
+                        <!-- Analytics Tools -->
+                        <div class="text-center group">
+                            <div class="w-16 h-16 mx-auto mb-2 bg-gray-700 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
+                                <i class="fab fa-google text-2xl text-green-400"></i>
+                            </div>
+                            <span class="text-xs text-gray-400">Analytics</span>
+                        </div>
+                        <div class="text-center group">
+                            <div class="w-16 h-16 mx-auto mb-2 bg-gray-700 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
+                                <i class="fas fa-chart-bar text-2xl text-orange-400"></i>
+                            </div>
+                            <span class="text-xs text-gray-400">Tableau</span>
+                        </div>
+                        <div class="text-center group">
+                            <div class="w-16 h-16 mx-auto mb-2 bg-gray-700 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
+                                <i class="fab fa-github text-2xl text-gray-400"></i>
+                            </div>
+                            <span class="text-xs text-gray-400">GitHub</span>
+                        </div>
+                        
+                        <!-- Cloud Platforms -->
+                        <div class="text-center group">
+                            <div class="w-16 h-16 mx-auto mb-2 bg-gray-700 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
+                                <i class="fab fa-aws text-2xl text-orange-500"></i>
+                            </div>
+                            <span class="text-xs text-gray-400">AWS</span>
+                        </div>
+                        <div class="text-center group">
+                            <div class="w-16 h-16 mx-auto mb-2 bg-gray-700 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
+                                <i class="fab fa-google text-2xl text-blue-500"></i>
+                            </div>
+                            <span class="text-xs text-gray-400">GCP</span>
+                        </div>
+                        <div class="text-center group">
+                            <div class="w-16 h-16 mx-auto mb-2 bg-gray-700 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
+                                <i class="fab fa-docker text-2xl text-blue-400"></i>
+                            </div>
+                            <span class="text-xs text-gray-400">Docker</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Skill Metrics -->
+                <div class="mt-12 grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+                    <div>
+                        <div class="text-3xl font-bold text-neon-blue mb-2">10+</div>
+                        <div class="text-sm text-gray-400">Years Experience</div>
+                    </div>
+                    <div>
+                        <div class="text-3xl font-bold text-neon-purple mb-2">50+</div>
+                        <div class="text-sm text-gray-400">Projects Led</div>
+                    </div>
+                    <div>
+                        <div class="text-3xl font-bold text-neon-pink mb-2">25+</div>
+                        <div class="text-sm text-gray-400">Team Members</div>
+                    </div>
+                    <div>
+                        <div class="text-3xl font-bold text-green-400 mb-2">3</div>
+                        <div class="text-sm text-gray-400">Companies Founded</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Add this section after the Timeline/Experience section -->
+
+    <!-- Professional Internships & Training Section -->
+    <section id="training" class="py-20">
+        <div class="container mx-auto px-4">
+            <div class="reveal">
+                <h2 class="text-4xl font-bold text-center mb-4 gradient-text">Professional Internships & Training</h2>
+                <p class="text-center text-gray-400 mb-12 max-w-2xl mx-auto">
+                    Hands-on experience across diverse technical and leadership domains
+                </p>
+                
+                <!-- Training Categories Tabs -->
+                <div class="flex flex-wrap justify-center gap-4 mb-12">
+                    <button class="training-tab active px-6 py-2 rounded-full border border-neon-blue bg-neon-blue/20 transition-all" data-category="all">
+                        All Certifications
+                    </button>
+                    <button class="training-tab px-6 py-2 rounded-full border border-gray-600 hover:border-neon-blue transition-all" data-category="technical">
+                        Technical
+                    </button>
+                    <button class="training-tab px-6 py-2 rounded-full border border-gray-600 hover:border-neon-blue transition-all" data-category="leadership">
+                        Leadership
+                    </button>
+                    <button class="training-tab px-6 py-2 rounded-full border border-gray-600 hover:border-neon-blue transition-all" data-category="business">
+                        Business
+                    </button>
+                </div>
+                
+                <!-- Internships & Training Grid -->
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+                    
+                    <!-- Training Card 1: Google Cloud -->
+                    <div class="training-card card-hover bg-gray-800/50 backdrop-blur-sm rounded-xl overflow-hidden" data-training-category="technical">
+                        <div class="p-6">
+                            <div class="flex items-start justify-between mb-4">
+                                <div class="w-12 h-12 bg-gradient-to-br from-blue-500 to-blue-700 rounded-lg flex items-center justify-center">
+                                    <i class="fab fa-google text-white text-xl"></i>
+                                </div>
+                                <span class="px-3 py-1 bg-green-500/20 text-green-400 rounded-full text-xs font-semibold">
+                                    Completed
+                                </span>
+                            </div>
+                            <h3 class="text-xl font-bold mb-2">Google Cloud Platform</h3>
+                            <p class="text-gray-400 text-sm mb-3">Cloud Architecture & DevOps</p>
+                            <div class="mb-4">
+                                <p class="text-gray-500 text-xs mb-2">Duration: 6 months | 2023</p>
+                                <p class="text-gray-300 text-sm">
+                                    Mastered cloud infrastructure, Kubernetes orchestration, and serverless architectures.
+                                </p>
+                            </div>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="px-2 py-1 bg-gray-700 rounded text-xs">GCP</span>
+                                <span class="px-2 py-1 bg-gray-700 rounded text-xs">Kubernetes</span>
+                                <span class="px-2 py-1 bg-gray-700 rounded text-xs">CI/CD</span>
+                            </div>
+                            <button class="view-certificate w-full px-4 py-2 bg-gradient-to-r from-neon-blue to-neon-purple rounded-lg text-sm font-semibold hover:scale-105 transition-transform"
+                                data-cert-id="gcp-cert">
+                                <i class="fas fa-certificate mr-2"></i>View Certificate
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <!-- Training Card 2: Meta/Facebook -->
+                    <div class="training-card card-hover bg-gray-800/50 backdrop-blur-sm rounded-xl overflow-hidden" data-training-category="technical">
+                        <div class="p-6">
+                            <div class="flex items-start justify-between mb-4">
+                                <div class="w-12 h-12 bg-gradient-to-br from-blue-600 to-indigo-700 rounded-lg flex items-center justify-center">
+                                    <i class="fab fa-facebook text-white text-xl"></i>
+                                </div>
+                                <span class="px-3 py-1 bg-green-500/20 text-green-400 rounded-full text-xs font-semibold">
+                                    Completed
+                                </span>
+                            </div>
+                            <h3 class="text-xl font-bold mb-2">Meta Front-End Developer</h3>
+                            <p class="text-gray-400 text-sm mb-3">Professional Certificate Program</p>
+                            <div class="mb-4">
+                                <p class="text-gray-500 text-xs mb-2">Duration: 8 months | 2023</p>
+                                <p class="text-gray-300 text-sm">
+                                    Advanced React development, mobile-first design, and modern web technologies.
+                                </p>
+                            </div>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="px-2 py-1 bg-gray-700 rounded text-xs">React</span>
+                                <span class="px-2 py-1 bg-gray-700 rounded text-xs">JavaScript</span>
+                                <span class="px-2 py-1 bg-gray-700 rounded text-xs">UI/UX</span>
+                            </div>
+                            <button class="view-certificate w-full px-4 py-2 bg-gradient-to-r from-neon-blue to-neon-purple rounded-lg text-sm font-semibold hover:scale-105 transition-transform"
+                                data-cert-id="meta-cert">
+                                <i class="fas fa-certificate mr-2"></i>View Certificate
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <!-- Training Card 3: AWS Solutions Architect -->
+                    <div class="training-card card-hover bg-gray-800/50 backdrop-blur-sm rounded-xl overflow-hidden" data-training-category="technical">
+                        <div class="p-6">
+                            <div class="flex items-start justify-between mb-4">
+                                <div class="w-12 h-12 bg-gradient-to-br from-orange-500 to-yellow-600 rounded-lg flex items-center justify-center">
+                                    <i class="fab fa-aws text-white text-xl"></i>
+                                </div>
+                                <span class="px-3 py-1 bg-green-500/20 text-green-400 rounded-full text-xs font-semibold">
+                                    Certified
+                                </span>
+                            </div>
+                            <h3 class="text-xl font-bold mb-2">AWS Solutions Architect</h3>
+                            <p class="text-gray-400 text-sm mb-3">Associate Level Certification</p>
+                            <div class="mb-4">
+                                <p class="text-gray-500 text-xs mb-2">Duration: 4 months | 2022</p>
+                                <p class="text-gray-300 text-sm">
+                                    Designed scalable, cost-optimized cloud solutions for enterprise applications.
+                                </p>
+                            </div>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="px-2 py-1 bg-gray-700 rounded text-xs">AWS</span>
+                                <span class="px-2 py-1 bg-gray-700 rounded text-xs">Architecture</span>
+                                <span class="px-2 py-1 bg-gray-700 rounded text-xs">Security</span>
+                            </div>
+                            <button class="view-certificate w-full px-4 py-2 bg-gradient-to-r from-neon-blue to-neon-purple rounded-lg text-sm font-semibold hover:scale-105 transition-transform"
+                                data-cert-id="aws-cert">
+                                <i class="fas fa-certificate mr-2"></i>View Certificate
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <!-- Training Card 4: Harvard Business School -->
+                    <div class="training-card card-hover bg-gray-800/50 backdrop-blur-sm rounded-xl overflow-hidden" data-training-category="leadership business">
+                        <div class="p-6">
+                            <div class="flex items-start justify-between mb-4">
+                                <div class="w-12 h-12 bg-gradient-to-br from-red-600 to-red-800 rounded-lg flex items-center justify-center">
+                                    <i class="fas fa-university text-white text-xl"></i>
+                                </div>
+                                <span class="px-3 py-1 bg-green-500/20 text-green-400 rounded-full text-xs font-semibold">
+                                    Completed
+                                </span>
+                            </div>
+                            <h3 class="text-xl font-bold mb-2">Harvard Business School Online</h3>
+                            <p class="text-gray-400 text-sm mb-3">Entrepreneurship Essentials</p>
+                            <div class="mb-4">
+                                <p class="text-gray-500 text-xs mb-2">Duration: 4 weeks | 2023</p>
+                                <p class="text-gray-300 text-sm">
+                                    Business strategy, venture financing, and startup ecosystem navigation.
+                                </p>
+                            </div>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="px-2 py-1 bg-gray-700 rounded text-xs">Strategy</span>
+                                <span class="px-2 py-1 bg-gray-700 rounded text-xs">Finance</span>
+                                <span class="px-2 py-1 bg-gray-700 rounded text-xs">Leadership</span>
+                            </div>
+                            <button class="view-certificate w-full px-4 py-2 bg-gradient-to-r from-neon-blue to-neon-purple rounded-lg text-sm font-semibold hover:scale-105 transition-transform"
+                                data-cert-id="harvard-cert">
+                                <i class="fas fa-certificate mr-2"></i>View Certificate
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <!-- Training Card 5: Microsoft AI -->
+                    <div class="training-card card-hover bg-gray-800/50 backdrop-blur-sm rounded-xl overflow-hidden" data-training-category="technical">
+                        <div class="p-6">
+                            <div class="flex items-start justify-between mb-4">
+                                <div class="w-12 h-12 bg-gradient-to-br from-green-500 to-teal-600 rounded-lg flex items-center justify-center">
+                                    <i class="fab fa-microsoft text-white text-xl"></i>
+                                </div>
+                                <span class="px-3 py-1 bg-green-500/20 text-green-400 rounded-full text-xs font-semibold">
+                                    Certified
+                                </span>
+                            </div>
+                            <h3 class="text-xl font-bold mb-2">Microsoft Azure AI Engineer</h3>
+                            <p class="text-gray-400 text-sm mb-3">AI-102 Certification</p>
+                            <div class="mb-4">
+                                <p class="text-gray-500 text-xs mb-2">Duration: 6 months | 2023</p>
+                                <p class="text-gray-300 text-sm">
+                                    Built and deployed AI solutions using Azure Cognitive Services and ML Studio.
+                                </p>
+                            </div>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="px-2 py-1 bg-gray-700 rounded text-xs">Azure AI</span>
+                                <span class="px-2 py-1 bg-gray-700 rounded text-xs">ML</span>
+                                <span class="px-2 py-1 bg-gray-700 rounded text-xs">NLP</span>
+                            </div>
+                            <button class="view-certificate w-full px-4 py-2 bg-gradient-to-r from-neon-blue to-neon-purple rounded-lg text-sm font-semibold hover:scale-105 transition-transform"
+                                data-cert-id="azure-cert">
+                                <i class="fas fa-certificate mr-2"></i>View Certificate
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <!-- Training Card 6: Y Combinator -->
+                    <div class="training-card card-hover bg-gray-800/50 backdrop-blur-sm rounded-xl overflow-hidden" data-training-category="leadership business">
+                        <div class="p-6">
+                            <div class="flex items-start justify-between mb-4">
+                                <div class="w-12 h-12 bg-gradient-to-br from-orange-500 to-red-600 rounded-lg flex items-center justify-center">
+                                    <span class="text-white font-bold">YC</span>
+                                </div>
+                                <span class="px-3 py-1 bg-yellow-500/20 text-yellow-400 rounded-full text-xs font-semibold">
+                                    In Progress
+                                </span>
+                            </div>
+                            <h3 class="text-xl font-bold mb-2">Y Combinator Startup School</h3>
+                            <p class="text-gray-400 text-sm mb-3">Founder Track Program</p>
+                            <div class="mb-4">
+                                <p class="text-gray-500 text-xs mb-2">Duration: 10 weeks | 2024</p>
+                                <p class="text-gray-300 text-sm">
+                                    Building scalable startups, product-market fit, and fundraising strategies.
+                                </p>
+                            </div>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="px-2 py-1 bg-gray-700 rounded text-xs">Startup</span>
+                                <span class="px-2 py-1 bg-gray-700 rounded text-xs">Growth</span>
+                                <span class="px-2 py-1 bg-gray-700 rounded text-xs">VC</span>
+                            </div>
+                            <button class="view-certificate w-full px-4 py-2 bg-gradient-to-r from-neon-blue to-neon-purple rounded-lg text-sm font-semibold hover:scale-105 transition-transform"
+                                data-cert-id="yc-cert">
+                                <i class="fas fa-certificate mr-2"></i>View Certificate
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <!-- Training Card 7: Blockchain Development -->
+                    <div class="training-card card-hover bg-gray-800/50 backdrop-blur-sm rounded-xl overflow-hidden" data-training-category="technical">
+                        <div class="p-6">
+                            <div class="flex items-start justify-between mb-4">
+                                <div class="w-12 h-12 bg-gradient-to-br from-purple-600 to-indigo-700 rounded-lg flex items-center justify-center">
+                                    <i class="fab fa-ethereum text-white text-xl"></i>
+                                </div>
+                                <span class="px-3 py-1 bg-green-500/20 text-green-400 rounded-full text-xs font-semibold">
+                                    Completed
+                                </span>
+                            </div>
+                            <h3 class="text-xl font-bold mb-2">Blockchain Developer</h3>
+                            <p class="text-gray-400 text-sm mb-3">ConsenSys Academy</p>
+                            <div class="mb-4">
+                                <p class="text-gray-500 text-xs mb-2">Duration: 12 weeks | 2022</p>
+                                <p class="text-gray-300 text-sm">
+                                    Smart contracts, DeFi protocols, and Web3 application development.
+                                </p>
+                            </div>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="px-2 py-1 bg-gray-700 rounded text-xs">Solidity</span>
+                                <span class="px-2 py-1 bg-gray-700 rounded text-xs">Web3</span>
+                                <span class="px-2 py-1 bg-gray-700 rounded text-xs">DeFi</span>
+                            </div>
+                            <button class="view-certificate w-full px-4 py-2 bg-gradient-to-r from-neon-blue to-neon-purple rounded-lg text-sm font-semibold hover:scale-105 transition-transform"
+                                data-cert-id="blockchain-cert">
+                                <i class="fas fa-certificate mr-2"></i>View Certificate
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <!-- Training Card 8: Data Science -->
+                    <div class="training-card card-hover bg-gray-800/50 backdrop-blur-sm rounded-xl overflow-hidden" data-training-category="technical">
+                        <div class="p-6">
+                            <div class="flex items-start justify-between mb-4">
+                                <div class="w-12 h-12 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center">
+                                    <i class="fas fa-chart-bar text-white text-xl"></i>
+                                </div>
+                                <span class="px-3 py-1 bg-green-500/20 text-green-400 rounded-full text-xs font-semibold">
+                                    Certified
+                                </span>
+                            </div>
+                            <h3 class="text-xl font-bold mb-2">IBM Data Science Professional</h3>
+                            <p class="text-gray-400 text-sm mb-3">Professional Certificate</p>
+                            <div class="mb-4">
+                                <p class="text-gray-500 text-xs mb-2">Duration: 9 months | 2022</p>
+                                <p class="text-gray-300 text-sm">
+                                    Machine learning, data visualization, and predictive analytics.
+                                </p>
+                            </div>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="px-2 py-1 bg-gray-700 rounded text-xs">Python</span>
+                                <span class="px-2 py-1 bg-gray-700 rounded text-xs">ML</span>
+                                <span class="px-2 py-1 bg-gray-700 rounded text-xs">SQL</span>
+                            </div>
+                            <button class="view-certificate w-full px-4 py-2 bg-gradient-to-r from-neon-blue to-neon-purple rounded-lg text-sm font-semibold hover:scale-105 transition-transform"
+                                data-cert-id="ibm-cert">
+                                <i class="fas fa-certificate mr-2"></i>View Certificate
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <!-- Training Card 9: Leadership -->
+                    <div class="training-card card-hover bg-gray-800/50 backdrop-blur-sm rounded-xl overflow-hidden" data-training-category="leadership">
+                        <div class="p-6">
+                            <div class="flex items-start justify-between mb-4">
+                                <div class="w-12 h-12 bg-gradient-to-br from-pink-500 to-purple-600 rounded-lg flex items-center justify-center">
+                                    <i class="fas fa-users text-white text-xl"></i>
+                                </div>
+                                <span class="px-3 py-1 bg-green-500/20 text-green-400 rounded-full text-xs font-semibold">
+                                    Completed
+                                </span>
+                            </div>
+                            <h3 class="text-xl font-bold mb-2">McKinsey Forward Program</h3>
+                            <p class="text-gray-400 text-sm mb-3">Leadership & Management</p>
+                            <div class="mb-4">
+                                <p class="text-gray-500 text-xs mb-2">Duration: 6 months | 2023</p>
+                                <p class="text-gray-300 text-sm">
+                                    Strategic thinking, problem-solving, and organizational leadership.
+                                </p>
+                            </div>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="px-2 py-1 bg-gray-700 rounded text-xs">Leadership</span>
+                                <span class="px-2 py-1 bg-gray-700 rounded text-xs">Strategy</span>
+                                <span class="px-2 py-1 bg-gray-700 rounded text-xs">Analytics</span>
+                            </div>
+                            <button class="view-certificate w-full px-4 py-2 bg-gradient-to-r from-neon-blue to-neon-purple rounded-lg text-sm font-semibold hover:scale-105 transition-transform"
+                                data-cert-id="mckinsey-cert">
+                                <i class="fas fa-certificate mr-2"></i>View Certificate
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Certificate Stats -->
+                <div class="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-8 neon-border">
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                        <div class="text-center">
+                            <div class="text-3xl font-bold text-neon-blue mb-2">15+</div>
+                            <div class="text-sm text-gray-400">Certifications Earned</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-3xl font-bold text-neon-purple mb-2">1200+</div>
+                            <div class="text-sm text-gray-400">Training Hours</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-3xl font-bold text-neon-pink mb-2">8</div>
+                            <div class="text-sm text-gray-400">Industry Partners</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-3xl font-bold text-green-400 mb-2">4.9/5</div>
+                            <div class="text-sm text-gray-400">Average Rating</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certificate Modal -->
+    <div id="certificateModal" class="fixed inset-0 z-50 hidden overflow-y-auto">
+        <div class="flex items-center justify-center min-h-screen px-4 pt-4 pb-20 text-center sm:p-0">
+            <!-- Background overlay -->
+            <div class="fixed inset-0 transition-opacity bg-gray-900 bg-opacity-75" onclick="closeCertificateModal()"></div>
+            
+            <!-- Modal panel -->
+            <div class="inline-block overflow-hidden text-left align-bottom transition-all transform bg-gray-800 rounded-lg shadow-xl sm:my-8 sm:align-middle sm:max-w-2xl sm:w-full">
+                <div class="px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-2xl font-bold gradient-text" id="certTitle">Certificate Title</h3>
+                        <button onclick="closeCertificateModal()" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fas fa-times text-xl"></i>
+                        </button>
+                    </div>
+                    
+                    <!-- Certificate Image Container -->
+                    <div class="bg-gray-900 rounded-lg p-4 mb-4">
+                        <img id="certImage" src="" alt="Certificate" class="w-full rounded-lg">
+                    </div>
+                    
+                    <!-- Certificate Details -->
+                    <div class="space-y-3">
+                        <div class="flex justify-between items-center py-2 border-b border-gray-700">
+                            <span class="text-gray-400">Credential ID:</span>
+                            <span class="text-gray-200" id="certCredentialId">ABC123XYZ</span>
+                        </div>
+                        <div class="flex justify-between items-center py-2 border-b border-gray-700">
+                            <span class="text-gray-400">Issue Date:</span>
+                            <span class="text-gray-200" id="certIssueDate">January 2023</span>
+                        </div>
+                        <div class="flex justify-between items-center py-2 border-b border-gray-700">
+                            <span class="text-gray-400">Issuing Organization:</span>
+                            <span class="text-gray-200" id="certOrganization">Organization Name</span>
+                        </div>
+                        <div class="flex justify-between items-center py-2 border-b border-gray-700">
+                            <span class="text-gray-400">Status:</span>
+                            <span class="text-green-400" id="certStatus">
+                                <i class="fas fa-check-circle mr-1"></i>Verified
+                            </span>
+                        </div>
+                    </div>
+                    
+                    <!-- Action Buttons -->
+                    <div class="flex gap-4 mt-6">
+                        <!-- <a id="certVerifyLink" href="#" target="_blank" 
+                            class="flex-1 px-4 py-2 bg-gradient-to-r from-neon-blue to-neon-purple rounded-lg text-center font-semibold hover:scale-105 transition-transform">
+                            <i class="fas fa-external-link-alt mr-2"></i>Verify Certificate
+                        </a> -->
+                        <button id="certDownloadBtn" 
+                            class="flex-1 px-4 py-2 border border-gray-600 rounded-lg font-semibold hover:bg-gray-700 transition-colors">
+                            <i class="fas fa-download mr-2"></i>Download
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Contact Section -->
+    <section id="contact" class="py-20">
+        <div class="container mx-auto px-4">
+            <div class="reveal">
+                <h2 class="text-4xl font-bold text-center mb-12 gradient-text">Get In Touch</h2>
+                
+                <div class="max-w-2xl mx-auto">
+                    <form id="contact-form" class="bg-gray-800/50 backdrop-blur-sm rounded-xl p-8">
+                        <div class="grid md:grid-cols-2 gap-6 mb-6">
+                            <div>
+                                <label for="name" class="block text-gray-400 mb-2">Name</label>
+                                <input type="text" id="name" name="name" required 
+                                    class="w-full px-4 py-3 bg-gray-900 border border-gray-700 rounded-lg focus:border-neon-blue focus:outline-none transition-colors"
+                                    placeholder="Your Name">
+                            </div>
+                            <div>
+                                <label for="email" class="block text-gray-400 mb-2">Email</label>
+                                <input type="email" id="email" name="email" required 
+                                    class="w-full px-4 py-3 bg-gray-900 border border-gray-700 rounded-lg focus:border-neon-blue focus:outline-none transition-colors"
+                                    placeholder="your@email.com">
+                            </div>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <label for="subject" class="block text-gray-400 mb-2">Subject</label>
+                            <input type="text" id="subject" name="subject" required 
+                                class="w-full px-4 py-3 bg-gray-900 border border-gray-700 rounded-lg focus:border-neon-blue focus:outline-none transition-colors"
+                                placeholder="Project Discussion">
+                        </div>
+                        
+                        <div class="mb-6">
+                            <label for="message" class="block text-gray-400 mb-2">Message</label>
+                            <textarea id="message" name="message" rows="5" required 
+                                class="w-full px-4 py-3 bg-gray-900 border border-gray-700 rounded-lg focus:border-neon-blue focus:outline-none transition-colors resize-none"
+                                placeholder="Tell me about your project..."></textarea>
+                        </div>
+                        
+                        <button type="submit" 
+                            class="w-full px-8 py-3 bg-gradient-to-r from-neon-blue to-neon-purple rounded-lg font-semibold hover:scale-105 transition-transform">
+                            Send Message
+                        </button>
+                    </form>
+                    
+                    <!-- Contact Info -->
+                    <div class="mt-12 text-center">
+                        <p class="text-gray-400 mb-4">Or reach out directly:</p>
+                        <div class="flex justify-center space-x-6">
+                            <a href="mailto:mahadi@example.com" class="text-neon-blue hover:text-neon-purple transition-colors">
+                                <i class="fas fa-envelope text-2xl"></i>
+                            </a>
+                            <a href="https://linkedin.com" target="_blank" class="text-neon-blue hover:text-neon-purple transition-colors">
+                                <i class="fab fa-linkedin text-2xl"></i>
+                            </a>
+                            <a href="https://github.com" target="_blank" class="text-neon-blue hover:text-neon-purple transition-colors">
+                                <i class="fab fa-github text-2xl"></i>
+                            </a>
+                            <a href="https://twitter.com" target="_blank" class="text-neon-blue hover:text-neon-purple transition-colors">
+                                <i class="fab fa-twitter text-2xl"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="py-8 border-t border-gray-800">
+        <div class="container mx-auto px-4">
+            <div class="text-center">
+                <p class="text-gray-500">
+                    © 2025 Mahadi Hassan. Built with ❤️. All rights reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- JavaScript -->
+    <script>
+        // 
+        // Add this JavaScript to handle the certificate section functionality
+        // Certificate Data Store
+        const certificateData = {
+            'gcp-cert': {
+                title: 'Google Cloud Platform - Cloud Architecture & DevOps',
+                credentialId: 'GCP-2023-ARCH-78945',
+                issueDate: 'June 2023',
+                organization: 'Google Cloud',
+                image: 'https://via.placeholder.com/600x400/1E3A8A/FFFFFF?text=GCP+Certificate',
+                verifyLink: 'https://www.credential.net/verify',
+                status: 'Verified'
+            },
+            'meta-cert': {
+                title: 'Meta Front-End Developer Professional Certificate',
+                credentialId: 'META-FE-2023-45678',
+                issueDate: 'August 2023',
+                organization: 'Meta',
+                image: 'https://via.placeholder.com/600x400/1877F2/FFFFFF?text=Meta+Certificate',
+                verifyLink: 'https://www.coursera.org/verify',
+                status: 'Verified'
+            },
+            'aws-cert': {
+                title: 'AWS Solutions Architect - Associate',
+                credentialId: 'AWS-SAA-2022-12345',
+                issueDate: 'December 2022',
+                organization: 'Amazon Web Services',
+                image: 'https://via.placeholder.com/600x400/FF9900/FFFFFF?text=AWS+Certificate',
+                verifyLink: 'https://aws.amazon.com/verification',
+                status: 'Verified'
+            },
+            'harvard-cert': {
+                title: 'Entrepreneurship Essentials',
+                credentialId: 'HBS-EE-2023-98765',
+                issueDate: 'March 2023',
+                organization: 'Harvard Business School Online',
+                image: 'https://via.placeholder.com/600x400/A51C30/FFFFFF?text=Harvard+Certificate',
+                verifyLink: 'https://online.hbs.edu/verify',
+                status: 'Verified'
+            },
+            'azure-cert': {
+                title: 'Microsoft Azure AI Engineer - AI-102',
+                credentialId: 'MS-AI102-2023-54321',
+                issueDate: 'July 2023',
+                organization: 'Microsoft',
+                image: 'https://via.placeholder.com/600x400/0078D4/FFFFFF?text=Azure+AI+Certificate',
+                verifyLink: 'https://www.microsoft.com/verify',
+                status: 'Verified'
+            },
+            'yc-cert': {
+                title: 'Y Combinator Startup School - Founder Track',
+                credentialId: 'YC-FS-2024-IN-PROGRESS',
+                issueDate: 'Expected: March 2024',
+                organization: 'Y Combinator',
+                image: 'https://via.placeholder.com/600x400/FF6600/FFFFFF?text=YC+In+Progress',
+                verifyLink: '#',
+                status: 'In Progress'
+            },
+            'blockchain-cert': {
+                title: 'Blockchain Developer Certification',
+                credentialId: 'CONSENSYS-BC-2022-11111',
+                issueDate: 'September 2022',
+                organization: 'ConsenSys Academy',
+                image: 'https://via.placeholder.com/600x400/627EEA/FFFFFF?text=Blockchain+Certificate',
+                verifyLink: 'https://consensys.net/academy/verify',
+                status: 'Verified'
+            },
+            'ibm-cert': {
+                title: 'IBM Data Science Professional Certificate',
+                credentialId: 'IBM-DS-2022-22222',
+                issueDate: 'November 2022',
+                organization: 'IBM',
+                image: 'https://via.placeholder.com/600x400/054ADA/FFFFFF?text=IBM+Certificate',
+                verifyLink: 'https://www.ibm.com/verify',
+                status: 'Verified'
+            },
+            'mckinsey-cert': {
+                title: 'McKinsey Forward Program - Leadership',
+                credentialId: 'MCK-FWD-2023-33333',
+                issueDate: 'May 2023',
+                organization: 'McKinsey & Company',
+                image: 'https://via.placeholder.com/600x400/00284A/FFFFFF?text=McKinsey+Certificate',
+                verifyLink: 'https://www.mckinsey.com/forward/verify',
+                status: 'Verified'
+            }
+        };
+
+        // Training Tab Functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            // Training category filter
+            const trainingTabs = document.querySelectorAll('.training-tab');
+            const trainingCards = document.querySelectorAll('.training-card');
+            
+            trainingTabs.forEach(tab => {
+                tab.addEventListener('click', () => {
+                    // Update active tab
+                    trainingTabs.forEach(t => {
+                        t.classList.remove('active', 'bg-neon-blue/20', 'border-neon-blue');
+                        t.classList.add('border-gray-600');
+                    });
+                    tab.classList.add('active', 'bg-neon-blue/20', 'border-neon-blue');
+                    tab.classList.remove('border-gray-600');
+                    
+                    // Filter training cards
+                    const category = tab.dataset.category;
+                    trainingCards.forEach(card => {
+                        if (category === 'all' || card.dataset.trainingCategory.includes(category)) {
+                            card.style.display = 'block';
+                            setTimeout(() => {
+                                card.style.opacity = '1';
+                                card.style.transform = 'scale(1)';
+                            }, 10);
+                        } else {
+                            card.style.opacity = '0';
+                            card.style.transform = 'scale(0.9)';
+                            setTimeout(() => {
+                                card.style.display = 'none';
+                            }, 300);
+                        }
+                    });
+                });
+            });
+            
+            // Certificate Modal Functionality
+            const certificateButtons = document.querySelectorAll('.view-certificate');
+            
+            certificateButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const certId = this.dataset.certId;
+                    openCertificateModal(certId);
+                });
+            });
+        });
+
+        // Open Certificate Modal
+        function openCertificateModal(certId) {
+            const modal = document.getElementById('certificateModal');
+            const cert = certificateData[certId];
+            
+            if (cert) {
+                // Update modal content
+                document.getElementById('certTitle').textContent = cert.title;
+                document.getElementById('certImage').src = cert.image;
+                document.getElementById('certCredentialId').textContent = cert.credentialId;
+                document.getElementById('certIssueDate').textContent = cert.issueDate;
+                document.getElementById('certOrganization').textContent = cert.organization;
+                document.getElementById('certVerifyLink').href = cert.verifyLink;
+                
+                // Update status with appropriate styling
+                const statusElement = document.getElementById('certStatus');
+                if (cert.status === 'In Progress') {
+                    statusElement.innerHTML = '<i class="fas fa-clock mr-1"></i>In Progress';
+                    statusElement.className = 'text-yellow-400';
+                } else {
+                    statusElement.innerHTML = '<i class="fas fa-check-circle mr-1"></i>Verified';
+                    statusElement.className = 'text-green-400';
+                }
+                
+                // Set download functionality
+                document.getElementById('certDownloadBtn').onclick = function() {
+                    // In production, this would trigger actual certificate download
+                    console.log('Downloading certificate:', certId);
+                    alert('Certificate download started!');
+                };
+                
+                // Show modal with animation
+                modal.classList.remove('hidden');
+                setTimeout(() => {
+                    modal.classList.add('opacity-100');
+                }, 10);
+            }
+        }
+
+        // Close Certificate Modal
+        function closeCertificateModal() {
+            const modal = document.getElementById('certificateModal');
+            modal.classList.remove('opacity-100');
+            setTimeout(() => {
+                modal.classList.add('hidden');
+            }, 300);
+        }
+
+        // Add keyboard escape to close modal
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closeCertificateModal();
+            }
+        });
+
+        // Animate certificate cards on scroll
+        const certificateObserver = new IntersectionObserver((entries) => {
+            entries.forEach((entry, index) => {
+                if (entry.isIntersecting) {
+                    setTimeout(() => {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }, index * 100);
+                }
+            });
+        }, {
+            threshold: 0.1
+        });
+
+        document.querySelectorAll('.training-card').forEach(card => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(20px)';
+            card.style.transition = 'all 0.6s ease-out';
+            certificateObserver.observe(card);
+        });
+
+
+
+        // Initialize particles with performance optimization
+        const isMobile = window.innerWidth < 768;
+        
+        tsParticles.load("particles-js", {
+            particles: {
+                number: {
+                    value: isMobile ? 20 : 50,
+                    density: {
+                        enable: true,
+                        value_area: 800
+                    }
+                },
+                color: {
+                    value: ["#00D4FF", "#7B2FFF", "#FF2E97"]
+                },
+                shape: {
+                    type: "circle"
+                },
+                opacity: {
+                    value: 0.5,
+                    random: true,
+                    animation: {
+                        enable: true,
+                        speed: 1,
+                        minimumValue: 0.1,
+                        sync: false
+                    }
+                },
+                size: {
+                    value: 3,
+                    random: true,
+                    animation: {
+                        enable: true,
+                        speed: 2,
+                        minimumValue: 0.1,
+                        sync: false
+                    }
+                },
+                links: {
+                    enable: !isMobile,
+                    distance: 150,
+                    color: "#00D4FF",
+                    opacity: 0.2,
+                    width: 1
+                },
+                move: {
+                    enable: true,
+                    speed: isMobile ? 1 : 2,
+                    direction: "none",
+                    random: false,
+                    straight: false,
+                    outModes: {
+                        default: "bounce"
+                    },
+                    attract: {
+                        enable: false,
+                        rotateX: 600,
+                        rotateY: 1200
+                    }
+                }
+            },
+            interactivity: {
+                detectsOn: "canvas",
+                events: {
+                    onHover: {
+                        enable: !isMobile,
+                        mode: "grab"
+                    },
+                    onClick: {
+                        enable: true,
+                        mode: "push"
+                    },
+                    resize: true
+                },
+                modes: {
+                    grab: {
+                        distance: 140,
+                        links: {
+                            opacity: 0.5
+                        }
+                    },
+                    push: {
+                        quantity: 4
+                    }
+                }
+            },
+            retina_detect: true
+        });
+        
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            mobileMenuBtn.classList.toggle('active');
+            const isOpen = !mobileMenu.classList.contains('hidden');
+            mobileMenuBtn.setAttribute('aria-expanded', isOpen);
+        });
+        
+        // Close mobile menu on link click
+        document.querySelectorAll('.mobile-nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                mobileMenuBtn.classList.remove('active');
+                mobileMenuBtn.setAttribute('aria-expanded', 'false');
+            });
+        });
+        
+        // Smooth Scroll for Navigation Links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+        
+        // Intersection Observer for Reveal Animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                    
+                    // Animate progress bars when skills section is visible
+                    if (entry.target.querySelector('.progress-fill')) {
+                        entry.target.querySelectorAll('.progress-fill').forEach(bar => {
+                            setTimeout(() => {
+                                bar.style.width = bar.dataset.width;
+                            }, 200);
+                        });
+                    }
+                    
+                    // Animate counters
+                    if (entry.target.querySelector('.counter')) {
+                        entry.target.querySelectorAll('.counter').forEach(counter => {
+                            animateCounter(counter);
+                        });
+                    }
+                }
+            });
+        }, observerOptions);
+        
+        document.querySelectorAll('.reveal').forEach(el => {
+            observer.observe(el);
+        });
+        
+        // Counter Animation
+        function animateCounter(counter) {
+            const target = parseInt(counter.dataset.target);
+            const duration = 2000;
+            const increment = target / (duration / 16);
+            let current = 0;
+            
+            const updateCounter = () => {
+                current += increment;
+                if (current < target) {
+                    counter.textContent = Math.floor(current);
+                    requestAnimationFrame(updateCounter);
+                } else {
+                    counter.textContent = target;
+                }
+            };
+            
+            updateCounter();
+        }
+        
+        // Project Filter
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const projectCards = document.querySelectorAll('.project-card');
+        
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Update active button
+                filterBtns.forEach(b => {
+                    b.classList.remove('active', 'bg-neon-blue/20', 'border-neon-blue');
+                    b.classList.add('border-gray-600');
+                });
+                btn.classList.add('active', 'bg-neon-blue/20', 'border-neon-blue');
+                btn.classList.remove('border-gray-600');
+                
+                // Filter projects
+                const filter = btn.dataset.filter;
+                projectCards.forEach(card => {
+                    if (filter === 'all' || card.dataset.category.includes(filter)) {
+                        card.style.display = 'block';
+                        setTimeout(() => {
+                            card.style.opacity = '1';
+                            card.style.transform = 'scale(1)';
+                        }, 10);
+                    } else {
+                        card.style.opacity = '0';
+                        card.style.transform = 'scale(0.9)';
+                        setTimeout(() => {
+                            card.style.display = 'none';
+                        }, 300);
+                    }
+                });
+            });
+        });
+        
+        // Theme Toggle (optional)
+        const themeToggle = document.getElementById('theme-toggle');
+        let isDark = true;
+        
+        themeToggle?.addEventListener('click', () => {
+            isDark = !isDark;
+            document.documentElement.classList.toggle('dark', isDark);
+            themeToggle.innerHTML = isDark 
+                ? '<i class="fas fa-moon text-yellow-400"></i>' 
+                : '<i class="fas fa-sun text-yellow-400"></i>';
+        });
+        
+        // Contact Form Handler
+        const contactForm = document.getElementById('contact-form');
+        contactForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            
+            const formData = new FormData(contactForm);
+            const data = Object.fromEntries(formData);
+            
+            // Here you would normally send to your API
+            console.log('Form submitted:', data);
+            
+            // Show success message
+            const button = contactForm.querySelector('button[type="submit"]');
+            const originalText = button.textContent;
+            button.textContent = 'Message Sent! ✓';
+            button.classList.add('bg-green-600');
+            
+            setTimeout(() => {
+                button.textContent = originalText;
+                button.classList.remove('bg-green-600');
+                contactForm.reset();
+            }, 3000);
+        });
+        
+        // Active Navigation Highlight
+        window.addEventListener('scroll', () => {
+            const sections = document.querySelectorAll('section[id]');
+            const scrollY = window.pageYOffset;
+            
+            sections.forEach(section => {
+                const sectionHeight = section.offsetHeight;
+                const sectionTop = section.offsetTop - 100;
+                const sectionId = section.getAttribute('id');
+                const navLink = document.querySelector(`.nav-link[href="#${sectionId}"]`);
+                
+                if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+                    document.querySelectorAll('.nav-link').forEach(link => {
+                        link.classList.remove('text-neon-blue');
+                    });
+                    navLink?.classList.add('text-neon-blue');
+                }
+            });
+        });
+        
+        // Parallax Effect for Particles
+        if (!isMobile) {
+            window.addEventListener('scroll', () => {
+                const scrolled = window.pageYOffset;
+                const parallax = document.getElementById('particles-js');
+                const speed = 0.5;
+                parallax.style.transform = `translateY(${scrolled * speed}px)`;
+            });
+        }
+    </script>
+</body>
+</html>
