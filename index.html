@@ -570,42 +570,7 @@
                 </button>
             </div>
 
-            <!-- Mobile Anonymous Message Modal -->
-            <div id="mobile-ngl-modal" class="fixed inset-0 z-50 hidden">
-                <div class="flex items-center justify-center min-h-screen px-4">
-                    <div class="fixed inset-0 bg-gray-900 bg-opacity-90" onclick="closeMobileNGL()"></div>
-                    <div class="bg-gray-800 rounded-2xl p-4 max-w-lg w-full z-10 max-h-[90vh] overflow-hidden">
-                        <div class="flex justify-between items-center mb-4">
-                            <h3 class="text-lg font-bold text-white">Send Anonymous Message</h3>
-                            <button onclick="closeMobileNGL()" class="text-gray-400 hover:text-white p-2">
-                                <i class="fas fa-times text-xl"></i>
-                            </button>
-                        </div>
-                        
-                        <!-- Mobile iframe -->
-                        <div class="relative">
-                            <iframe 
-                                src="https://ngl.link/marufurrahman1" 
-                                class="w-full h-[60vh] rounded-lg border border-gray-700"
-                                frameborder="0"
-                                scrolling="yes"
-                                title="Send anonymous message via NGL">
-                            </iframe>
-                            
-                        </div>
-                        
-                        <!-- Open in Browser Option -->
-                        <div class="mt-4 text-center">
-                            <a href="https://ngl.link/marufurrahman1" 
-                            target="_blank" 
-                            class="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-neon-purple to-neon-pink rounded-lg text-sm hover:scale-105 transition-transform">
-                                <i class="fas fa-external-link-alt"></i>
-                                <span>Open in Browser</span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            
         </div>
         
         <!-- Animated Background Elements -->
@@ -618,6 +583,42 @@
         </div>
     </section>
 
+    <!-- Mobile Anonymous Message Modal -->
+    <div id="mobile-ngl-modal" class="fixed inset-0 z-50 hidden">
+        <div class="flex items-center justify-center min-h-screen px-4">
+            <div class="fixed inset-0 bg-gray-900 bg-opacity-90" onclick="closeMobileNGL()"></div>
+            <div class="bg-gray-800 rounded-2xl p-4 max-w-lg w-full z-10 max-h-[90vh] overflow-hidden">
+                <div class="flex justify-between items-center mb-4">
+                    <h3 class="text-lg font-bold text-white">Send Anonymous Message</h3>
+                    <button onclick="closeMobileNGL()" class="text-gray-400 hover:text-white p-2">
+                        <i class="fas fa-times text-xl"></i>
+                    </button>
+                </div>
+                
+                <!-- Mobile iframe -->
+                <div class="relative">
+                    <iframe 
+                        src="https://ngl.link/marufurrahman1" 
+                        class="w-full h-[60vh] rounded-lg border border-gray-700"
+                        frameborder="0"
+                        scrolling="yes"
+                        title="Send anonymous message via NGL">
+                    </iframe>
+                    
+                </div>
+                
+                <!-- Open in Browser Option -->
+                <div class="mt-4 text-center">
+                    <a href="https://ngl.link/marufurrahman1" 
+                    target="_blank" 
+                    class="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-neon-purple to-neon-pink rounded-lg text-sm hover:scale-105 transition-transform">
+                        <i class="fas fa-external-link-alt"></i>
+                        <span>Open in Browser</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
     
     <!-- About Section -->
     <section id="about" class="py-20">
