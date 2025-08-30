@@ -422,10 +422,10 @@
                     <a href="#skills" class="nav-link hover:text-neon-blue transition-colors">Skills</a>
                     <a href="#training" class="nav-link hover:text-neon-blue transition-colors">Certifications</a>
                     <a href="#timeline" class="nav-link hover:text-neon-blue transition-colors">Experience</a>
-                    <a href="#contact" class="nav-link hover:text-neon-blue transition-colors">Contact</a>
-                    <button id="theme-toggle" class="ml-4 p-2 rounded-lg hover:bg-gray-800 transition-colors" aria-label="Toggle theme">
+                    <!-- <a href="#contact" class="nav-link hover:text-neon-blue transition-colors">Contact</a> -->
+                    <!-- <button id="theme-toggle" class="ml-4 p-2 rounded-lg hover:bg-gray-800 transition-colors" aria-label="Toggle theme">
                         <i class="fas fa-moon text-yellow-400"></i>
-                    </button>
+                    </button> -->
                 </div>
                 
                 <!-- Mobile Menu Button -->
@@ -447,7 +447,7 @@
                     <a href="#skills" class="mobile-nav-link hover:text-neon-blue transition-colors">Skills</a>
                     <a href="#training" class="mobile-nav-link hover:text-neon-blue transition-colors">Certifications</a>
                     <a href="#timeline" class="mobile-nav-link hover:text-neon-blue transition-colors">Experience</a>
-                    <a href="#contact" class="mobile-nav-link hover:text-neon-blue transition-colors">Contact</a>
+                    <!-- <a href="#contact" class="mobile-nav-link hover:text-neon-blue transition-colors">Contact</a> -->
                 </div>
             </div>
         </div>
@@ -523,66 +523,41 @@
                         </a>
                     </div>
                 </div>
+                    <!-- <div class="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-700 hover:border-neon-purple/50 transition-all duration-300 max-w-md w-full neon-glow"> -->
                 
-                <!-- Right Side - Anonymous Message Widget -->
-                <div class="lg:flex justify-center items-center hidden">
-                    <div class="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-700 hover:border-neon-purple/50 transition-all duration-300 max-w-md w-full neon-glow">
-                        <!-- NGL Widget Header -->
-                        <div class="text-center mb-6">
+                <!-- Right Side - NGL Anonymous Message Widget -->
+                <div class="lg:flex justify-center items-center hidden mt-2">
+                    <div class="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-6 border border-gray-700 hover:border-neon-purple/50 transition-all duration-300 max-w-md w-full neon-glow">
+                        <!-- Widget Header -->
+                        <div class="text-center">
                             <div class="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-neon-purple to-neon-pink rounded-full mb-4">
                                 <i class="fas fa-user-secret text-2xl text-white"></i>
                             </div>
-                            <h3 class="text-2xl font-bold text-white mb-2">Send Anonymous Message</h3>
-                            <p class="text-gray-400 text-sm">Your identity will remain completely anonymous</p>
+                            <h3 class="text-xl font-bold text-white mb-2">Send Anonymous Message</h3>
+                            <p class="text-gray-400 text-sm">Share your thoughts anonymously 🔒</p>
                         </div>
                         
-                        <!-- Message Form -->
-                        <form id="anonymous-form" class="space-y-4">
-                            <div>
-                                <textarea 
-                                    id="anonymous-message"
-                                    rows="4" 
-                                    class="w-full px-4 py-3 bg-gray-900/50 border border-gray-600 rounded-lg focus:border-neon-purple focus:outline-none transition-colors resize-none text-gray-300"
-                                    placeholder="Type your anonymous message here..."
-                                    maxlength="500"></textarea>
-                                <div class="text-right mt-1">
-                                    <span id="char-count" class="text-xs text-gray-500">0/500</span>
-                                </div>
-                            </div>
+                        <!-- NGL iframe -->
+                        <div class="ngl-iframe-container relative">
+                            <iframe 
+                                src="https://ngl.link/marufurrahman1" 
+                                class="w-full h-[33rem] rounded-lg border border-gray-700"
+                                frameborder="0"
+                                scrolling="yes"
+                                title="Send anonymous message via NGL">
+                            </iframe>
                             
-                            <!-- Emotion Selection -->
-                            <div class="flex justify-center gap-3">
-                                <button type="button" class="emotion-btn" data-emotion="💭">💭</button>
-                                <button type="button" class="emotion-btn" data-emotion="💡">💡</button>
-                                <button type="button" class="emotion-btn" data-emotion="❤️">❤️</button>
-                                <button type="button" class="emotion-btn" data-emotion="🎯">🎯</button>
-                                <button type="button" class="emotion-btn" data-emotion="🚀">🚀</button>
-                            </div>
-                            
-                            <button type="submit" class="w-full px-6 py-3 bg-gradient-to-r from-neon-purple to-neon-pink rounded-lg font-semibold hover:scale-105 transition-transform">
-                                <i class="fas fa-paper-plane mr-2"></i>Send Message
-                            </button>
-                        </form>
+                        </div>
                         
-                        <!-- NGL Link -->
-                        <div class="mt-6 pt-6 border-t border-gray-700 text-center">
-                            <p class="text-gray-500 text-sm mb-2">Or send via NGL</p>
+                        <!-- Alternative Link -->
+                        <div class="mt-4 text-center">
+                            <p class="text-gray-500 text-xs mb-2">Having trouble? Open in new tab</p>
                             <a href="https://ngl.link/marufurrahman1" 
                             target="_blank" 
-                            class="inline-flex items-center gap-2 text-neon-purple hover:text-neon-pink transition-colors">
+                            class="inline-flex items-center gap-2 text-neon-purple hover:text-neon-pink transition-colors text-sm">
                                 <i class="fas fa-external-link-alt"></i>
                                 <span>ngl.link/marufurrahman1</span>
                             </a>
-                        </div>
-                        
-                        <!-- Recent Messages Preview -->
-                        <div class="mt-6 pt-6 border-t border-gray-700">
-                            <p class="text-gray-400 text-sm mb-3">Recent Anonymous Messages</p>
-                            <div class="space-y-2 max-h-32 overflow-y-auto custom-scrollbar">
-                                <div class="text-xs text-gray-500 italic">"Your work is truly inspiring! 💡"</div>
-                                <div class="text-xs text-gray-500 italic">"Great innovation in tech space 🚀"</div>
-                                <div class="text-xs text-gray-500 italic">"Keep building amazing things! ❤️"</div>
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -590,9 +565,46 @@
             
             <!-- Mobile Anonymous Message Button -->
             <div class="lg:hidden fixed bottom-20 right-4 z-40">
-                <button id="mobile-ngl-btn" class="w-14 h-14 bg-gradient-to-br from-neon-purple to-neon-pink rounded-full flex items-center justify-center shadow-lg hover:scale-110 transition-transform">
+                <button id="mobile-ngl-btn" class="w-14 h-14 bg-gradient-to-br from-neon-purple to-neon-pink rounded-full flex items-center justify-center shadow-lg hover:scale-110 transition-transform animate-pulse">
                     <i class="fas fa-user-secret text-white text-xl"></i>
                 </button>
+            </div>
+
+            <!-- Mobile Anonymous Message Modal -->
+            <div id="mobile-ngl-modal" class="fixed inset-0 z-50 hidden">
+                <div class="flex items-center justify-center min-h-screen px-4">
+                    <div class="fixed inset-0 bg-gray-900 bg-opacity-90" onclick="closeMobileNGL()"></div>
+                    <div class="bg-gray-800 rounded-2xl p-4 max-w-lg w-full z-10 max-h-[90vh] overflow-hidden">
+                        <div class="flex justify-between items-center mb-4">
+                            <h3 class="text-lg font-bold text-white">Send Anonymous Message</h3>
+                            <button onclick="closeMobileNGL()" class="text-gray-400 hover:text-white p-2">
+                                <i class="fas fa-times text-xl"></i>
+                            </button>
+                        </div>
+                        
+                        <!-- Mobile iframe -->
+                        <div class="relative">
+                            <iframe 
+                                src="https://ngl.link/marufurrahman1" 
+                                class="w-full h-[60vh] rounded-lg border border-gray-700"
+                                frameborder="0"
+                                scrolling="yes"
+                                title="Send anonymous message via NGL">
+                            </iframe>
+                            
+                        </div>
+                        
+                        <!-- Open in Browser Option -->
+                        <div class="mt-4 text-center">
+                            <a href="https://ngl.link/marufurrahman1" 
+                            target="_blank" 
+                            class="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-neon-purple to-neon-pink rounded-lg text-sm hover:scale-105 transition-transform">
+                                <i class="fas fa-external-link-alt"></i>
+                                <span>Open in Browser</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
         
@@ -606,51 +618,46 @@
         </div>
     </section>
 
-    <!-- Mobile Anonymous Message Modal -->
-    <div id="mobile-ngl-modal" class="fixed inset-0 z-50 hidden">
-        <div class="flex items-center justify-center min-h-screen px-4">
-            <div class="fixed inset-0 bg-gray-900 bg-opacity-75" onclick="closeMobileNGL()"></div>
-            <div class="bg-gray-800 rounded-2xl p-6 max-w-sm w-full z-10">
-                <div class="flex justify-between items-center mb-4">
-                    <h3 class="text-xl font-bold text-white">Send Anonymous Message</h3>
-                    <button onclick="closeMobileNGL()" class="text-gray-400 hover:text-white">
-                        <i class="fas fa-times"></i>
-                    </button>
-                </div>
-                <p class="text-gray-400 text-sm mb-4">Your identity will remain anonymous</p>
-                <a href="https://ngl.link/marufurrahman1" 
-                target="_blank" 
-                class="block w-full px-6 py-3 bg-gradient-to-r from-neon-purple to-neon-pink rounded-lg font-semibold text-center hover:scale-105 transition-transform">
-                    <i class="fas fa-external-link-alt mr-2"></i>Open NGL
-                </a>
-            </div>
-        </div>
-    </div>  
     
     <!-- About Section -->
     <section id="about" class="py-20">
         <div class="container mx-auto px-4">
             <div class="reveal">
-                <h2 class="text-4xl font-bold text-center mb-12 gradient-text">About Me</h2>
+                <h2 class="text-4xl font-bold text-center mb-12 gradient-text">About</h2>
                 <div class="max-w-4xl mx-auto">
                     <div class="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-8 neon-border">
+                        <div class="text-center mb-8">
+                            <h3 class="text-2xl font-bold text-white mb-2">Marufur Rahman</h3>
+                            <p class="text-lg text-gray-400">Entrepreneur • Researcher • Innovation Leader</p>
+                        </div>
+                        
                         <p class="text-lg text-gray-300 mb-6 leading-relaxed">
-                            Passionate entrepreneur bridging technology and social impact. Building innovative solutions that matter - from saving lives through blood donation networks to democratizing education with AI.
-                        </p>
-                        <p class="text-lg text-gray-300 mb-8 leading-relaxed">
-                            প্রযুক্তির মাধ্যমে সমাজে ইতিবাচক পরিবর্তন আনতে প্রতিশ্রুতিবদ্ধ। My journey spans from fintech innovations to healthcare technology, always with a focus on accessibility and user empowerment.
+                            I am a technology entrepreneur and researcher dedicated to developing innovative solutions that address complex real-world challenges. With a proven track record in founding and scaling ventures, I specialize in translating cutting-edge research into practical applications that drive meaningful impact.
                         </p>
                         
-                        <!-- Founder Badges -->
-                        <div class="flex flex-wrap gap-4 justify-center">
-                            <div class="px-4 py-2 bg-gradient-to-r from-red-600 to-red-800 rounded-full text-sm font-semibold">
-                                🩸 Rokto Bondhu Founder
-                            </div>
-                            <div class="px-4 py-2 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full text-sm font-semibold">
-                                🤖 Tutorly AI Co-Founder
-                            </div>
-                            <div class="px-4 py-2 bg-gradient-to-r from-green-600 to-teal-600 rounded-full text-sm font-semibold">
-                                💰 Fintech Innovator
+                        <p class="text-lg text-gray-300 mb-8 leading-relaxed">
+                            My approach combines strategic vision with technical expertise, focusing on emerging technologies in healthcare, AI, and fintech. Through my ventures, I have demonstrated the ability to identify market opportunities, build high-performing teams, and deliver solutions that create lasting value for stakeholders and communities.
+                        </p>
+                        
+                        <!-- Professional Achievements -->
+                        <div class="border-t border-gray-700 pt-6">
+                            <h4 class="text-lg font-semibold text-white mb-4 text-center">Founded Ventures</h4>
+                            <div class="grid md:grid-cols-3 gap-4">
+                                <div class="text-center p-4 bg-gray-700/30 rounded-lg">
+                                    <div class="text-2xl mb-2">🩸</div>
+                                    <h5 class="font-semibold text-white">Rokto Bondhu</h5>
+                                    <p class="text-sm text-gray-400">Healthcare Platform</p>
+                                </div>
+                                <div class="text-center p-4 bg-gray-700/30 rounded-lg">
+                                    <div class="text-2xl mb-2">🤖</div>
+                                    <h5 class="font-semibold text-white">Tutorly AI</h5>
+                                    <p class="text-sm text-gray-400">EdTech Innovation</p>
+                                </div>
+                                <div class="text-center p-4 bg-gray-700/30 rounded-lg">
+                                    <div class="text-2xl mb-2">💳</div>
+                                    <h5 class="font-semibold text-white">Fintech Solutions</h5>
+                                    <p class="text-sm text-gray-400">Financial Technology</p>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -1694,7 +1701,8 @@
                 'Founder',
                 'Innovator',
                 'Tech Leader',
-                'Problem Solver'
+                'Problem Solver',
+                'Visionary'
             ];
             
             let currentRoleIndex = 0;
@@ -1735,113 +1743,54 @@
             
             // Start typing animation
             typeWriter();
-            
-            // Anonymous Message Form Handler
-            const anonymousForm = document.getElementById('anonymous-form');
-            const messageTextarea = document.getElementById('anonymous-message');
-            const charCount = document.getElementById('char-count');
-            const emotionBtns = document.querySelectorAll('.emotion-btn');
-            
-            // Character counter
-            messageTextarea?.addEventListener('input', function() {
-                const length = this.value.length;
-                charCount.textContent = `${length}/500`;
-                
-                if (length >= 450) {
-                    charCount.classList.add('text-yellow-500');
-                } else if (length >= 490) {
-                    charCount.classList.add('text-red-500');
-                } else {
-                    charCount.classList.remove('text-yellow-500', 'text-red-500');
-                }
-            });
-            
-            // Emotion selection
-            let selectedEmotion = '';
-            emotionBtns.forEach(btn => {
-                btn.addEventListener('click', function() {
-                    emotionBtns.forEach(b => b.classList.remove('selected'));
-                    this.classList.add('selected');
-                    selectedEmotion = this.dataset.emotion;
-                });
-            });
-            
-            // Form submission
-            anonymousForm?.addEventListener('submit', async function(e) {
-                e.preventDefault();
-                
-                const message = messageTextarea.value.trim();
-                if (!message) {
-                    messageTextarea.classList.add('border-red-500');
-                    setTimeout(() => {
-                        messageTextarea.classList.remove('border-red-500');
-                    }, 2000);
-                    return;
-                }
-                
-                // In production, this would send to your backend/NGL API
-                const submitBtn = this.querySelector('button[type="submit"]');
-                const originalText = submitBtn.innerHTML;
-                
-                // Show loading state
-                submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i>Sending...';
-                submitBtn.disabled = true;
-                
-                // Simulate API call
-                setTimeout(() => {
-                    submitBtn.innerHTML = '<i class="fas fa-check mr-2"></i>Sent!';
-                    submitBtn.classList.add('bg-green-600');
-                    
-                    // Reset form
-                    setTimeout(() => {
-                        messageTextarea.value = '';
-                        charCount.textContent = '0/500';
-                        emotionBtns.forEach(b => b.classList.remove('selected'));
-                        selectedEmotion = '';
-                        submitBtn.innerHTML = originalText;
-                        submitBtn.classList.remove('bg-green-600');
-                        submitBtn.disabled = false;
-                        
-                        // Add to recent messages (optional)
-                        addRecentMessage(message, selectedEmotion);
-                    }, 2000);
-                }, 1500);
-            });
-            
-            // Add recent message to preview
-            function addRecentMessage(message, emotion) {
-                const recentContainer = document.querySelector('.custom-scrollbar');
-                if (recentContainer) {
-                    const messageDiv = document.createElement('div');
-                    messageDiv.className = 'text-xs text-gray-500 italic';
-                    messageDiv.textContent = `"${message.substring(0, 50)}${message.length > 50 ? '...' : ''}" ${emotion || '💭'}`;
-                    recentContainer.insertBefore(messageDiv, recentContainer.firstChild);
-                    
-                    // Keep only last 5 messages
-                    while (recentContainer.children.length > 5) {
-                        recentContainer.removeChild(recentContainer.lastChild);
-                    }
-                }
-            }
-            
-            // Mobile NGL Modal
+
+
+            // Mobile NGL Modal Handler
             const mobileNGLBtn = document.getElementById('mobile-ngl-btn');
             const mobileNGLModal = document.getElementById('mobile-ngl-modal');
             
             mobileNGLBtn?.addEventListener('click', function() {
                 mobileNGLModal.classList.remove('hidden');
+                document.body.style.overflow = 'hidden'; // Prevent background scroll
+                
+                // Animate modal appearance
                 setTimeout(() => {
-                    mobileNGLModal.classList.add('opacity-100');
+                    mobileNGLModal.querySelector('.bg-gray-800').style.transform = 'scale(1)';
+                    mobileNGLModal.querySelector('.bg-gray-800').style.opacity = '1';
                 }, 10);
             });
+            
+            // Add badge notification animation
+            let messageCount = 0;
+            setInterval(() => {
+                // Simulate new message notification
+                if (Math.random() > 0.8) { // 20% chance every interval
+                    messageCount++;
+                    showNotificationBadge();
+                }
+            }, 30000); // Check every 30 seconds
+            
+            function showNotificationBadge() {
+                const badge = document.createElement('div');
+                badge.className = 'absolute -top-1 -right-1 w-4 h-4 bg-red-500 rounded-full animate-ping';
+                mobileNGLBtn?.appendChild(badge);
+                
+                // Remove badge after 5 seconds
+                setTimeout(() => {
+                    badge.remove();
+                }, 5000);
+            }
         });
 
         // Close Mobile NGL Modal
         function closeMobileNGL() {
             const modal = document.getElementById('mobile-ngl-modal');
-            modal.classList.remove('opacity-100');
+            modal.querySelector('.bg-gray-800').style.transform = 'scale(0.95)';
+            modal.querySelector('.bg-gray-800').style.opacity = '0';
+            
             setTimeout(() => {
                 modal.classList.add('hidden');
+                document.body.style.overflow = ''; // Restore scrolling
             }, 300);
         }
 
@@ -1856,6 +1805,34 @@
             });
         });
 
+        // Handle iframe responsiveness
+        window.addEventListener('resize', () => {
+            const iframeContainer = document.querySelector('.ngl-iframe-container');
+            if (iframeContainer && window.innerWidth < 768) {
+                const iframe = iframeContainer.querySelector('iframe');
+                if (iframe) {
+                    iframe.style.height = '350px';
+                }
+            }
+        });
+
+        // Add keyboard shortcut for anonymous message
+        document.addEventListener('keydown', (e) => {
+            // Press 'M' key to open mobile modal on desktop
+            if (e.key === 'm' || e.key === 'M') {
+                if (window.innerWidth >= 1024) {
+                    // Scroll to NGL section
+                    const nglSection = document.querySelector('.ngl-iframe-container');
+                    nglSection?.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    
+                    // Add highlight effect
+                    nglSection?.parentElement.classList.add('ring-2', 'ring-neon-purple');
+                    setTimeout(() => {
+                        nglSection?.parentElement.classList.remove('ring-2', 'ring-neon-purple');
+                    }, 2000);
+                }
+            }
+        });
         // Add this JavaScript to handle the certificate section functionality
         // Certificate Data Store
         const certificateData = {
