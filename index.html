@@ -640,34 +640,6 @@
 
                             I started exploring tech through competitive programming, which sparked my love for solving challenging problems and building smart systems. Since then, I’ve grown—pushing myself to be better every day—and built impactful projects, including a peer-to-peer blood service platform and a 24/7 AI education platform designed to make learning smarter and more accessible.
                         </p>
-                        
-                        
-                        <!-- Professional Achievements -->
-                        <div class="border-t border-gray-700 pt-6">
-                            <h4 class="text-lg font-semibold text-white mb-4 text-center">Founded Ventures</h4>
-                            <div class="grid md:grid-cols-3 gap-4">
-                                <div class="text-center p-4 bg-gray-700/30 rounded-lg">
-                                    <div class="text-2xl mb-2">🩸</div>
-                                    <h5 class="font-semibold text-white">Rokto Bondhu</h5>
-                                    <p class="text-sm text-gray-400">Healthcare Platform</p>
-                                </div>
-                                <div class="text-center p-4 bg-gray-700/30 rounded-lg">
-                                    <div class="text-2xl mb-2">🤖</div>
-                                    <h5 class="font-semibold text-white">Tutorly AI</h5>
-                                    <p class="text-sm text-gray-400">EdTech Innovation</p>
-                                </div>
-                                <!-- <div class="text-center p-4 bg-gray-700/30 rounded-lg">
-                                    <div class="text-2xl mb-2">💳</div>
-                                    <h5 class="font-semibold text-white">Fintech Solutions</h5>
-                                    <p class="text-sm text-gray-400">Financial Technology</p>
-                                </div> -->
-                                <div class="text-center p-4 bg-gray-700/30 rounded-lg">
-                                    <div class="text-2xl mb-2">🏢</div>
-                                    <h5 class="font-semibold text-white">RISDY</h5>
-                                    <p class="text-sm text-gray-400">Organisation</p>
-                                </div>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -679,76 +651,49 @@
         <div class="container mx-auto px-4">
             <div class="reveal">
                 <h2 class="text-4xl font-bold text-center mb-12 gradient-text">Featured Projects</h2>
-                
-                <!-- Filter Buttons -->
-                <div class="flex flex-wrap justify-center gap-4 mb-12">
-                    <button class="filter-btn active px-6 py-2 rounded-full border border-neon-blue bg-neon-blue/20 transition-all" data-filter="all">
-                        All
-                    </button>
-                    <button class="filter-btn px-6 py-2 rounded-full border border-gray-600 hover:border-neon-blue transition-all" data-filter="web">
-                        Web
-                    </button>
-                    <button class="filter-btn px-6 py-2 rounded-full border border-gray-600 hover:border-neon-blue transition-all" data-filter="ai">
-                        AI/ML
-                    </button>
-                    <button class="filter-btn px-6 py-2 rounded-full border border-gray-600 hover:border-neon-blue transition-all" data-filter="product">
-                        Product
-                    </button>
-                </div>
-                
+            
                 <!-- Project Cards Grid -->
                 <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                     <!-- Project 1: Rokto Bondhu -->
                     <div class="project-card card-hover bg-gray-800/50 backdrop-blur-sm rounded-xl overflow-hidden" data-category="web product">
-                        <div class="h-48 bg-gradient-to-br from-red-600 to-red-800 flex items-center justify-center">
-                            <i class="fas fa-heartbeat text-6xl text-white/50"></i>
+                        <div class="relative h-48 overflow-hidden rounded-lg">
+                            <!-- Video (.mov) -->
+                            <video id="heartbeatVideo" class="absolute inset-0 w-full h-full object-cover hidden"
+                                playsinline controls preload="metadata">
+                                <source src="roktoapp.mov" type="video/quicktime" />
+                            </video>
+
+                            <!-- Click overlay -->
+                            <button id="heartbeatOverlay" type="button"
+                                class="h-full w-full bg-gradient-to-br from-red-600 to-red-800 flex items-center justify-center cursor-pointer">
+                                <i class="fas fa-heartbeat text-6xl text-white/60"></i>
+                            </button>
                         </div>
+
                         <div class="p-6">
                             <h3 class="text-xl font-bold mb-2">Rokto Bondhu</h3>
-                            <p class="text-gray-400 mb-4">Revolutionary blood donation platform connecting donors with those in need. Saved 500+ lives.</p>
-                            <!-- <div class="flex flex-wrap gap-2 mb-4">
-                                <span class="px-2 py-1 bg-gray-700 rounded text-xs">React</span>
-                                <span class="px-2 py-1 bg-gray-700 rounded text-xs">Node.js</span>
-                                <span class="px-2 py-1 bg-gray-700 rounded text-xs">MongoDB</span>
-                                <span class="px-2 py-1 bg-gray-700 rounded text-xs">Maps API</span>
-                            </div> -->
-                            <!-- <div class="flex gap-4">
-                                <a href="#" class="text-neon-blue hover:text-neon-purple transition-colors">
-                                    <i class="fas fa-external-link-alt"></i> Live
-                                </a>
-                                <a href="#" class="text-neon-blue hover:text-neon-purple transition-colors">
-                                    <i class="fab fa-github"></i> Code
-                                </a>
-                            </div> -->
+                            <p class="text-gray-400 mb-4">• Founder & CEO, Rokto Bondhu: Bangladesh's largest free peer-to-peer blood service platform. <br>
+                                            • Contributed to saving thousands of lives through Rokto Bondhu. <br>
+                                            • Built a nationwide donor network with thousands of active donors across Bangladesh.</p>
                         </div>
                     </div>
                     
                     <!-- Project 2: Tutorly AI -->
                     <div class="project-card card-hover bg-gray-800/50 backdrop-blur-sm rounded-xl overflow-hidden" data-category="ai product">
-                        <div class="h-48 bg-gradient-to-br from-blue-600 to-purple-600 flex items-center justify-center">
-                            <i class="fas fa-robot text-6xl text-white/50"></i>
+                        <div class="relative h-48 overflow-hidden">
+                            <video class="absolute inset-0 w-full h-full object-cover" autoplay muted loop playsinline poster="poster.jpg">
+                                <source src="tutorly.mp4" type="video/mp4" />
+                            </video>
+                            <div class="absolute inset-0 bg-gradient-to-br from-blue-600/25 to-purple-600/25 pointer-events-none"></div>
                         </div>
                         <div class="p-6">
                             <h3 class="text-xl font-bold mb-2">Tutorly AI</h3>
                             <p class="text-gray-400 mb-4">AI-powered personalized learning platform revolutionizing education for 1000+ students.</p>
-                            <div class="flex flex-wrap gap-2 mb-4">
-                                <span class="px-2 py-1 bg-gray-700 rounded text-xs">Python</span>
-                                <span class="px-2 py-1 bg-gray-700 rounded text-xs">TensorFlow</span>
-                                <span class="px-2 py-1 bg-gray-700 rounded text-xs">FastAPI</span>
-                                <span class="px-2 py-1 bg-gray-700 rounded text-xs">React</span>
-                            </div>
-                            <!-- <div class="flex gap-4">
-                                <a href="#" class="text-neon-blue hover:text-neon-purple transition-colors">
-                                    <i class="fas fa-external-link-alt"></i> Live
-                                </a>
-                                <a href="#" class="text-neon-blue hover:text-neon-purple transition-colors">
-                                    <i class="fab fa-github"></i> Code
-                                </a>
-                            </div> -->
+                            
                         </div>
                     </div>
                     
-                    <!-- Project 3: FinTrack Pro -->
+                    <!-- Project 4: FinTrack Pro -->
                     <div class="project-card card-hover bg-gray-800/50 backdrop-blur-sm rounded-xl overflow-hidden" data-category="web product">
                         <div class="h-48 bg-gradient-to-br from-green-600 to-teal-600 flex items-center justify-center">
                             <i class="fas fa-chart-line text-6xl text-white/50"></i>
@@ -756,20 +701,17 @@
                         <div class="p-6">
                             <h3 class="text-xl font-bold mb-2">FinTrack Pro</h3>
                             <p class="text-gray-400 mb-4">Smart financial tracking and analytics platform for SMEs. Managing $2M+ in transactions.</p>
-                            <div class="flex flex-wrap gap-2 mb-4">
-                                <span class="px-2 py-1 bg-gray-700 rounded text-xs">Vue.js</span>
-                                <span class="px-2 py-1 bg-gray-700 rounded text-xs">Django</span>
-                                <span class="px-2 py-1 bg-gray-700 rounded text-xs">PostgreSQL</span>
-                                <span class="px-2 py-1 bg-gray-700 rounded text-xs">D3.js</span>
-                            </div>
-                            <!-- <div class="flex gap-4">
-                                <a href="#" class="text-neon-blue hover:text-neon-purple transition-colors">
-                                    <i class="fas fa-external-link-alt"></i> Live
-                                </a>
-                                <a href="#" class="text-neon-blue hover:text-neon-purple transition-colors">
-                                    <i class="fab fa-github"></i> Code
-                                </a>
-                            </div> -->
+                        </div>
+                    </div>
+
+                    <!-- Project 5: FinTrack Pro -->
+                    <div class="project-card card-hover bg-gray-800/50 backdrop-blur-sm rounded-xl overflow-hidden" data-category="web product">
+                        <div class="h-48 bg-gradient-to-br from-green-600 to-teal-600 flex items-center justify-center">
+                            <i class="fas fa-chart-line text-6xl text-white/50"></i>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2">FinTrack Pro</h3>
+                            <p class="text-gray-400 mb-4">Smart financial tracking and analytics platform for SMEs. Managing $2M+ in transactions.</p>
                         </div>
                     </div>
                 </div>
@@ -1700,6 +1642,26 @@
     
     <!-- JavaScript -->
     <script>
+        const overlay = document.getElementById('heartbeatOverlay');
+        const video = document.getElementById('heartbeatVideo');
+
+        overlay.addEventListener('click', async () => {
+            overlay.classList.add('hidden');
+            video.classList.remove('hidden');
+
+            video.muted = false;     // enable sound
+            video.controls = true;   // show controls (volume, etc.)
+
+            try {
+            await video.play();
+            } catch (e) {
+            console.warn('Playback requires user action:', e);
+            }
+        });
+
+
+
+
         // 
         // Typing Animation
         document.addEventListener('DOMContentLoaded', function() {
@@ -2234,39 +2196,7 @@
             updateCounter();
         }
         
-        // Project Filter
-        const filterBtns = document.querySelectorAll('.filter-btn');
-        const projectCards = document.querySelectorAll('.project-card');
-        
-        filterBtns.forEach(btn => {
-            btn.addEventListener('click', () => {
-                // Update active button
-                filterBtns.forEach(b => {
-                    b.classList.remove('active', 'bg-neon-blue/20', 'border-neon-blue');
-                    b.classList.add('border-gray-600');
-                });
-                btn.classList.add('active', 'bg-neon-blue/20', 'border-neon-blue');
-                btn.classList.remove('border-gray-600');
-                
-                // Filter projects
-                const filter = btn.dataset.filter;
-                projectCards.forEach(card => {
-                    if (filter === 'all' || card.dataset.category.includes(filter)) {
-                        card.style.display = 'block';
-                        setTimeout(() => {
-                            card.style.opacity = '1';
-                            card.style.transform = 'scale(1)';
-                        }, 10);
-                    } else {
-                        card.style.opacity = '0';
-                        card.style.transform = 'scale(0.9)';
-                        setTimeout(() => {
-                            card.style.display = 'none';
-                        }, 300);
-                    }
-                });
-            });
-        });
+
         
         // Theme Toggle (optional)
         const themeToggle = document.getElementById('theme-toggle');
