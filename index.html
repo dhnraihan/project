@@ -684,6 +684,10 @@
                     <!-- Project 1: Rokto Bondhu -->
                     <div class="project-card card-hover bg-gray-800/50 backdrop-blur-sm rounded-xl overflow-hidden" data-category="web product">
                         <div class="relative h-[16rem] overflow-hidden rounded-lg">
+                            <!-- Added overlay for video playback -->
+                            <div id="heartbeatOverlay" class="absolute inset-0 w-full h-full bg-black/30 flex items-center justify-center cursor-pointer">
+                                <i class="fas fa-play-circle text-white text-6xl opacity-70"></i>
+                            </div>
                             <!-- Video (.mp4) -->
                             <video id="heartbeatVideo" 
                                 class="absolute inset-0 w-full h-full object-cover" 
@@ -2081,19 +2085,21 @@
         const overlay = document.getElementById('heartbeatOverlay');
         const video = document.getElementById('heartbeatVideo');
 
-        overlay.addEventListener('click', async () => {
-            overlay.classList.add('hidden');
-            video.classList.remove('hidden');
+        if (overlay && video) {
+            overlay.addEventListener('click', async () => {
+                overlay.classList.add('hidden');
+                video.classList.remove('hidden');
 
-            video.muted = false;     // enable sound
-            video.controls = true;   // show controls (volume, etc.)
+                video.muted = false;     // enable sound
+                video.controls = true;   // show controls (volume, etc.)
 
-            try {
-            await video.play();
-            } catch (e) {
-            console.warn('Playback requires user action:', e);
-            }
-        });
+                try {
+                await video.play();
+                } catch (e) {
+                console.warn('Playback requires user action:', e);
+                }
+            });
+        }
 
 
 
