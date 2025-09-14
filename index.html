@@ -331,95 +331,6 @@
             }
         }
 
-        /* Certificate Section Styles */
-        .training-card {
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-
-        .training-card:hover {
-            transform: translateY(-8px) scale(1.02);
-            box-shadow: 
-                0 20px 40px rgba(0, 212, 255, 0.2),
-                0 0 20px rgba(123, 47, 255, 0.2);
-        }
-
-        .training-tab {
-            transition: all 0.3s ease;
-        }
-
-        .training-tab:hover {
-            transform: translateY(-2px);
-        }
-
-        .training-tab.active {
-            transform: translateY(-2px);
-        }
-
-        /* Certificate Modal Animations */
-        #certificateModal {
-            transition: opacity 0.3s ease;
-        }
-
-        #certificateModal.opacity-100 {
-            opacity: 1;
-        }
-
-        #certificateModal img {
-            transition: transform 0.3s ease;
-        }
-
-        #certificateModal img:hover {
-            transform: scale(1.05);
-        }
-
-        /* Certificate Badge Glow */
-        .training-card .view-certificate {
-            position: relative;
-            overflow: hidden;
-        }
-
-        .training-card .view-certificate::before {
-            content: '';
-            position: absolute;
-            top: 50%;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
-            transform: translateY(-50%);
-            transition: left 0.5s;
-        }
-
-        .training-card .view-certificate:hover::before {
-            left: 100%;
-        }
-
-        /* Status Badge Animations */
-        @keyframes pulse {
-            0%, 100% {
-                transform: scale(1);
-                opacity: 1;
-            }
-            50% {
-                transform: scale(1.1);
-                opacity: 0.8;
-            }
-        }
-
-        .training-card span[class*="text-green"] {
-            animation: pulse 2s infinite;
-        }
-
-        /* Responsive Design for Certificate Cards */
-        @media (max-width: 768px) {
-            .training-card {
-                margin-bottom: 1rem;
-            }
-            
-            #certificateModal .inline-block {
-                max-width: 95%;
-            }
-        }
 
         /* Enhanced Skills Section Styles */
         .skill-item {
@@ -1089,6 +1000,7 @@
                         <h3 class="text-lg md:text-xl font-semibold text-white">National Robotics Quiz Carnival</h3>
                         <span class="text-xs md:text-sm text-gray-400">2024</span>
                     </div>
+                    <p class="text-gray-400 text-sm mt-1">• Silver Medalist among thousands of participants Nationwide.</p>
                     <div class="mt-2 flex flex-wrap gap-2">
                         <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] md:text-xs font-medium border border-neon-purple/30 text-neon-purple bg-neon-purple/10">
                         <i class="fas fa-question-circle text-[10px]"></i> Robotics Quiz
@@ -1120,7 +1032,7 @@
                     </div>
                 </div>
 
-                        <!-- 7. International Astronomy and Astrophysics Challenge 2024 -->
+                <!-- 7. International Astronomy and Astrophysics Challenge 2024 -->
                 <div class="relative pb-0 group">
                     <div class="absolute -left-1.5 md:-left-1 top-1">
                         <span class="relative flex h-8 w-8">
@@ -1187,7 +1099,9 @@
                 <i class="fas fa-flask text-xl"></i>
             </div>
             <div class="min-w-0">
-                <h3 class="text-xl font-semibold text-white">Research Internship</h3>
+                <h3 class="text-xl font-semibold text-white">Scientific Research BD – Research Intern (Unpaid, 6 months )</h3>
+                <p class="text-gray-400 text-sm mt-1">• Contributed to a key research project with measurable community impact.</p>
+                <p class="text-gray-400 text-sm mt-1">• Demonstrated initiative, creativity, and strong work ethic.</p>
                 <div class="mt-3 flex flex-wrap gap-2">
                 <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-xs font-medium border border-neon-purple/30 text-neon-purple bg-neon-purple/10">
                     <i class="fas fa-briefcase text-[10px]"></i> Internship
@@ -1629,34 +1543,6 @@
                     </div>
                 </div>
 
-                <!-- Book 6: Thinking, Fast and Slow -->
-                <div class="book-card group" data-book-category="science personal">
-                    <div class="bg-gray-800/50 backdrop-blur-sm rounded-xl overflow-hidden border border-gray-700 hover:border-neon-purple/50 transition-all duration-300 hover:scale-105">
-                        <div class="relative h-64 bg-gradient-to-br from-gray-600 to-gray-800 overflow-hidden">
-                            <img src="assets/img/book4.jpeg" 
-                                alt="Thinking, Fast and Slow" 
-                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
-                            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
-                            <div class="absolute top-2 right-2 px-2 py-1 bg-green-500/90 rounded-full text-xs font-semibold text-white">
-                                Completed
-                            </div>
-                        </div>
-                        <div class="p-4">
-                            <h3 class="text-lg font-semibold text-white mb-1">Thinking, Fast and Slow</h3>
-                            <p class="text-sm text-gray-400 mb-2">Daniel Kahneman</p>
-                            <div class="flex items-center gap-2 mb-3">
-                                <div class="flex text-yellow-400">
-                                    <i class="fas fa-star text-xs"></i>
-                                    <i class="fas fa-star text-xs"></i>
-                                    <i class="fas fa-star text-xs"></i>
-                                    <i class="fas fa-star text-xs"></i>
-                                    <i class="fas fa-star text-xs"></i>
-                                </div>
-                                <span class="text-xs text-gray-500">5.0</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
 
                 <!-- Book 7: -->
                 <div class="book-card group" data-book-category="technology">
@@ -1719,66 +1605,6 @@
         </div>
     </section>
 
-    
-    <!-- Certificate Modal -->
-    <div id="certificateModal" class="fixed inset-0 z-50 hidden overflow-y-auto">
-        <div class="flex items-center justify-center min-h-screen px-4 pt-4 pb-20 text-center sm:p-0">
-            <!-- Background overlay -->
-            <div class="fixed inset-0 transition-opacity bg-gray-900 bg-opacity-75" onclick="closeCertificateModal()"></div>
-            
-            <!-- Modal panel -->
-            <div class="inline-block overflow-hidden text-left align-bottom transition-all transform bg-gray-800 rounded-lg shadow-xl sm:my-8 sm:align-middle sm:max-w-2xl sm:w-full">
-                <div class="px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
-                    <div class="flex justify-between items-start mb-4">
-                        <h3 class="text-2xl font-bold gradient-text" id="certTitle">Certificate Title</h3>
-                        <button onclick="closeCertificateModal()" class="text-gray-400 hover:text-white transition-colors">
-                            <i class="fas fa-times text-xl"></i>
-                        </button>
-                    </div>
-                    
-                    <!-- Certificate Image Container -->
-                    <div class="bg-gray-900 rounded-lg p-4 mb-4">
-                        <img id="certImage" src="" alt="Certificate" class="w-full rounded-lg">
-                    </div>
-                    
-                    <!-- Certificate Details -->
-                    <div class="space-y-3">
-                        <div class="flex justify-between items-center py-2 border-b border-gray-700">
-                            <span class="text-gray-400">Credential ID:</span>
-                            <span class="text-gray-200" id="certCredentialId">ABC123XYZ</span>
-                        </div>
-                        <div class="flex justify-between items-center py-2 border-b border-gray-700">
-                            <span class="text-gray-400">Issue Date:</span>
-                            <span class="text-gray-200" id="certIssueDate">January 2023</span>
-                        </div>
-                        <div class="flex justify-between items-center py-2 border-b border-gray-700">
-                            <span class="text-gray-400">Issuing Organization:</span>
-                            <span class="text-gray-200" id="certOrganization">Organization Name</span>
-                        </div>
-                        <div class="flex justify-between items-center py-2 border-b border-gray-700">
-                            <span class="text-gray-400">Status:</span>
-                            <span class="text-green-400" id="certStatus">
-                                <i class="fas fa-check-circle mr-1"></i>Verified
-                            </span>
-                        </div>
-                    </div>
-                    
-                    <!-- Action Buttons -->
-                    <div class="flex gap-4 mt-6">
-                        <!-- <a id="certVerifyLink" href="#" target="_blank" 
-                            class="flex-1 px-4 py-2 bg-gradient-to-r from-neon-blue to-neon-purple rounded-lg text-center font-semibold hover:scale-105 transition-transform">
-                            <i class="fas fa-external-link-alt mr-2"></i>Verify Certificate
-                        </a> -->
-                        <button id="certDownloadBtn" 
-                            class="flex-1 px-4 py-2 border border-gray-600 rounded-lg font-semibold hover:bg-gray-700 transition-colors">
-                            <i class="fas fa-download mr-2"></i>Download
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-  
 
     <!-- Contact Section -->
     <section id="contact" class="py-20">
@@ -2196,95 +2022,7 @@
                     });
                 });
             });
-            
-            // Certificate Modal Functionality
-            const certificateButtons = document.querySelectorAll('.view-certificate');
-            
-            certificateButtons.forEach(button => {
-                button.addEventListener('click', function() {
-                    const certId = this.dataset.certId;
-                    openCertificateModal(certId);
-                });
-            });
         });
-
-        // Open Certificate Modal
-        function openCertificateModal(certId) {
-            const modal = document.getElementById('certificateModal');
-            const cert = certificateData[certId];
-            
-            if (cert) {
-                // Update modal content
-                document.getElementById('certTitle').textContent = cert.title;
-                document.getElementById('certImage').src = cert.image;
-                document.getElementById('certCredentialId').textContent = cert.credentialId;
-                document.getElementById('certIssueDate').textContent = cert.issueDate;
-                document.getElementById('certOrganization').textContent = cert.organization;
-                document.getElementById('certVerifyLink').href = cert.verifyLink;
-                
-                // Update status with appropriate styling
-                const statusElement = document.getElementById('certStatus');
-                if (cert.status === 'In Progress') {
-                    statusElement.innerHTML = '<i class="fas fa-clock mr-1"></i>In Progress';
-                    statusElement.className = 'text-yellow-400';
-                } else {
-                    statusElement.innerHTML = '<i class="fas fa-check-circle mr-1"></i>Verified';
-                    statusElement.className = 'text-green-400';
-                }
-                
-                // Set download functionality
-                document.getElementById('certDownloadBtn').onclick = function() {
-                    // In production, this would trigger actual certificate download
-                    console.log('Downloading certificate:', certId);
-                    alert('Certificate download started!');
-                };
-                
-                // Show modal with animation
-                modal.classList.remove('hidden');
-                setTimeout(() => {
-                    modal.classList.add('opacity-100');
-                }, 10);
-            }
-        }
-
-        // Close Certificate Modal
-        function closeCertificateModal() {
-            const modal = document.getElementById('certificateModal');
-            modal.classList.remove('opacity-100');
-            setTimeout(() => {
-                modal.classList.add('hidden');
-            }, 300);
-        }
-
-        // Add keyboard escape to close modal
-        document.addEventListener('keydown', function(e) {
-            if (e.key === 'Escape') {
-                closeCertificateModal();
-            }
-        });
-
-        // Animate certificate cards on scroll
-        const certificateObserver = new IntersectionObserver((entries) => {
-            entries.forEach((entry, index) => {
-                if (entry.isIntersecting) {
-                    setTimeout(() => {
-                        entry.target.style.opacity = '1';
-                        entry.target.style.transform = 'translateY(0)';
-                    }, index * 100);
-                }
-            });
-        }, {
-            threshold: 0.1
-        });
-
-        document.querySelectorAll('.training-card').forEach(card => {
-            card.style.opacity = '0';
-            card.style.transform = 'translateY(20px)';
-            card.style.transition = 'all 0.6s ease-out';
-            certificateObserver.observe(card);
-        });
-
-
 
         // Initialize particles with performance optimization
         const isMobile = window.innerWidth < 768;
