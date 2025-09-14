@@ -914,7 +914,7 @@
                                         <i class="fas fa-trophy text-[10px]"></i> Olympiad
                                     </span>
                                 </div>
-                                <button onclick="openBiologyOlympiadModal()" class="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg text-xs font-medium border border-neon-purple/30 text-neon-purple bg-neon-purple/10 hover:bg-neon-purple/20 transition-colors">
+                                <button onclick="openBiologyOlympiadModal()" class="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg text-xs font-medium border border-neon-blue/30 text-neon-blue bg-neon-blue/10 hover:bg-neon-blue/20 transition-colors">
                                     <i class="fas fa-certificate text-[10px]"></i> View Certificate
                                 </button>
                             </div>
@@ -923,8 +923,8 @@
 
                     <!-- Biology Olympiad Certificate Modal -->
                     <div id="biologyOlympiadModal" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 hidden items-center justify-center p-4">
-                        <div class="relative bg-gray-900 rounded-xl border border-gray-700 p-4">
-                            
+                        <div class="relative bg-gray-900 rounded-xl border border-gray-700 p-4 max-w-6xl w-full max-h-[90vh] overflow-auto">
+
                             <!-- Header -->
                             <div class="flex items-center justify-between mb-4">
                             <h4 class="text-lg font-semibold text-white flex items-center gap-2">
@@ -934,16 +934,22 @@
                                 <i class="fas fa-times text-xl"></i>
                             </button>
                             </div>
-                            
-                            <!-- Image -->
-                            <img id="biologyOlympiadImage" 
-                                src="assets/img/biology.webp" 
-                                loading="lazy" 
+
+                            <!-- Images -->
+                            <div class="flex flex-col lg:flex-row gap-4 items-center justify-center">
+                            <img src="assets/img/biology.webp" 
                                 alt="Statice Health International Biology Olympiad Certificate" 
-                                class="rounded-lg border border-gray-600 max-w-[90vw] max-h-[90vh] object-contain">
-                            
+                                class="rounded-lg border border-gray-600 max-w-[90vw] lg:max-w-[45%] max-h-[70vh] object-contain">
+                            <img src="assets/img/biology2.webp" 
+                                alt="Another Biology Olympiad Certificate" 
+                                class="rounded-lg border border-gray-600 max-w-[90vw] lg:max-w-[45%] max-h-[70vh] object-contain">
+                            </div>
+
                         </div>
                     </div>
+
+
+
 
 
                <!-- Duke of Edinburgh Award 2025 -->
@@ -1035,8 +1041,10 @@
 
                 <!-- Math Challenge Certificate Modal -->
                 <div id="mathChallengeModal" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 hidden items-center justify-center p-4">
-                    <div class="relative max-w-4xl max-h-[90vh] bg-gray-900 rounded-xl border border-gray-700 overflow-hidden">
-                        <div class="flex items-center justify-between p-4 border-b border-gray-700">
+                    <div class="relative bg-gray-900 rounded-xl border border-gray-700 p-4">
+
+                        <!-- Header -->
+                        <div class="flex items-center justify-between mb-4">
                             <h4 class="text-lg font-semibold text-white flex items-center gap-2">
                                 🧮 Math Challenge Certificate
                             </h4>
@@ -1044,11 +1052,17 @@
                                 <i class="fas fa-times text-xl"></i>
                             </button>
                         </div>
-                        <div class="p-4">
-                            <img id="mathChallengeImage" src="assets/img/math-cer.webp" loading="lazy" alt="International Youth Math Challenge Certificate" class="w-full h-auto rounded-lg border border-gray-600">
-                        </div>
+
+                        <!-- Image -->
+                        <img id="mathChallengeImage" 
+                            src="assets/img/math-cer.webp" 
+                            loading="lazy"
+                            alt="International Youth Math Challenge Certificate"
+                            class="rounded-lg border border-gray-600 max-w-[90vw] max-h-[90vh] object-contain">
+
                     </div>
                 </div>
+
 
                 <!-- 4. International Physics Brawl Competition 2024 -->
                 <div class="relative pb-10 group">
@@ -1080,8 +1094,10 @@
 
                 <!-- Physics Brawl Certificate Modal -->
                 <div id="physicsBrawlModal" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 hidden items-center justify-center p-4">
-                    <div class="relative max-w-4xl max-h-[90vh] bg-gray-900 rounded-xl border border-gray-700 overflow-hidden">
-                        <div class="flex items-center justify-between p-4 border-b border-gray-700">
+                    <div class="relative bg-gray-900 rounded-xl border border-gray-700 p-4">
+
+                        <!-- Header -->
+                        <div class="flex items-center justify-between mb-4">
                             <h4 class="text-lg font-semibold text-white flex items-center gap-2">
                                 🔬 Physics Brawl Competition Certificate
                             </h4>
@@ -1089,11 +1105,16 @@
                                 <i class="fas fa-times text-xl"></i>
                             </button>
                         </div>
-                        <div class="p-4">
-                            <img id="physicsBrawlImage" src="assets/img/physic.webp" alt="International Physics Brawl Competition Certificate" class="w-full h-auto rounded-lg border border-gray-600">
-                        </div>
+
+                        <!-- Image -->
+                        <img id="physicsBrawlImage" 
+                            src="assets/img/physic.webp" 
+                            alt="International Physics Brawl Competition Certificate"
+                            class="rounded-lg border border-gray-600 max-w-[90vw] max-h-[90vh] object-contain">
+
                     </div>
                 </div>
+
 
                 <!-- 5. National Robotics Quiz Carnival 2024 -->
                 <div class="relative pb-10 group">
@@ -1126,8 +1147,10 @@
 
                 <!-- Robotics Quiz Certificate Modal -->
                 <div id="roboticsQuizModal" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 hidden items-center justify-center p-4">
-                    <div class="relative max-w-4xl max-h-[90vh] bg-gray-900 rounded-xl border border-gray-700 overflow-hidden">
-                        <div class="flex items-center justify-between p-4 border-b border-gray-700">
+                    <div class="relative bg-gray-900 rounded-xl border border-gray-700 p-4">
+
+                        <!-- Header -->
+                        <div class="flex items-center justify-between mb-4">
                             <h4 class="text-lg font-semibold text-white flex items-center gap-2">
                                 🏅 Robotics Quiz Certificate
                             </h4>
@@ -1135,11 +1158,17 @@
                                 <i class="fas fa-times text-xl"></i>
                             </button>
                         </div>
-                        <div class="p-4">
-                            <img id="roboticsQuizImage" src="assets/img/robotic.webp" alt="National Robotics Quiz Carnival Certificate" class="w-full h-auto rounded-lg border border-gray-600">
-                        </div>
+
+                        <!-- Image -->
+                        <img id="roboticsQuizImage" 
+                            src="assets/img/robotic.webp" 
+                            loading="lazy"
+                            alt="National Robotics Quiz Carnival Certificate"
+                            class="rounded-lg border border-gray-600 max-w-[90vw] max-h-[90vh] object-contain">
+
                     </div>
                 </div>
+
 
                 <!-- 6. International Economics Olympiad x Winter Challenge 2024 -->
                 <div class="relative pb-10 group">
@@ -1257,24 +1286,54 @@
         <!-- Research Internship -->
         <div class="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-6 border border-gray-700 hover:border-neon-purple/50 transition-all duration-300 neon-glow">
             <div class="flex items-start gap-4">
-            <div class="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-gradient-to-br from-neon-purple to-neon-pink text-white/90 shadow-lg">
-                <i class="fas fa-flask text-xl"></i>
-            </div>
-            <div class="min-w-0">
-                <h3 class="text-xl font-semibold text-white">Scientific Research BD – Research Intern (Unpaid, 6 months )</h3>
-                <p class="text-gray-400 text-sm mt-1">• Contributed to a key research project with measurable community impact.</p>
-                <p class="text-gray-400 text-sm mt-1">• Demonstrated initiative, creativity, and strong work ethic.</p>
-                <div class="mt-3 flex flex-wrap gap-2">
-                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-xs font-medium border border-neon-purple/30 text-neon-purple bg-neon-purple/10">
-                    <i class="fas fa-briefcase text-[10px]"></i> Internship
-                </span>
-                <span class="px-2.5 py-0.5 rounded-full text-xs font-medium border border-gray-600 text-gray-300">Research</span>
-                <span class="px-2.5 py-0.5 rounded-full text-xs font-medium border border-gray-600 text-gray-300">Documentation</span>
-                <span class="px-2.5 py-0.5 rounded-full text-xs font-medium border border-gray-600 text-gray-300">Collaboration</span>
+                <div class="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-gradient-to-br from-neon-purple to-neon-pink text-white/90 shadow-lg">
+                    <i class="fas fa-flask text-xl"></i>
+                </div>
+                <div class="min-w-0 flex-1">
+                    <div class="flex items-center justify-between gap-4 mb-2">
+                        <h3 class="text-xl font-semibold text-white">🔬 Scientific Research BD – Research Intern (Unpaid, 6 months)</h3>
+                        <button onclick="openResearchInternModal()" class="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg text-xs font-medium border border-neon-purple/30 text-neon-purple bg-neon-purple/10 hover:bg-neon-purple/20 transition-colors">
+                            <i class="fas fa-certificate text-[10px]"></i> View Certificate
+                        </button>
+                    </div>
+                    <p class="text-gray-400 text-sm mt-1">• Contributed to a key research project with measurable community impact.</p>
+                    <p class="text-gray-400 text-sm mt-1">• Demonstrated initiative, creativity, and strong work ethic.</p>
+                    <div class="mt-3 flex flex-wrap gap-2">
+                        <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-xs font-medium border border-neon-purple/30 text-neon-purple bg-neon-purple/10">
+                            <i class="fas fa-briefcase text-[10px]"></i> Internship
+                        </span>
+                        <span class="px-2.5 py-0.5 rounded-full text-xs font-medium border border-gray-600 text-gray-300">Research</span>
+                        <span class="px-2.5 py-0.5 rounded-full text-xs font-medium border border-gray-600 text-gray-300">Documentation</span>
+                        <span class="px-2.5 py-0.5 rounded-full text-xs font-medium border border-gray-600 text-gray-300">Collaboration</span>
+                    </div>
                 </div>
             </div>
+        </div>
+
+        <!-- Research Intern Certificate Modal -->
+       <div id="researchInternModal" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 hidden items-center justify-center p-4">
+            <div class="relative bg-gray-900 rounded-xl border border-gray-700 p-4">
+
+                <!-- Header -->
+                <div class="flex items-center justify-between mb-4">
+                    <h4 class="text-lg font-semibold text-white flex items-center gap-2">
+                        📋 Research Internship Certificate - Scientific Research BD
+                    </h4>
+                    <button onclick="closeResearchInternModal()" class="text-gray-400 hover:text-white transition-colors">
+                        <i class="fas fa-times text-xl"></i>
+                    </button>
+                </div>
+
+                <!-- Image -->
+                <img id="researchInternImage" 
+                    src="assets/img/research.webp"
+                    loading="lazy"
+                    alt="Scientific Research BD Internship Certificate"
+                    class="rounded-lg border border-gray-600 max-w-[90vw] max-h-[90vh] object-contain">
+
             </div>
         </div>
+
 
         <!-- Research Internship 2 -->
         <div class="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-6 border border-gray-700 hover:border-neon-purple/50 transition-all duration-300 neon-glow">
@@ -1476,11 +1535,11 @@
                         </span>
                         </div>
 
-                        <div class="mt-4 flex flex-wrap gap-3">
+                        <!-- <div class="mt-4 flex flex-wrap gap-3">
                         <a href="review-paper.pdf" target="_blank" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-gradient-to-r from-neon-purple to-neon-pink text-white hover:opacity-90">
                             <i class="fas fa-file-pdf"></i> Read PDF
                         </a>
-                        </div>
+                        </div> -->
                     </div>
                     </div>
                 </article>
@@ -1889,6 +1948,44 @@
     
     <!-- JavaScript -->
     <script>
+        function openResearchInternModal() {
+            const modal = document.getElementById('researchInternModal');
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeResearchInternModal() {
+            const modal = document.getElementById('researchInternModal');
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+            document.body.style.overflow = 'auto';
+        }
+
+        // Close modal when clicking outside the content
+        document.getElementById('researchInternModal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeResearchInternModal();
+            }
+        });
+
+        // Updated global escape key handler for all modals
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closeCertificateModal(); // Duke of Edinburgh
+                closeBiologyOlympiadModal(); // Biology Olympiad
+                closeMathChallengeModal(); // Math Challenge
+                closeMSOfficeModal(); // MS Office
+                closeRoboticsQuizModal(); // Robotics Quiz
+                closePhysicsBrawlModal(); // Physics Brawl
+                closeMicrosoftAmbassadorModal(); // Microsoft Ambassador
+                closeResearchInternModal(); // Research Intern
+            }
+        });
+
+
+
+
         function openMicrosoftAmbassadorModal() {
             const modal = document.getElementById('microsoftAmbassadorModal');
             modal.classList.remove('hidden');
