@@ -419,6 +419,19 @@
 </head>
 <body class="bg-gray-900 text-gray-100 overflow-x-hidden">
     
+    <!-- Loading Screen Overlay -->
+    <div id="loading-screen" style="position:fixed;top:0;left:0;width:100vw;height:100vh;background:#18181b;z-index:9999;display:flex;align-items:center;justify-content:center;">
+        <div>
+            <svg width="60" height="60" viewBox="0 0 50 50">
+                <circle cx="25" cy="25" r="20" stroke="#7B2FFF" stroke-width="4" fill="none" stroke-linecap="round">
+                    <animate attributeName="stroke-dasharray" values="1,200;89,200;89,200" times="0;0.5;1" dur="1.5s" repeatCount="indefinite"/>
+                    <animate attributeName="stroke-dashoffset" values="0;-35;-124" times="0;0.5;1" dur="1.5s" repeatCount="indefinite"/>
+                </circle>
+            </svg>
+            <div style="color:#fff;text-align:center;margin-top:16px;font-size:1.2rem;">Loading...</div>
+        </div>
+    </div>
+
     <!-- Particle Background -->
     <div id="particles-js"></div>
     
@@ -1979,6 +1992,11 @@
     
     <!-- JavaScript -->
     <script>
+        window.addEventListener('load', function() {
+            var loader = document.getElementById('loading-screen');
+            if(loader) loader.style.display = 'none';
+        });
+
         function openResearchInternModal() {
             const modal = document.getElementById('researchInternModal');
             modal.classList.remove('hidden');
