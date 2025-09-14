@@ -684,26 +684,25 @@
                     <!-- Project 1: Rokto Bondhu -->
                     <div class="project-card card-hover bg-gray-800/50 backdrop-blur-sm rounded-xl overflow-hidden" data-category="web product">
                         <div class="relative h-[16rem] overflow-hidden rounded-lg">
-                            <!-- Video (.mov) -->
-                            <video id="heartbeatVideo" class="absolute inset-0 w-full h-full object-cover hidden"
+                            <!-- Video (.mp4) -->
+                            <video id="heartbeatVideo" 
+                                class="absolute inset-0 w-full h-full object-cover" 
                                 playsinline controls preload="metadata">
-                                <source src="roktoapp.mov" type="video/quicktime" />
+                            <source src="roktoapp.mp4" type="video/mp4" />
+                            Your browser does not support the video tag.
                             </video>
-
-                            <!-- Click overlay -->
-                            <button id="heartbeatOverlay" type="button"
-                                class="h-full w-full bg-gradient-to-br from-red-600 to-red-800 flex items-center justify-center cursor-pointer">
-                                <i class="fas fa-heartbeat text-6xl text-white/60"></i>
-                            </button>
                         </div>
 
                         <div class="p-6">
                             <h3 class="text-xl font-bold mb-2">Rokto Bondhu</h3>
-                            <p class="text-gray-400 text-sm mb-4">• Founder & CEO, Rokto Bondhu: Bangladesh's largest free peer-to-peer blood service platform. <br>
-                                            • Contributed to saving thousands of lives through Rokto Bondhu. <br>
-                                            • Built a nationwide donor network with thousands of active donors across Bangladesh.</p>
+                            <p class="text-gray-400 text-sm mb-4">
+                            • Founder & CEO, Rokto Bondhu: Bangladesh's largest free peer-to-peer blood service platform. <br>
+                            • Contributed to saving thousands of lives through Rokto Bondhu. <br>
+                            • Built a nationwide donor network with thousands of active donors across Bangladesh.
+                            </p>
                         </div>
                     </div>
+
                     
                     <!-- Project 2: Tutorly AI -->
                     <div class="project-card card-hover bg-gray-800/50 backdrop-blur-sm rounded-xl overflow-hidden" data-category="ai product">
@@ -731,7 +730,7 @@
                             <div class="slider-wrapper flex transition-transform duration-500 ease-in-out h-full" data-slider="risdy">
                                 <!-- Slide 1 -->
                                 <div class="slider-slide min-w-full h-full">
-                                    <img src="assets/img/risdy.jpeg" 
+                                    <img src="assets/img/risdy.webp" 
                                         loading="lazy"
                                         alt="RISDY Community Outreach" 
                                         class="w-full h-full object-cover">
@@ -740,7 +739,7 @@
                                 
                                 <!-- Slide 2 -->
                                 <div class="slider-slide min-w-full h-full">
-                                    <img src="assets/img/risdy2.jpeg"
+                                    <img src="assets/img/risdy2.webp"
                                         loading="lazy"
                                         alt="Children Education Program" 
                                         class="w-full h-full object-cover">
@@ -749,7 +748,7 @@
                                 
                                 <!-- Slide 3 -->
                                 <div class="slider-slide min-w-full h-full">
-                                    <img src="assets/img/risdy3.jpeg" 
+                                    <img src="assets/img/risdy3.webp" 
                                         loading="lazy"
                                         alt="Healthcare Support Initiative" 
                                         class="w-full h-full object-cover">
@@ -758,7 +757,7 @@
                                 
                                 <!-- Slide 4 -->
                                 <div class="slider-slide min-w-full h-full">
-                                    <img src="assets/img/risdy4.jpeg"
+                                    <img src="assets/img/risdy4.webp"
                                         loading="lazy"
                                         alt="Financial Literacy Workshop" 
                                         class="w-full h-full object-cover">
@@ -767,7 +766,7 @@
                                 
                                 <!-- Slide 5 -->
                                 <div class="slider-slide min-w-full h-full">
-                                    <img src="assets/img/risdy5.jpeg" 
+                                    <img src="assets/img/risdy5.webp" 
                                         loading="lazy"
                                         alt="Community Development" 
                                         class="w-full h-full object-cover">
@@ -827,7 +826,7 @@
                     <!-- Project 4: Emblem Club -->
                     <div class="project-card card-hover bg-gray-800/50 backdrop-blur-sm rounded-xl overflow-hidden" data-category="web product">
                         <div class="h-[16rem] bg-[#061E15] flex items-center justify-center">
-                            <img src="assets/img/emblem.jpeg" loading="lazy" alt="Chart" class="h-full object-contain opacity-80" />
+                            <img src="assets/img/emblem.webp" loading="lazy" alt="Chart" class="h-full object-contain opacity-80" />
                         </div>
 
                         <div class="p-6">
@@ -843,7 +842,7 @@
                     <!-- Project 5: Thunder XI -->
                     <div class="project-card card-hover bg-gray-800/50 backdrop-blur-sm rounded-xl overflow-hidden" data-category="web product">
                         <div class="h-[16rem] bg-[#0D323D] flex items-center justify-center">
-                            <img src="assets/img/thunder.jpeg" alt="Thunder" loading="lazy" class="h-full object-contain opacity-80" />
+                            <img src="assets/img/thunder.webp" alt="Thunder" loading="lazy" class="h-full object-contain opacity-80" />
                         </div> 
                         <div class="p-6">
                             <h3 class="text-xl font-bold mb-2">Thunder XI</h3>
@@ -860,7 +859,7 @@
                     <!-- Project 6: Dealivarly -->
                     <div class="project-card card-hover bg-gray-800/50 backdrop-blur-sm rounded-xl overflow-hidden" data-category="web product">
                         <div class="h-[16rem] bg-white flex items-center justify-center">
-                            <img src="assets/img/dealivarly.jpeg" alt="Thunder" loading="lazy" class="h-full object-contain opacity-80" />
+                            <img src="assets/img/dealivarly.webp" alt="Thunder" loading="lazy" class="h-full object-contain opacity-80" />
                             <div class="absolute top-4 left-4 px-3 py-1 bg-green-600/90 backdrop-blur-sm rounded-full text-xs font-semibold text-white z-10">
                                 In process
                             </div>
@@ -888,77 +887,162 @@
                 <!-- vertical line -->
                 <div class="absolute left-5 md:left-6 top-0 bottom-0 w-px bg-gradient-to-b from-neon-blue via-neon-purple to-neon-pink/70"></div>
 
-                <!-- 1. Statice Health International Biology Olympiad 2024 -->
+                   <!-- 1. Statice Health International Biology Olympiad 2024 -->
+                    <div class="relative pb-10 group">
+                        <div class="absolute -left-1.5 md:-left-1 top-1">
+                            <span class="relative flex h-8 w-8">
+                                <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-neon-purple/30 opacity-30"></span>
+                                <span class="relative inline-flex items-center justify-center h-8 w-8 rounded-full border border-neon-purple/50 bg-gray-900 text-neon-blue">
+                                    <i class="fas fa-dna text-sm"></i>
+                                </span>
+                            </span>
+                        </div>
+                        <div class="bg-gray-800/50 backdrop-blur-sm border border-gray-700 hover:border-neon-purple/50 transition-colors rounded-xl p-4">
+                            <div class="flex items-center justify-between gap-4">
+                                <h3 class="text-lg md:text-xl font-semibold text-white">🏆 Statice Health International Biology Olympiad</h3>
+                                <span class="text-xs md:text-sm text-gray-400">2024</span>
+                            </div>
+                            <p class="text-gray-400 text-sm mt-1">• 1st Position – Statice Health International Biology Olympiad 2024 (Higher Secondary Category)</p>
+                            <p class="text-gray-400 text-sm mt-1">• Competed among 10000+ students nationally.</p>
+                            <div class="mt-3 flex flex-wrap gap-2 items-center justify-between">
+                                <div class="flex gap-2">
+                                    <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] md:text-xs font-medium border border-neon-purple/30 text-neon-purple bg-neon-purple/10">
+                                        <i class="fas fa-trophy text-[10px]"></i> Olympiad
+                                    </span>
+                                </div>
+                                <button onclick="openBiologyOlympiadModal()" class="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg text-xs font-medium border border-neon-purple/30 text-neon-purple bg-neon-purple/10 hover:bg-neon-purple/20 transition-colors">
+                                    <i class="fas fa-certificate text-[10px]"></i> View Certificate
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Biology Olympiad Certificate Modal -->
+                    <div id="biologyOlympiadModal" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 hidden items-center justify-center p-4">
+                        <div class="relative bg-gray-900 rounded-xl border border-gray-700 p-4">
+                            
+                            <!-- Header -->
+                            <div class="flex items-center justify-between mb-4">
+                            <h4 class="text-lg font-semibold text-white flex items-center gap-2">
+                                🧬 Biology Olympiad Certificate - 1st Position
+                            </h4>
+                            <button onclick="closeBiologyOlympiadModal()" class="text-gray-400 hover:text-white transition-colors">
+                                <i class="fas fa-times text-xl"></i>
+                            </button>
+                            </div>
+                            
+                            <!-- Image -->
+                            <img id="biologyOlympiadImage" 
+                                src="assets/img/biology.webp" 
+                                loading="lazy" 
+                                alt="Statice Health International Biology Olympiad Certificate" 
+                                class="rounded-lg border border-gray-600 max-w-[90vw] max-h-[90vh] object-contain">
+                            
+                        </div>
+                    </div>
+
+
+               <!-- Duke of Edinburgh Award 2025 -->
                 <div class="relative pb-10 group">
                     <div class="absolute -left-1.5 md:-left-1 top-1">
-                    <span class="relative flex h-8 w-8">
-                        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-neon-purple/30 opacity-30"></span>
-                        <span class="relative inline-flex items-center justify-center h-8 w-8 rounded-full border border-neon-purple/50 bg-gray-900 text-neon-blue">
-                        <i class="fas fa-dna text-sm"></i>
+                        <span class="relative flex h-8 w-8">
+                            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-neon-blue/30 opacity-30"></span>
+                            <span class="relative inline-flex items-center justify-center h-8 w-8 rounded-full border border-neon-purple/50 bg-gray-900 text-neon-purple">
+                                <i class="fas fa-award text-sm"></i>
+                            </span>
                         </span>
-                    </span>
                     </div>
                     <div class="bg-gray-800/50 backdrop-blur-sm border border-gray-700 hover:border-neon-purple/50 transition-colors rounded-xl p-4">
-                    <div class="flex items-center justify-between gap-4">
-                        <h3 class="text-lg md:text-xl font-semibold text-white">Statice Health International Biology Olympiad</h3>
-                        <span class="text-xs md:text-sm text-gray-400">2024</span>
-                    </div>
-                    <p class="text-gray-400 text-sm mt-1">• 1st Position – Statice Health International Biology Olympiad 2024 (Higher Secondary Category)</p>
-                    <p class="text-gray-400 text-sm mt-1">• Competed among 10000+ students nationally.</p>
-                    <div class="mt-2 flex flex-wrap gap-2">
-                        <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] md:text-xs font-medium border border-neon-purple/30 text-neon-purple bg-neon-purple/10">
-                        <i class="fas fa-trophy text-[10px]"></i> Olympiad
-                        </span>
-                    </div>
+                        <div class="flex items-center justify-between gap-4">
+                            <h3 class="text-lg md:text-xl font-semibold text-white flex items-center gap-2">
+                                🏆 The Duke of Edinburgh's International Award
+                            </h3>
+                            <span class="text-xs md:text-sm text-gray-400">2024</span>
+                        </div>
+                        <p class="text-gray-400 text-sm mt-1">• After months of consistent activities and a volunteering tour, I was awarded a Gold Medalist at The Duke of Edinburgh's International award, 2024.</p>
+                        <div class="mt-3 flex flex-wrap gap-2 items-center justify-between">
+                            <div class="flex gap-2">
+                                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] md:text-xs font-medium border border-neon-purple/30 text-neon-purple bg-neon-purple/10">
+                                    <i class="fas fa-medal text-[10px]"></i> Award
+                                </span>
+                            </div>
+                            <button onclick="openCertificateModal()" class="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg text-xs font-medium border border-neon-blue/30 text-neon-blue bg-neon-blue/10 hover:bg-neon-blue/20 transition-colors">
+                                <i class="fas fa-certificate text-[10px]"></i> View Certificate
+                            </button>
+                        </div>
                     </div>
                 </div>
 
-                <!-- 2. Duke of Edinburgh Award 2025 -->
-                <div class="relative pb-10 group">
-                    <div class="absolute -left-1.5 md:-left-1 top-1">
-                    <span class="relative flex h-8 w-8">
-                        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-neon-blue/30 opacity-30"></span>
-                        <span class="relative inline-flex items-center justify-center h-8 w-8 rounded-full border border-neon-purple/50 bg-gray-900 text-neon-purple">
-                        <i class="fas fa-award text-sm"></i>
-                        </span>
-                    </span>
-                    </div>
-                    <div class="bg-gray-800/50 backdrop-blur-sm border border-gray-700 hover:border-neon-purple/50 transition-colors rounded-xl p-4">
-                    <div class="flex items-center justify-between gap-4">
-                        <h3 class="text-lg md:text-xl font-semibold text-white">The Duke of Edinburgh's International Award</h3>
-                        <span class="text-xs md:text-sm text-gray-400">2024</span>
-                    </div>
-                    <p class="text-gray-400 text-sm mt-1">• After months of consistent activities and a volunteering tour, I was awarded a Gold Medalist at The Duke of Edinburgh's International award, 2024.</p>
-                    <div class="mt-2 flex flex-wrap gap-2">
-                        <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] md:text-xs font-medium border border-neon-purple/30 text-neon-purple bg-neon-purple/10">
-                        <i class="fas fa-medal text-[10px]"></i> Award
-                        </span>
-                    </div>
+                   <!-- Certificate Modal -->
+                <div id="certificateModal" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 hidden items-center justify-center p-4">
+                    <div class="relative bg-gray-900 rounded-xl border border-gray-700 p-4">
+                        
+                        <!-- Header -->
+                        <div class="flex items-center justify-between mb-4">
+                        <h4 class="text-lg font-semibold text-white flex items-center gap-2">
+                            🏆 Duke of Edinburgh's Award Certificate
+                        </h4>
+                        <button onclick="closeCertificateModal()" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fas fa-times text-xl"></i>
+                        </button>
+                        </div>
+                        
+                        <!-- Image -->
+                        <img id="certificateImage" 
+                            src="assets/img/duke.webp" 
+                            loading="lazy" 
+                            alt="Duke of Edinburgh Award Certificate" 
+                            class="rounded-lg border border-gray-600 max-w-[90vw] max-h-[90vh] object-contain">
+                        
                     </div>
                 </div>
+
+
 
                 <!-- 3. International Youth Math Challenge 2024 -->
                 <div class="relative pb-10 group">
                     <div class="absolute -left-1.5 md:-left-1 top-1">
-                    <span class="relative flex h-8 w-8">
-                        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-neon-purple/30 opacity-30"></span>
-                        <span class="relative inline-flex items-center justify-center h-8 w-8 rounded-full border border-neon-purple/50 bg-gray-900 text-neon-blue">
-                        <i class="fas fa-calculator text-sm"></i>
+                        <span class="relative flex h-8 w-8">
+                            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-neon-purple/30 opacity-30"></span>
+                            <span class="relative inline-flex items-center justify-center h-8 w-8 rounded-full border border-neon-purple/50 bg-gray-900 text-neon-blue">
+                                <i class="fas fa-calculator text-sm"></i>
+                            </span>
                         </span>
-                    </span>
                     </div>
                     <div class="bg-gray-800/50 backdrop-blur-sm border border-gray-700 hover:border-neon-purple/50 transition-colors rounded-xl p-4">
-                    <div class="flex items-center justify-between gap-4">
-                        <h3 class="text-lg md:text-xl font-semibold text-white">International Youth Math Challenge</h3>
-                        <span class="text-xs md:text-sm text-gray-400">2024</span>
+                        <div class="flex items-center justify-between gap-4">
+                            <h3 class="text-lg md:text-xl font-semibold text-white">🥈 International Youth Math Challenge</h3>
+                            <span class="text-xs md:text-sm text-gray-400">2024</span>
+                        </div>
+                        <p class="text-gray-400 text-sm mt-1">• Silver Medalist (Top 8% of 10,000+ students from 98 countries)</p>
+                        <p class="text-gray-400 text-sm mt-1">• Excelled in research analysis and theoretical problem-solving.</p>
+                        <div class="mt-3 flex flex-wrap gap-2 items-center justify-between">
+                            <div class="flex gap-2">
+                                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] md:text-xs font-medium border border-neon-purple/30 text-neon-purple bg-neon-purple/10">
+                                    <i class="fas fa-bolt text-[10px]"></i> Challenge
+                                </span>
+                            </div>
+                            <button onclick="openMathChallengeModal()" class="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg text-xs font-medium border border-neon-blue/30 text-neon-blue bg-neon-blue/10 hover:bg-neon-blue/20 transition-colors">
+                                <i class="fas fa-certificate text-[10px]"></i> View Certificate
+                            </button>
+                        </div>
                     </div>
-                    <p class="text-gray-400 text-sm mt-1">• Silver Medalist (Top 8% of 10,000+ students from 98 countries)</p>
-                    <p class="text-gray-400 text-sm mt-1">• Excelled in research analysis and theoretical problem-solving.</p>
-                    <div class="mt-2 flex flex-wrap gap-2">
-                        <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] md:text-xs font-medium border border-neon-purple/30 text-neon-purple bg-neon-purple/10">
-                        <i class="fas fa-bolt text-[10px]"></i> Challenge
-                        </span>
-                    </div>
+                </div>
+
+                <!-- Math Challenge Certificate Modal -->
+                <div id="mathChallengeModal" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 hidden items-center justify-center p-4">
+                    <div class="relative max-w-4xl max-h-[90vh] bg-gray-900 rounded-xl border border-gray-700 overflow-hidden">
+                        <div class="flex items-center justify-between p-4 border-b border-gray-700">
+                            <h4 class="text-lg font-semibold text-white flex items-center gap-2">
+                                🧮 Math Challenge Certificate
+                            </h4>
+                            <button onclick="closeMathChallengeModal()" class="text-gray-400 hover:text-white transition-colors">
+                                <i class="fas fa-times text-xl"></i>
+                            </button>
+                        </div>
+                        <div class="p-4">
+                            <img id="mathChallengeImage" src="assets/img/math-cer.webp" loading="lazy" alt="International Youth Math Challenge Certificate" class="w-full h-auto rounded-lg border border-gray-600">
+                        </div>
                     </div>
                 </div>
 
@@ -1072,25 +1156,55 @@
         <!-- MS Office Applications -->
         <div class="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-6 border border-gray-700 hover:border-neon-purple/50 transition-all duration-300 neon-glow">
             <div class="flex items-start gap-4">
-            <div class="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-gradient-to-br from-neon-blue to-neon-purple text-white/90 shadow-lg">
-                <i class="fas fa-laptop text-xl"></i>
-            </div>
-            <div class="min-w-0">
-                <h3 class="text-xl font-semibold text-white">MS Office Applications</h3>
-                <p class="text-gray-400 text-sm mt-1">National Skill Standard Basic Course (6 months / 360 hours) – Grade: A+</p>
-                <p class="text-gray-400 text-sm mt-1">• Trained in MS Word, Excel, PowerPoint, Access.</p>
-                <p class="text-gray-400 text-sm mt-1">• BTEB-certified, secured A+ in final assessment.</p>
-                <div class="mt-3 flex flex-wrap gap-2">
-                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-xs font-medium border border-neon-blue/30 text-neon-blue bg-neon-blue/10">
-                    <i class="fas fa-certificate text-[10px]"></i> Professional Development
-                </span>
-                <span class="px-2.5 py-0.5 rounded-full text-xs font-medium border border-gray-600 text-gray-300">Word</span>
-                <span class="px-2.5 py-0.5 rounded-full text-xs font-medium border border-gray-600 text-gray-300">Excel</span>
-                <span class="px-2.5 py-0.5 rounded-full text-xs font-medium border border-gray-600 text-gray-300">PowerPoint</span>
+                <div class="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-gradient-to-br from-neon-blue to-neon-purple text-white/90 shadow-lg">
+                    <i class="fas fa-laptop text-xl"></i>
+                </div>
+                <div class="min-w-0 flex-1">
+                    <div class="flex items-center justify-between gap-4 mb-2">
+                        <h3 class="text-xl font-semibold text-white">💻 MS Office Applications</h3>
+                        <button onclick="openMSOfficeModal()" class="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg text-xs font-medium border border-neon-blue/30 text-neon-blue bg-neon-blue/10 hover:bg-neon-purple/20 transition-colors">
+                            <i class="fas fa-certificate text-[10px]"></i> View Certificate
+                        </button>
+                    </div>
+                    <p class="text-gray-400 text-sm mt-1">National Skill Standard Basic Course (6 months / 360 hours) – Grade: A+</p>
+                    <p class="text-gray-400 text-sm mt-1">• Trained in MS Word, Excel, PowerPoint, Access.</p>
+                    <p class="text-gray-400 text-sm mt-1">• BTEB-certified, secured A+ in final assessment.</p>
+                    <div class="mt-3 flex flex-wrap gap-2">
+                        <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-xs font-medium border border-neon-blue/30 text-neon-blue bg-neon-blue/10">
+                            <i class="fas fa-certificate text-[10px]"></i> Professional Development
+                        </span>
+                        <span class="px-2.5 py-0.5 rounded-full text-xs font-medium border border-gray-600 text-gray-300">Word</span>
+                        <span class="px-2.5 py-0.5 rounded-full text-xs font-medium border border-gray-600 text-gray-300">Excel</span>
+                        <span class="px-2.5 py-0.5 rounded-full text-xs font-medium border border-gray-600 text-gray-300">PowerPoint</span>
+                    </div>
                 </div>
             </div>
+        </div>
+
+        <!-- MS Office Certificate Modal -->
+        <div id="msOfficeModal" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 hidden items-center justify-center p-4">
+            <div class="relative bg-gray-900 rounded-xl border border-gray-700 p-4">
+                
+                <!-- Header -->
+                <div class="flex items-center justify-between mb-4">
+                    <h4 class="text-lg font-semibold text-white flex items-center gap-2">
+                        📋 MS Office Applications Certificate - Grade A+
+                    </h4>
+                    <button onclick="closeMSOfficeModal()" class="text-gray-400 hover:text-white transition-colors">
+                        <i class="fas fa-times text-xl"></i>
+                    </button>
+                </div>
+                
+                <!-- Image -->
+                <img id="msOfficeImage" 
+                    src="assets/img/360hour.webp" 
+                    loading="lazy" 
+                    alt="MS Office Applications Certificate" 
+                    class="rounded-lg border border-gray-600 max-w-[90vw] max-h-[90vh] object-contain">
+                
             </div>
         </div>
+
 
         <!-- Research Internship -->
         <div class="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-6 border border-gray-700 hover:border-neon-purple/50 transition-all duration-300 neon-glow">
@@ -1280,7 +1394,7 @@
                         </div>
 
                         <div class="mt-4 flex flex-wrap gap-3">
-                        <a href="conference-paper.pdf" target="_blank" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-gradient-to-r from-neon-blue to-neon-purple text-white hover:opacity-90">
+                        <a href="assets/pdf/GpApjsa.pdf" target="_blank" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-gradient-to-r from-neon-blue to-neon-purple text-white hover:opacity-90">
                             <i class="fas fa-file-pdf"></i> Read PDF
                         </a>
                         </div>
@@ -1401,8 +1515,8 @@
                 <div class="book-card group" data-book-category="business technology">
                     <div class="bg-gray-800/50 backdrop-blur-sm rounded-xl overflow-hidden border border-gray-700 hover:border-neon-purple/50 transition-all duration-300 hover:scale-105">
                         <div class="relative h-64 bg-gradient-to-br from-blue-600 to-purple-600 overflow-hidden">
-                            <img src="assets/img/book5.jpeg"
-                                 
+                            <img src="assets/img/book5.webp"
+                                loading="lazy" 
                                 alt="Zero to One" 
                                 class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
                             <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
@@ -1431,7 +1545,8 @@
                 <div class="book-card group" data-book-category="personal">
                     <div class="bg-gray-800/50 backdrop-blur-sm rounded-xl overflow-hidden border border-gray-700 hover:border-neon-purple/50 transition-all duration-300 hover:scale-105">
                         <div class="relative h-64 bg-gradient-to-br from-yellow-500 to-orange-600 overflow-hidden">
-                            <img src="assets/img/book3.jpeg" 
+                            <img src="assets/img/book3.webp" 
+                                loading="lazy"
                                 alt="Atomic Habits" 
                                 class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
                             <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
@@ -1460,7 +1575,8 @@
                 <div class="book-card group" data-book-category="business technology">
                     <div class="bg-gray-800/50 backdrop-blur-sm rounded-xl overflow-hidden border border-gray-700 hover:border-neon-purple/50 transition-all duration-300 hover:scale-105">
                         <div class="relative h-64 bg-gradient-to-br from-red-500 to-pink-600 overflow-hidden">
-                            <img src="assets/img/book4.jpeg" 
+                            <img src="assets/img/book4.webp" 
+                                loading="lazy"
                                 alt="The Lean Startup" 
                                 class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
                             <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
@@ -1489,7 +1605,8 @@
                 <div class="book-card group" data-book-category="science">
                     <div class="bg-gray-800/50 backdrop-blur-sm rounded-xl overflow-hidden border border-gray-700 hover:border-neon-purple/50 transition-all duration-300 hover:scale-105">
                         <div class="relative h-64 bg-gradient-to-br from-green-500 to-teal-600 overflow-hidden">
-                            <img src="assets/img/book6.jpeg" 
+                            <img src="assets/img/book6.webp"
+                                loading="lazy"
                                 alt="The Alchemist" 
                                 class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
                             <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
@@ -1518,7 +1635,8 @@
                 <div class="book-card group" data-book-category="personal technology">
                     <div class="bg-gray-800/50 backdrop-blur-sm rounded-xl overflow-hidden border border-gray-700 hover:border-neon-purple/50 transition-all duration-300 hover:scale-105">
                         <div class="relative h-64 bg-gradient-to-br from-indigo-500 to-purple-600 overflow-hidden">
-                            <img src="assets/img/book7.jpeg" 
+                            <img src="assets/img/book7.webp"
+                                loading="lazy" 
                                 alt="Mind Your Business" 
                                 class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
                             <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
@@ -1548,7 +1666,8 @@
                 <div class="book-card group" data-book-category="technology">
                     <div class="bg-gray-800/50 backdrop-blur-sm rounded-xl overflow-hidden border border-gray-700 hover:border-neon-purple/50 transition-all duration-300 hover:scale-105">
                         <div class="relative h-64 bg-gradient-to-br from-blue-500 to-cyan-600 overflow-hidden">
-                            <img src="assets/img/book2.jpeg" 
+                            <img src="assets/img/book2.webp" 
+                                loading="lazy"
                                 alt="Clean Code" 
                                 class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
                             <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
@@ -1577,7 +1696,8 @@
                 <div class="book-card group" data-book-category="business personal">
                     <div class="bg-gray-800/50 backdrop-blur-sm rounded-xl overflow-hidden border border-gray-700 hover:border-neon-purple/50 transition-all duration-300 hover:scale-105">
                         <div class="relative h-64 bg-gradient-to-br from-purple-500 to-pink-600 overflow-hidden">
-                            <img src="assets/img/book1.jpeg" 
+                            <img src="assets/img/book1.webp" 
+                                loading="lazy"
                                 alt="Rich Dad Poor Dad" 
                                 class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
                             <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
@@ -1605,6 +1725,8 @@
         </div>
     </section>
 
+
+ 
 
     <!-- Contact Section -->
     <section id="contact" class="py-20">
@@ -1686,8 +1808,145 @@
     <!-- JavaScript -->
     <script>
 
+        function openMSOfficeModal() {
+            const modal = document.getElementById('msOfficeModal');
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeMSOfficeModal() {
+            const modal = document.getElementById('msOfficeModal');
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+            document.body.style.overflow = 'auto';
+        }
+
+        // Close modal when clicking outside the content
+        document.getElementById('msOfficeModal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeMSOfficeModal();
+            }
+        });
+
+        // Update the global escape key handler to include all modals
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closeCertificateModal(); // Duke of Edinburgh
+                closeBiologyOlympiadModal(); // Biology Olympiad
+                closeMathChallengeModal(); // Math Challenge
+                closeMSOfficeModal(); // MS Office
+            }
+        });
 
 
+
+        function openMathChallengeModal() {
+            const modal = document.getElementById('mathChallengeModal');
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeMathChallengeModal() {
+            const modal = document.getElementById('mathChallengeModal');
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+            document.body.style.overflow = 'auto';
+        }
+
+        // Close modal when clicking outside the content
+        document.getElementById('mathChallengeModal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeMathChallengeModal();
+            }
+        });
+
+        // Update the global escape key handler to include all modals
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closeCertificateModal(); // Duke of Edinburgh
+                closeBiologyOlympiadModal(); // Biology Olympiad
+                closeMathChallengeModal(); // Math Challenge
+            }
+        });
+
+
+        // 1. Certificate Modal Functionality
+        function openBiologyOlympiadModal() {
+            const modal = document.getElementById('biologyOlympiadModal');
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeBiologyOlympiadModal() {
+            const modal = document.getElementById('biologyOlympiadModal');
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+            document.body.style.overflow = 'auto';
+        }
+
+        // Close modal when clicking outside the content
+        document.getElementById('biologyOlympiadModal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeBiologyOlympiadModal();
+            }
+        });
+
+        // Update the global escape key handler to include this modal
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closeBiologyOlympiadModal();
+                // Add other modal close functions here if you have more
+            }
+        });
+
+
+        // 2. dude
+        // Certificate Modal Functionality
+        function openCertificateModal() {
+            const modal = document.getElementById('certificateModal');
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeCertificateModal() {
+            const modal = document.getElementById('certificateModal');
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+            document.body.style.overflow = 'auto';
+        }
+
+        // Close modal when clicking outside the content
+        document.getElementById('certificateModal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeCertificateModal();
+            }
+        });
+
+        // Math Challenge Modal Functionality
+        function openMathChallengeModal() {
+            const modal = document.getElementById('mathChallengeModal');
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeMathChallengeModal() {
+            const modal = document.getElementById('mathChallengeModal');
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+            document.body.style.overflow = 'auto';
+        }
+
+        // Close modal when clicking outside the content
+        document.getElementById('mathChallengeModal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeMathChallengeModal();
+            }
+        });
 
         // Project Image Slider Functionality
         const sliderStates = {};
