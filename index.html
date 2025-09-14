@@ -436,9 +436,12 @@
                     <a href="#home" class="nav-link hover:text-neon-blue transition-colors">Home</a>
                     <a href="#about" class="nav-link hover:text-neon-blue transition-colors">About</a>
                     <a href="#projects" class="nav-link hover:text-neon-blue transition-colors">Projects</a>
-                    <a href="#skills" class="nav-link hover:text-neon-blue transition-colors">Skills</a>
-                    <a href="#training" class="nav-link hover:text-neon-blue transition-colors">Certifications</a>
-                    <a href="#timeline" class="nav-link hover:text-neon-blue transition-colors">Experience</a>
+                    <a href="#experience" class="nav-link hover:text-neon-blue transition-colors">Certifications</a>
+                    <a href="#professional-development" class="nav-link hover:text-neon-blue transition-colors">Internship</a>
+                    <a href="#volunteering-leadership" class="nav-link hover:text-neon-blue transition-colors">Volunteering</a>
+                    <a href="#publications" class="nav-link hover:text-neon-blue transition-colors">Research</a>
+                    <a href="#self-learning" class="nav-link hover:text-neon-blue transition-colors">Self-Learning</a>
+
                     <!-- <a href="#contact" class="nav-link hover:text-neon-blue transition-colors">Contact</a> -->
                     <!-- <button id="theme-toggle" class="ml-4 p-2 rounded-lg hover:bg-gray-800 transition-colors" aria-label="Toggle theme">
                         <i class="fas fa-moon text-yellow-400"></i>
@@ -461,9 +464,12 @@
                     <a href="#home" class="mobile-nav-link hover:text-neon-blue transition-colors">Home</a>
                     <a href="#about" class="mobile-nav-link hover:text-neon-blue transition-colors">About</a>
                     <a href="#projects" class="mobile-nav-link hover:text-neon-blue transition-colors">Projects</a>
-                    <a href="#skills" class="mobile-nav-link hover:text-neon-blue transition-colors">Skills</a>
-                    <a href="#training" class="mobile-nav-link hover:text-neon-blue transition-colors">Certifications</a>
-                    <a href="#timeline" class="mobile-nav-link hover:text-neon-blue transition-colors">Experience</a>
+                    <a href="#experience" class="mobile-nav-link hover:text-neon-blue transition-colors">Certifications</a>
+                    <a href="#professional-development" class="mobile-nav-link hover:text-neon-blue transition-colors">Internship</a>
+                    <a href="#volunteering-leadership" class="mobile-nav-link hover:text-neon-blue transition-colors">Volunteering</a>
+                    <a href="#publications" class="mobile-nav-link hover:text-neon-blue transition-colors">Research</a>
+                    <a href="#self-learning" class="mobile-nav-link hover:text-neon-blue transition-colors">Self-Learning</a>
+
                     <!-- <a href="#contact" class="mobile-nav-link hover:text-neon-blue transition-colors">Contact</a> -->
                 </div>
             </div>
@@ -477,17 +483,29 @@
                 
                 <!-- Left Side - Main Content -->
                 <div class="text-left reveal">
-                    <!-- Profile Image -->
+                   <!-- Profile Image -->
                     <div class="mb-8">
                         <div class="relative inline-block">
-                            <div class="w-32 h-32 md:w-40 md:h-40 rounded-full overflow-hidden border-4 border-neon-blue/50 shadow-2xl">
+                            <!-- LinkedIn-style Cover Image with actual image -->
+                            <div class="absolute -inset-8 mt-10 w-96 h-28 md:w-96 md:h-32 rounded-2xl overflow-hidden shadow-2xl">
+                                <img src="flag.webp" 
+                                    alt="Professional Cover Background" 
+                                    loading="lazy"
+                                    class="w-full h-full object-cover">
+                                <!-- Dark overlay for better contrast -->
+                                <div class="absolute inset-0 bg-gradient-to-br from-black/30 via-transparent to-black/20"></div>
+                            </div>
+                            
+                            <!-- Profile Photo -->
+                            <div class="relative mt-6 z-10 w-32 h-32 md:w-40 md:h-40 rounded-full overflow-hidden border-4 border-white shadow-2xl">
                                 <img src="logo.webp" 
                                     alt="Marufur Rahman"
                                     loading="lazy" 
                                     class="w-full h-full object-cover hover:scale-110 transition-transform duration-300">
                             </div>
+                            
                             <!-- Status Indicator -->
-                            <div class="absolute bottom-2 right-2 w-6 h-6 bg-green-500 rounded-full border-4 border-gray-900 animate-pulse"></div>
+                            <div class="absolute bottom-2 right-2 z-20 w-6 h-6 bg-green-500 rounded-full border-4 border-white animate-pulse shadow-lg"></div>
                         </div>
                     </div>
                     
@@ -1292,7 +1310,7 @@
                 <div class="min-w-0 flex-1">
                     <div class="flex items-center justify-between gap-4 mb-2">
                         <h3 class="text-xl font-semibold text-white">🔬 Scientific Research BD – Research Intern (Unpaid, 6 months)</h3>
-                        <button onclick="openResearchInternModal()" class="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg text-xs font-medium border border-neon-purple/30 text-neon-purple bg-neon-purple/10 hover:bg-neon-purple/20 transition-colors">
+                        <button onclick="openResearchInternModal()" class="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg text-xs font-medium border border-neon-blue/30 text-neon-blue bg-neon-blue/10 hover:bg-neon-purple/20 transition-colors">
                             <i class="fas fa-certificate text-[10px]"></i> View Certificate
                         </button>
                     </div>
@@ -1866,17 +1884,16 @@
         </div>
     </section>
 
-
- 
-
     <!-- Contact Section -->
     <section id="contact" class="py-20">
         <div class="container mx-auto px-4">
             <div class="reveal">
-                <h2 class="text-4xl font-bold text-center mb-12 gradient-text">Get In Touch</h2>
+                <h2 class="text-4xl font-bold text-center mb-8 gradient-text">Get In Touch</h2>
+                <a href="mailto:hello@maruf.xyz"><h2 class="text-4xl font-bold text-center mb-8 gradient-text">Mail: hello@maruf.xyz</h2></a>
                 
-                <div class="max-w-2xl mx-auto">
-                    <!-- <form id="contact-form" class="bg-gray-800/50 backdrop-blur-sm rounded-xl p-8">
+                
+               <!--<div class="max-w-2xl mx-auto">
+                     <form id="contact-form" class="bg-gray-800/50 backdrop-blur-sm rounded-xl p-8">
                         <div class="grid md:grid-cols-2 gap-6 mb-6">
                             <div>
                                 <label for="name" class="block text-gray-400 mb-2">Name</label>
@@ -1929,8 +1946,8 @@
                                 <i class="fab fa-twitter text-2xl"></i>
                             </a>
                         </div> 
-                    </div>-->
-                </div>
+                    </div>
+                </div>-->
             </div>
         </div>
     </section>
