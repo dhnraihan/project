@@ -48,6 +48,18 @@
     </script>
     
     <style>
+       /* Simple hover effect for test score cards */
+        #test-scores .bg-gray-800\/50:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Score number animation on hover */
+        #test-scores .text-3xl:hover {
+            transform: scale(1.05);
+            transition: transform 0.3s ease;
+        }
+        
         /* Book Card Styles */
         .book-card {
             transition: all 0.3s ease;
@@ -414,8 +426,6 @@
             }
         }
     </style>
-    
-
 </head>
 <body class="bg-gray-900 text-gray-100 overflow-x-hidden">
     
@@ -564,7 +574,7 @@
                             <span class="text-sm">🤖 Founder @ <span class="text-neon-purple font-semibold">Tutorly AI</span></span>
                         </div>
                         <div class="px-4 py-2 bg-gray-800/50 backdrop-blur-sm rounded-full border border-neon-purple/30 hover:border-neon-purple transition-colors">
-                            <span class="text-sm">⚽ Founder @ <span class="text-neon-purple font-semibold">Emblem Club</span></span>
+                            <span class="text-sm">🧑‍💻 Founder @ <span class="text-neon-purple font-semibold">Emblem Club</span></span>
                         </div>
                         <div class="px-4 py-2 bg-gray-800/50 backdrop-blur-sm rounded-full border border-neon-purple/30 hover:border-neon-purple transition-colors">
                             <span class="text-sm">🏏 Founder @ <span class="text-neon-purple font-semibold">Thunder XI</span></span>
@@ -572,10 +582,13 @@
                         <div class="px-4 py-2 bg-gray-800/50 backdrop-blur-sm rounded-full border border-neon-purple/30 hover:border-neon-purple transition-colors">
                             <span class="text-sm">📦 Founder @ <span class="text-neon-purple font-semibold">Dealivarly</span></span>
                         </div>
+                        <div class="px-4 py-2 bg-gray-800/50 backdrop-blur-sm rounded-full border border-neon-purple/30 hover:border-neon-purple transition-colors">
+                            <span class="text-sm">📰 Founder @ <span class="text-neon-purple font-semibold">One News AI</span></span>
+                        </div>
                     </div>
                     
                     <!-- CTA Buttons -->
-                    <div class="flex flex-col sm:flex-row gap-4">
+                    <div class="flex flex-col sm:flex-row gap-4 item-center justify-center mt-4">
                         <a href="#projects" class="px-8 py-3 bg-gradient-to-r from-neon-blue to-neon-purple rounded-lg font-semibold hover:scale-105 transition-transform text-center">
                             <i class="fas fa-briefcase mr-2"></i>View Work
                         </a>
@@ -687,7 +700,6 @@
                     <div class="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-8 neon-border">
                         <div class="text-center mb-8">
                             <h3 class="text-2xl font-bold text-white mb-2">Marufur Rahman</h3>
-                            <p class="text-lg text-gray-400">Entrepreneur • Researcher • Innovation Leader</p>
                         </div>
                         
                         <p class="text-lg text-gray-300 mb-6 leading-relaxed">
@@ -708,10 +720,13 @@
     <section id="projects" class="py-20 bg-gray-800/30">
         <div class="container mx-auto px-4">
             <div class="reveal">
-                <h2 class="text-4xl font-bold text-center mb-12 gradient-text">Instead of featured projects</h2>
+                <h2 class="text-4xl font-bold text-center mb-12 gradient-text">Iniatives</h2>
+                <p class="text-center text-gray-400 mb-12 max-w-2xl mx-auto">
+                    With my programming skills and a mindset for creating diverse solutions.
+                </p>
             
                 <!-- Project Cards Grid -->
-                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 ">
                     <!-- Project 1: Rokto Bondhu -->
                     <div class="project-card card-hover bg-gray-800/50 backdrop-blur-sm rounded-xl overflow-hidden" data-category="web product">
                         <div class="relative h-[16rem] overflow-hidden rounded-lg">
@@ -730,14 +745,13 @@
                         <div class="p-6">
                             <h3 class="text-xl font-bold mb-2">Rokto Bondhu</h3>
                             <p class="text-gray-400 text-sm mb-4">
-                            • Founder & CEO, Rokto Bondhu: Bangladesh's largest free peer-to-peer blood service platform. <br>
+                            • Founder & CEO, Rokto Bondhu: Bangladesh's largest and first free peer-to-peer blood service platform. <br>
                             • Contributed to saving thousands of lives through Rokto Bondhu. <br>
                             • Built a nationwide donor network with thousands of active donors across Bangladesh.
                             </p>
                         </div>
                     </div>
 
-                    
                     <!-- Project 2: Tutorly AI -->
                     <div class="project-card card-hover bg-gray-800/50 backdrop-blur-sm rounded-xl overflow-hidden" data-category="ai product">
                         <div class="relative h-[16rem] overflow-hidden">
@@ -920,6 +934,23 @@
                             </p>
                         </div>
                     </div>
+
+                    <!-- Project 7: AI News -->
+                    <div class="project-card card-hover bg-gray-800/50 backdrop-blur-sm rounded-xl overflow-hidden" data-category="web product">
+                        <div class="h-[16rem] bg-[#010604] flex items-center justify-center">
+                            <img src="assets/img/ainews.jpeg" loading="lazy" alt="Chart" class="h-full object-contain opacity-80" />
+                        </div>
+
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2">OneNews AI</h3>
+                            <p class="text-gray-400 text text-sm mb-4">
+                                • Founder, OneNews AI – The world’s first AI-powered social media news portal. <br>
+                                • Developed to deliver personalized, real-time news updates based on user interests. <br>
+                                • Integrated AI-driven content curation to make global information more accessible and engaging.
+                            </p>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </div>
@@ -1236,6 +1267,9 @@
                         <h3 class="text-lg md:text-xl font-semibold text-white">International Economics Olympiad<span class="text-sm md:text-base">x</span> Winter Challenge 2024</h3>
                         <span class="text-xs md:text-sm text-gray-400">2024</span>
                     </div>
+                    <p class="text-gray-400 text-sm mt-1">• Advanced to the Pre-Final Round among thousands of international students.</p>
+                    <p class="text-gray-400 text-sm mt-1">• Competed in the Duo Category as part of a squad, showcasing teamwork and analytical skills.</p>
+
                     <div class="mt-2 flex flex-wrap gap-2">
                         <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] md:text-xs font-medium border border-neon-purple/30 text-neon-purple bg-neon-purple/10">
                         <i class="fas fa-bolt text-[10px]"></i> Challenge
@@ -1244,7 +1278,7 @@
                     </div>
                 </div>
 
-                <!-- 7. International Astronomy and Astrophysics Challenge 2024 -->
+                <!-- 7. International Astronomy and Astrophysics Challenge -->
                 <div class="relative pb-0 group">
                     <div class="absolute -left-1.5 md:-left-1 top-1">
                         <span class="relative flex h-8 w-8">
@@ -1446,13 +1480,15 @@
             </div>
             <div class="min-w-0">
                 <h3 class="text-xl font-semibold text-white">Vice President, Science Club</h3>
-                <div class="mt-3 flex flex-wrap gap-2">
-                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-xs font-medium border border-neon-purple/30 text-neon-purple bg-neon-purple/10">
-                    <i class="fas fa-user-tie text-[10px]"></i> Leadership
-                </span>
-                <span class="px-2.5 py-0.5 rounded-full text-xs font-medium border border-gray-600 text-gray-300">STEM</span>
-                <span class="px-2.5 py-0.5 rounded-full text-xs font-medium border border-gray-600 text-gray-300">Science Club</span>
-                </div>
+                <p class="text-gray-400 text-sm mt-4">• Served as Vice President of the Science Club, leading multiple science projects.</p>
+                <p class="text-gray-400 text-sm mt-1">• - Successfully guided the club to secure 2nd place at the district-level science competitions twice.</p>
+                <!-- <div class="mt-3 flex flex-wrap gap-2">
+                    <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-xs font-medium border border-neon-purple/30 text-neon-purple bg-neon-purple/10">
+                        <i class="fas fa-user-tie text-[10px]"></i> Leadership
+                    </span>
+                    <span class="px-2.5 py-0.5 rounded-full text-xs font-medium border border-gray-600 text-gray-300">STEM</span>
+                    <span class="px-2.5 py-0.5 rounded-full text-xs font-medium border border-gray-600 text-gray-300">Science Club</span>
+                </div> -->
             </div>
             </div>
         </div>
@@ -1465,12 +1501,14 @@
             </div>
             <div class="min-w-0">
                 <h3 class="text-xl font-semibold text-white">Volunteer, Red Crescent Society</h3>
-                <div class="mt-3 flex flex-wrap gap-2">
-                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-xs font-medium border border-rose-400/30 text-rose-300 bg-rose-400/10">
-                    <i class="fas fa-heart text-[10px]"></i> Humanitarian
-                </span>
-                <span class="px-2.5 py-0.5 rounded-full text-xs font-medium border border-gray-600 text-gray-300">Community Service</span>
-                </div>
+                <p class="text-gray-400 text-sm mt-4">• Red Crescent Society Aid Training – Trained in first aid, disaster response, and community support.</p>
+
+                <!-- <div class="mt-3 flex flex-wrap gap-2">
+                    <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-xs font-medium border border-rose-400/30 text-rose-300 bg-rose-400/10">
+                        <i class="fas fa-heart text-[10px]"></i> Humanitarian
+                    </span>
+                    <span class="px-2.5 py-0.5 rounded-full text-xs font-medium border border-gray-600 text-gray-300">Community Service</span>
+                </div> -->
             </div>
             </div>
         </div>
@@ -1478,37 +1516,40 @@
         <!-- 4. Captain, High School & College Cricket Club -->
         <div class="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-6 border border-gray-700 hover:border-neon-purple/50 transition-all duration-300">
             <div class="flex items-start gap-4">
-            <div class="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-gradient-to-br from-emerald-500 to-teal-500 text-white/90 shadow-lg">
-                <i class="fas fa-trophy text-xl"></i>
-            </div>
-            <div class="min-w-0">
-                <h3 class="text-xl font-semibold text-white">Captain, High School & College Cricket Club</h3>
-                <div class="mt-3 flex flex-wrap gap-2">
-                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-xs font-medium border border-emerald-400/30 text-emerald-300 bg-emerald-400/10">
-                    <i class="fas fa-users text-[10px]"></i> Team Lead
-                </span>
-                <span class="px-2.5 py-0.5 rounded-full text-xs font-medium border border-gray-600 text-gray-300">Sports</span>
-                <span class="px-2.5 py-0.5 rounded-full text-xs font-medium border border-gray-600 text-gray-300">Cricket Club</span>
+                <div class="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-gradient-to-br from-emerald-500 to-teal-500 text-white/90 shadow-lg">
+                    <i class="fas fa-trophy text-xl"></i>
                 </div>
-            </div>
+                <div class="min-w-0">
+                    <h3 class="text-xl font-semibold text-white">Captain, High School & College Cricket Club</h3>
+                    <p class="text-gray-400 text-sm mt-4">• Promoted the spirit of cricket on my school campus by organizing weekly matches, monthly tournaments, and international match screenings.</p>
+
+                    <!-- <div class="mt-3 flex flex-wrap gap-2">
+                        <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-xs font-medium border border-emerald-400/30 text-emerald-300 bg-emerald-400/10">
+                            <i class="fas fa-users text-[10px]"></i> Team Lead
+                        </span>
+                        <span class="px-2.5 py-0.5 rounded-full text-xs font-medium border border-gray-600 text-gray-300">Sports</span>
+                        <span class="px-2.5 py-0.5 rounded-full text-xs font-medium border border-gray-600 text-gray-300">Cricket Club</span>
+                    </div> -->
+                </div>
             </div>
         </div>
 
-        <!-- 5. Volunteer Outreach Representative -->
+        <!-- 5. Scientific Research Volunteer Representative, Bangladesh -->
         <div class="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-6 border border-gray-700 hover:border-neon-purple/50 transition-all duration-300 md:col-span-2 xl:col-span-1">
             <div class="flex items-start gap-4">
             <div class="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-gradient-to-br from-neon-blue to-neon-purple text-white/90 shadow-lg">
                 <i class="fas fa-bullhorn text-xl"></i>
             </div>
             <div class="min-w-0">
-                <h3 class="text-xl font-semibold text-white">Volunteer Outreach Representative</h3>
-                <div class="mt-3 flex flex-wrap gap-2">
+                <h3 class="text-xl font-semibold text-white">Scientific Research Volunteer Representative, Bangladesh</h3>
+                <p class="text-gray-400 text-sm mt-4">• Represented research organizations as a volunteer, fostering collaboration and engagement with students and the community.</p>
+                <!-- <div class="mt-3 flex flex-wrap gap-2">
                 <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-xs font-medium border border-neon-blue/30 text-neon-blue bg-neon-blue/10">
                     <i class="fas fa-hands-helping text-[10px]"></i> Volunteer
                 </span>
                 <span class="px-2.5 py-0.5 rounded-full text-xs font-medium border border-gray-600 text-gray-300">Outreach</span>
                 <span class="px-2.5 py-0.5 rounded-full text-xs font-medium border border-gray-600 text-gray-300">Community</span>
-                </div>
+                </div> -->
             </div>
             </div>
         </div>
@@ -1610,6 +1651,7 @@
                 </div>
                 <div class="min-w-0">
                     <h3 class="text-xl font-semibold text-white">Student Ambassador, Bangladesh English Olympiad</h3>
+                    <p class="text-gray-400 text-sm mt-4 mb-4">• Represented Bangladesh English Olympiad as District Ambassador in Bhola, organizing events, liaising with schools, and increasing student engagement.</p>
                     <div class="mt-3 flex flex-wrap gap-2">
                     <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-xs font-medium border border-neon-blue/30 text-neon-blue bg-neon-blue/10">
                         <i class="fas fa-id-badge text-[10px]"></i> Ambassador
@@ -1638,6 +1680,13 @@
                                 <i class="fas fa-certificate text-[10px]"></i> View Certificate
                             </button>
                         </div>
+                        <p class="text-gray-400 text-sm mt-1">Hosted workshops and events on Microsoft technologies, mentored students, and collaborated with peers to support local tech communities and promote innovation. <br>
+                              Key Responsibilities: <br>
+                            • Conducted tech workshops and events. <br>
+                            • Mentored students in projects and learning. <br>
+                            • Collaborated on initiatives to foster tech skills.
+                        </p>
+
                         <div class="mt-3 flex flex-wrap gap-2">
                             <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-xs font-medium border border-sky-400/30 text-sky-300 bg-sky-400/10">
                                 <i class="fas fa-id-badge text-[10px]"></i> Ambassador
@@ -1911,12 +1960,132 @@
         </div>
     </section>
 
+    <!-- Test Scores Section -->
+<section id="test-scores" class="py-16 bg-gray-900/50">
+    <div class="container mx-auto px-4">
+        <h2 class="text-3xl md:text-4xl font-bold mb-4 text-center">
+            <span class="bg-gradient-to-r from-neon-blue via-neon-purple to-neon-pink bg-clip-text text-transparent">
+                Test Scores
+            </span>
+        </h2>
+        <p class="text-center text-gray-400 mb-12 max-w-2xl mx-auto">
+            Standardized test results for academic proficiency
+        </p>
+
+        <div class="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+            
+            <!-- Duolingo English Test -->
+            <div class="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:border-neon-blue/50 transition-all">
+                <div class="flex items-start gap-4">
+                    <div class="w-12 h-12 bg-gradient-to-br from-green-500 to-green-700 rounded-lg flex items-center justify-center flex-shrink-0">
+                        <i class="fas fa-language text-white text-xl"></i>
+                    </div>
+                    <div class="flex-1">
+                        <h3 class="text-xl font-bold text-white mb-2">Duolingo English Test</h3>
+                        
+                        <!-- Main Score -->
+                        <div class="mb-4">
+                            <div class="flex items-baseline gap-2">
+                                <span class="text-3xl font-bold text-green-400">145</span>
+                                <span class="text-gray-400 text-sm">/ 160</span>
+                            </div>
+                            <p class="text-gray-500 text-xs mt-1">Expert Proficiency (C1-C2)</p>
+                        </div>
+                        
+                        <!-- Subscores -->
+                        <div class="space-y-2 text-sm">
+                            <div class="flex justify-between">
+                                <span class="text-gray-400">Literacy</span>
+                                <span class="text-gray-300">150</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-400">Comprehension</span>
+                                <span class="text-gray-300">145</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-400">Conversation</span>
+                                <span class="text-gray-300">140</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-400">Production</span>
+                                <span class="text-gray-300">145</span>
+                            </div>
+                        </div>
+                        
+                        <!-- Test Date -->
+                        <div class="mt-4 pt-4 border-t border-gray-700">
+                            <p class="text-xs text-gray-500">
+                                <i class="far fa-calendar mr-1"></i>
+                                Test Date: October 2024
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Digital SAT -->
+            <div class="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:border-neon-purple/50 transition-all">
+                <div class="flex items-start gap-4">
+                    <div class="w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                        <i class="fas fa-graduation-cap text-white text-xl"></i>
+                    </div>
+                    <div class="flex-1">
+                        <h3 class="text-xl font-bold text-white mb-2">Digital SAT (DSAT)</h3>
+                        
+                        <!-- Main Score -->
+                        <div class="mb-4">
+                            <div class="flex items-baseline gap-2">
+                                <span class="text-3xl font-bold text-purple-400">1520</span>
+                                <span class="text-gray-400 text-sm">/ 1600</span>
+                            </div>
+                            <p class="text-gray-500 text-xs mt-1">99th Percentile</p>
+                        </div>
+                        
+                        <!-- Section Scores -->
+                        <div class="space-y-2 text-sm">
+                            <div class="flex justify-between">
+                                <span class="text-gray-400">Math</span>
+                                <span class="text-gray-300">780 / 800</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-400">Reading & Writing</span>
+                                <span class="text-gray-300">740 / 800</span>
+                            </div>
+                        </div>
+                        
+                        <!-- Cross-Test Scores -->
+                        <div class="mt-3 space-y-2 text-sm">
+                            <div class="flex justify-between">
+                                <span class="text-gray-400">Analysis in Science</span>
+                                <span class="text-gray-300">38 / 40</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-400">Analysis in History</span>
+                                <span class="text-gray-300">37 / 40</span>
+                            </div>
+                        </div>
+                        
+                        <!-- Test Date -->
+                        <div class="mt-4 pt-4 border-t border-gray-700">
+                            <p class="text-xs text-gray-500">
+                                <i class="far fa-calendar mr-1"></i>
+                                Test Date: November 2024
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    
     <!-- Contact Section -->
     <section id="contact" class="py-20">
         <div class="container mx-auto px-4">
             <div class="reveal">
-                <h2 class="text-4xl font-bold text-center mb-8 gradient-text">Get In Touch</h2>
-                <a href="mailto:hello@maruf.xyz"><h2 class="text-4xl font-bold text-center mb-8 gradient-text">Mail: hello@maruf.xyz</h2></a>
+                <h2 class="text-4xl font-bold text-center mb-8 gradient-text">Taking initiative and creating change is my way forward</h2>
+                <a href="mailto:marufurrahmanxyz@gmail.com"><h2 class="text-4xl font-bold text-center mb-8 gradient-text">E-Mail: marufurrahmanxyz@gmail.com</h2></a>
                 
                 
                <!--<div class="max-w-2xl mx-auto">
@@ -1984,7 +2153,7 @@
         <div class="container mx-auto px-4">
             <div class="text-center">
                 <p class="text-gray-500">
-                    © 2025 Marufur Rahman. Built with ❤️. All rights reserved.
+                    © 2025 Marufur Rahman. All rights reserved.
                 </p>
             </div>
         </div>
@@ -1992,11 +2161,53 @@
     
     <!-- JavaScript -->
     <script>
+        
+// Simple counter animation for test scores
+function animateTestScores() {
+    const scores = [
+        { element: 'duolingo-score', target: 145, duration: 1500 },
+        { element: 'dsat-score', target: 1520, duration: 1500 }
+    ];
+    
+    scores.forEach(score => {
+        const element = document.getElementById(score.element);
+        if (!element) return;
+        
+        let current = 0;
+        const increment = score.target / (score.duration / 16);
+        
+        const timer = setInterval(() => {
+            current += increment;
+            if (current >= score.target) {
+                current = score.target;
+                clearInterval(timer);
+            }
+            element.textContent = Math.floor(current);
+        }, 16);
+    });
+}
+
+// Trigger animation when section is visible
+const testSection = document.querySelector('#test-scores');
+if (testSection) {
+    const observer = new IntersectionObserver((entries) => {
+        if (entries[0].isIntersecting) {
+            animateTestScores();
+            observer.disconnect();
+        }
+    });
+    observer.observe(testSection);
+}
+
+
+
+        // loading screen
         window.addEventListener('load', function() {
             var loader = document.getElementById('loading-screen');
             if(loader) loader.style.display = 'none';
         });
 
+        // Modal Functions ResearchIntern
         function openResearchInternModal() {
             const modal = document.getElementById('researchInternModal');
             modal.classList.remove('hidden');
