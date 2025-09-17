@@ -948,14 +948,13 @@
                         </div>
                     </div>
 
-                    <!-- Project 8:  -->
+                    <!-- Project 8: Computer Instructor  -->
                     <div class="project-card card-hover bg-gray-800/50 backdrop-blur-sm rounded-xl overflow-hidden" data-category="web product">
                     <!-- Image Slider Container -->
                     <div class="relative h-[16rem] bg-gradient-to-br from-green-600 to-teal-600 overflow-hidden group">
-                        <!-- Slider Wrapper -->
-                        <div class="slider-wrapper flex transition-transform duration-500 ease-in-out h-full" data-slider="risdy" id="risdy-slider">
+                        <div class="slider-wrapper flex transition-transform duration-500 ease-in-out h-full" data-slider="ComputerInstructor" id="ComputerInstructor-slider">
                             <!-- Slide 1 -->
-                            <div class="slider-slide min-w-full h-full">
+                            <div class="slider-slide2 min-w-full h-full">
                                 <img src="assets/img/ComputerInstructor.jpeg" 
                                     loading="lazy"
                                     alt="RISDY Community Outreach" 
@@ -964,7 +963,7 @@
                             </div>
 
                             <!-- Slide 2 -->
-                            <div class="slider-slide min-w-full h-full">
+                            <div class="slider-slide2 min-w-full h-full">
                                 <img src="assets/img/ComputerInstructor2.jpeg" 
                                     loading="lazy"
                                     alt="Healthcare Support Initiative" 
@@ -2206,11 +2205,11 @@
     <script>
 
         class AutoSlider {
-            constructor(sliderId, interval = 4000) {
+            constructor(sliderId, interval = 3000) {
                 this.slider = document.getElementById(sliderId);
                 if (!this.slider) return;
                 
-                this.slides = this.slider.querySelectorAll('.slider-slide');
+                this.slides = this.slider.querySelectorAll('.slider-slide2');
                 this.dots = this.slider.parentElement.querySelectorAll('.slide-dot');
                 this.currentSlide = 0;
                 this.totalSlides = this.slides.length;
@@ -2269,7 +2268,7 @@
 
         // Initialize the slider
         document.addEventListener('DOMContentLoaded', function() {
-            new AutoSlider('risdy-slider', 4000); // 4000ms = 4 seconds
+            new AutoSlider('ComputerInstructor-slider', 4000); // 4000ms = 4 seconds
         });
                 
         // Simple counter animation for test scores
