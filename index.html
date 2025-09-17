@@ -2205,65 +2205,71 @@
     <!-- JavaScript -->
     <script>
 
-        document.addEventListener('DOMContentLoaded', function() {
-            // Auto-slide functionality
-            const slider = document.getElementById('risdy-slider');
-            const slides = slider.querySelectorAll('.slider-slide');
-            const dots = document.querySelectorAll('.slide-dot');
-            let currentSlide = 0;
-            const totalSlides = slides.length;
+        class AutoSlider {
+            constructor(sliderId, interval = 4000) {
+                this.slider = document.getElementById(sliderId);
+                if (!this.slider) return;
+                
+                this.slides = this.slider.querySelectorAll('.slider-slide');
+                this.dots = this.slider.parentElement.querySelectorAll('.slide-dot');
+                this.currentSlide = 0;
+                this.totalSlides = this.slides.length;
+                this.interval = interval;
+                this.autoSlideInterval = null;
+                
+                this.init();
+            }
             
-            function updateSlider() {
-                // Move to next slide
-                currentSlide = (currentSlide + 1) % totalSlides;
+            init() {
+                this.startAutoSlide();
+                this.addEventListeners();
+            }
+            
+            updateSlider() {
+                this.currentSlide = (this.currentSlide + 1) % this.totalSlides;
+                this.slider.style.transform = `translateX(-${this.currentSlide * 100}%)`;
+                this.updateDots();
+            }
+            
+            updateDots() {
+                if (this.dots.length === 0) return;
                 
-                // Update slider position
-                slider.style.transform = `translateX(-${currentSlide * 100}%)`;
-                
-                // Update dots if they exist
-                if (dots.length > 0) {
-                    dots.forEach((dot, index) => {
-                        if (index === currentSlide) {
-                            dot.classList.remove('bg-white/50');
-                            dot.classList.add('bg-white');
-                        } else {
-                            dot.classList.remove('bg-white');
-                            dot.classList.add('bg-white/50');
-                        }
-                    });
+                this.dots.forEach((dot, index) => {
+                    dot.classList.toggle('bg-white', index === this.currentSlide);
+                    dot.classList.toggle('bg-white/50', index !== this.currentSlide);
+                });
+            }
+            
+            startAutoSlide() {
+                this.autoSlideInterval = setInterval(() => this.updateSlider(), this.interval);
+            }
+            
+            stopAutoSlide() {
+                if (this.autoSlideInterval) {
+                    clearInterval(this.autoSlideInterval);
                 }
             }
             
-            // Start auto-sliding every 4 seconds
-            const slideInterval = setInterval(updateSlider, 4000);
-            
-            // Optional: Pause on hover
-            slider.parentElement.addEventListener('mouseenter', () => {
-                clearInterval(slideInterval);
-            });
-            
-            slider.parentElement.addEventListener('mouseleave', () => {
-                setInterval(updateSlider, 4000);
-            });
-            
-            // Optional: Click on dots to go to specific slide
-            dots.forEach((dot, index) => {
-                dot.addEventListener('click', () => {
-                    currentSlide = index;
-                    slider.style.transform = `translateX(-${currentSlide * 100}%)`;
-                    
-                    // Update dot styles
-                    dots.forEach((d, i) => {
-                        if (i === currentSlide) {
-                            d.classList.remove('bg-white/50');
-                            d.classList.add('bg-white');
-                        } else {
-                            d.classList.remove('bg-white');
-                            d.classList.add('bg-white/50');
-                        }
+            addEventListeners() {
+                // Pause on hover
+                const container = this.slider.parentElement;
+                container.addEventListener('mouseenter', () => this.stopAutoSlide());
+                container.addEventListener('mouseleave', () => this.startAutoSlide());
+                
+                // Dot navigation
+                this.dots.forEach((dot, index) => {
+                    dot.addEventListener('click', () => {
+                        this.currentSlide = index;
+                        this.slider.style.transform = `translateX(-${this.currentSlide * 100}%)`;
+                        this.updateDots();
                     });
                 });
-            });
+            }
+        }
+
+        // Initialize the slider
+        document.addEventListener('DOMContentLoaded', function() {
+            new AutoSlider('risdy-slider', 4000); // 4000ms = 4 seconds
         });
                 
         // Simple counter animation for test scores
